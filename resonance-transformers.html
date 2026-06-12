@@ -1,263 +1,231 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Resonance &amp; Transformers — Electronics Study Guide</title>
-<link rel="stylesheet" href="css/style.css">
-<meta name="theme-color" content="#1e3a8a">
+<link href="css/style.css" rel="stylesheet"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<meta content="#1e3a8a" name="theme-color"/>
 <script>(function(){try{var t=localStorage.getItem("eguide-theme");if(!t&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){t="dark"}if(t==="dark"){document.documentElement.setAttribute("data-theme","dark")}}catch(e){}})();</script>
 </head>
 <body data-page="res">
-
 <nav class="topnav"><div class="wrap">
-  <a class="brand" href="index.html"><span class="bolt">⚡</span> Electronics Study Guide</a>
-  <div class="navlinks" id="navlinks">
-    <a class="navlink" data-nav="home" href="index.html">Home</a>
-    <a class="navlink" data-nav="dc" href="dc-circuits.html">DC Circuits</a>
-    <a class="navlink" data-nav="cap" href="capacitors-inductors.html">Capacitors &amp; Inductors</a>
-    <a class="navlink" data-nav="ac" href="ac-circuits.html">AC Circuits</a>
-    <a class="navlink" data-nav="res" href="resonance-transformers.html">Resonance &amp; Transformers</a>
-    <a class="navlink" data-nav="formulas" href="formulas.html">Formula Sheet</a>
-    <a class="navlink" data-nav="quiz" href="quiz.html">Quiz</a>
-  </div>
-  <button class="themetoggle" id="themetoggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
-  <button class="navtoggle" id="navtoggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+<a class="brand" href="index.html"><span class="bolt">⚡</span> Electronics Study Guide</a>
+<div class="navlinks" id="navlinks">
+<a class="navlink" data-nav="home" href="index.html">Home</a>
+<a class="navlink" data-nav="dc" href="dc-circuits.html">DC Circuits</a>
+<a class="navlink" data-nav="cap" href="capacitors-inductors.html">Capacitors &amp; Inductors</a>
+<a class="navlink" data-nav="ac" href="ac-circuits.html">AC Circuits</a>
+<a class="navlink" data-nav="res" href="resonance-transformers.html">Resonance &amp; Transformers</a>
+<a class="navlink" data-nav="formulas" href="formulas.html">Formula Sheet</a>
+<a class="navlink" data-nav="quiz" href="quiz.html">Quiz</a>
+</div>
+<button aria-label="Toggle dark mode" class="themetoggle" id="themetoggle" title="Toggle dark mode" type="button">🌙</button>
+<button aria-expanded="false" aria-label="Menu" class="navtoggle" id="navtoggle" type="button">☰</button>
 </div></nav>
-
 <div class="layout">
-
 <aside class="sidebar">
-  <h3>On this page</h3>
-  <ul class="toc">
-    <li><input type="checkbox" data-sec="series-res" title="Mark as studied"><a href="#series-res">1. Series Resonance</a></li>
-    <li><input type="checkbox" data-sec="qfactor" title="Mark as studied"><a href="#qfactor">2. The Quality Factor Q</a></li>
-    <li><input type="checkbox" data-sec="bandwidth" title="Mark as studied"><a href="#bandwidth">3. Selectivity &amp; Bandwidth</a></li>
-    <li><input type="checkbox" data-sec="parallel-res" title="Mark as studied"><a href="#parallel-res">4. Parallel Resonance</a></li>
-    <li><input type="checkbox" data-sec="transformer" title="Mark as studied"><a href="#transformer">5. Transformers &amp; Mutual Inductance</a></li>
-    <li><input type="checkbox" data-sec="turns" title="Mark as studied"><a href="#turns">6. Turns Ratio &amp; Reflected Impedance</a></li>
-  </ul>
-  <div class="progress-wrap">
-    <div class="progress-label">Studied: <b>0 / 6</b></div>
-    <div class="pbar"><span></span></div>
-  </div>
+<h3>On this page</h3>
+<ul class="toc">
+<li><input data-sec="series-res" title="Mark as studied" type="checkbox"/><a href="#series-res">1. Series Resonance</a></li>
+<li><input data-sec="qfactor" title="Mark as studied" type="checkbox"/><a href="#qfactor">2. The Quality Factor Q</a></li>
+<li><input data-sec="bandwidth" title="Mark as studied" type="checkbox"/><a href="#bandwidth">3. Selectivity &amp; Bandwidth</a></li>
+<li><input data-sec="parallel-res" title="Mark as studied" type="checkbox"/><a href="#parallel-res">4. Parallel Resonance</a></li>
+<li><input data-sec="transformer" title="Mark as studied" type="checkbox"/><a href="#transformer">5. Transformers &amp; Mutual Inductance</a></li>
+<li><input data-sec="turns" title="Mark as studied" type="checkbox"/><a href="#turns">6. Turns Ratio &amp; Reflected Impedance</a></li>
+</ul>
+<div class="progress-wrap">
+<div class="progress-label">Studied: <b>0 / 6</b></div>
+<div class="pbar"><span></span></div>
+</div>
 </aside>
-
 <main>
-  <div class="page-head">
-    <span class="crumb">Part 4 of 4</span>
-    <h1>Resonance &amp; Transformers <span class="lecture-tag">Lecture 7</span></h1>
-    <p class="lead">Two showcase applications of everything so far. <b>Resonance</b>: at one magic frequency
+<div class="page-head">
+<span class="crumb">Part 4 of 4</span>
+<h1>Resonance &amp; Transformers <span class="lecture-tag">Lecture 7</span></h1>
+<p class="lead">Two showcase applications of everything so far. <b>Resonance</b>: at one magic frequency
     X<sub>L</sub> and X<sub>C</sub> cancel and the circuit becomes razor-sharp frequency-selective — the heart of every
     radio tuner. <b>Transformers</b>: two magnetically-coupled coils that convert voltages, currents and impedances.</p>
-  </div>
-
-  <!-- ============ 1. SERIES RESONANCE ============ -->
-  <section class="topic" id="series-res">
-    <h2><span class="nr">1</span> The Series Resonant Circuit</h2>
-    <p>Take R, L and C in series. Their total impedance is
+</div>
+<!-- ============ 1. SERIES RESONANCE ============ -->
+<section class="topic" id="series-res">
+<h2><span class="nr">1</span> The Series Resonant Circuit</h2>
+<p>Take R, L and C in series. Their total impedance is
     <b>Z</b><sub>T</sub> = <span class="m">R</span> + j(<span class="m">X<sub>L</sub></span> − <span class="m">X<sub>C</sub></span>).
     Since X<sub>L</sub> grows with frequency and X<sub>C</sub> shrinks, there is exactly one frequency where they are
     equal and the j-part vanishes. That is <b>resonance</b>:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">X<sub>L</sub></span> = <span class="m">X<sub>C</sub></span>&nbsp;&nbsp;⇒&nbsp;&nbsp;<b>Z</b><sub>T<sub>s</sub></sub> = <span class="m">R</span>&nbsp;&nbsp;(minimum!)</div>
-      <ul class="vars">
-        <li>at resonance the circuit looks <b>purely resistive</b>: v and i in phase, F<sub>p</sub> = 1</li>
-        <li>the supply current is <b>maximum</b>: I = E/R</li>
-      </ul>
-    </div>
-
-    <p>Setting <span class="m">ωL</span> = 1/<span class="m">ωC</span> gives the resonant frequency:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">ω<sub>s</sub></span> = <span class="fr"><span class="nu">1</span><span class="de"><span class="sq"><span class="rad">√</span><span class="vinc"><span class="m">L C</span></span></span></span></span>&nbsp;&nbsp;,&nbsp;&nbsp;<span class="m">f<sub>s</sub></span> = <span class="fr"><span class="nu">1</span><span class="de">2π<span class="sq"><span class="rad">√</span><span class="vinc"><span class="m">L C</span></span></span></span></span></div>
-      <ul class="vars">
-        <li><b>f<sub>s</sub></b> – series resonant frequency (Hz); L in henries, C in farads</li>
-      </ul>
-    </div>
-
-    <div class="figrow">
-      <figure class="fig">
-        <img src="assets/img/series-resonant-circuit.png" alt="Series RLC resonant circuit">
-        <figcaption><b>Series resonant circuit.</b> <span class="src-note">— Lecture 7</span></figcaption>
-      </figure>
-      <figure class="fig">
-        <img src="assets/img/resonance-phasor.png" alt="Phasor diagram at series resonance">
-        <figcaption><b>At resonance:</b> V<sub>L</sub> and V<sub>C</sub> are equal and opposite — they cancel, leaving E = V<sub>R</sub>. <span class="src-note">— Lecture 7</span></figcaption>
-      </figure>
-    </div>
-    <p class="ref">Reference: Boylestad, Ch. 20.2–20.4.</p>
-  </section>
-
-  <!-- ============ 2. Q FACTOR ============ -->
-  <section class="topic" id="qfactor">
-    <h2><span class="nr">2</span> The Quality Factor <span class="m">Q</span></h2>
-    <p>How "sharp" is the resonance? The quality factor compares the reactive power in L to the power burned in R —
+<div class="fbox">
+<div class="fml ktx">X_{L} = X_{C} \;\Rightarrow\; \mathbf{Z}_{T_{s}} = R\quad (\text{minimum}!)</div>
+<ul class="vars">
+<li>at resonance the circuit looks <b>purely resistive</b>: v and i in phase, F<sub>p</sub> = 1</li>
+<li>the supply current is <b>maximum</b>: I = E/R</li>
+</ul>
+</div>
+<p>Setting <span class="m">ωL</span> = 1/<span class="m">ωC</span> gives the resonant frequency:</p>
+<div class="fbox">
+<div class="fml ktx">\omega _{s} = \frac{1}{\sqrt{L C}},\quad f_{s} = \frac{1}{2\pi \sqrt{L C}}</div>
+<ul class="vars">
+<li><b>f<sub>s</sub></b> – series resonant frequency (Hz); L in henries, C in farads</li>
+</ul>
+</div>
+<div class="figrow">
+<figure class="fig">
+<img alt="Series RLC resonant circuit" src="assets/img/series-resonant-circuit.png"/>
+<figcaption><b>Series resonant circuit.</b> <span class="src-note">— Lecture 7</span></figcaption>
+</figure>
+<figure class="fig">
+<img alt="Phasor diagram at series resonance" src="assets/img/resonance-phasor.png"/>
+<figcaption><b>At resonance:</b> V<sub>L</sub> and V<sub>C</sub> are equal and opposite — they cancel, leaving E = V<sub>R</sub>. <span class="src-note">— Lecture 7</span></figcaption>
+</figure>
+</div>
+<p class="ref">Reference: Boylestad, Ch. 20.2–20.4.</p>
+</section>
+<!-- ============ 2. Q FACTOR ============ -->
+<section class="topic" id="qfactor">
+<h2><span class="nr">2</span> The Quality Factor <span class="m">Q</span></h2>
+<p>How "sharp" is the resonance? The quality factor compares the reactive power in L to the power burned in R —
     equivalently, reactance over resistance at resonance:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">Q<sub>s</sub></span> = <span class="fr"><span class="nu"><span class="m">X<sub>L</sub></span></span><span class="de"><span class="m">R</span></span></span> = <span class="fr"><span class="nu">1</span><span class="de"><span class="m">R</span></span></span><span class="sq"><span class="rad">√</span><span class="vinc"><span class="fr" style="font-size:.92em"><span class="nu"><span class="m">L</span></span><span class="de"><span class="m">C</span></span></span></span></span></div>
-      <ul class="vars">
-        <li><b>Q<sub>s</sub></b> – dimensionless; bigger Q = sharper, more selective circuit</li>
-        <li>small series R → high Q</li>
-      </ul>
-    </div>
-
-    <h3>Resonant voltage rise — the classic exam surprise</h3>
-    <p>Apply the voltage divider at resonance: V<sub>L</sub> = X<sub>L</sub>E/Z<sub>T</sub> = X<sub>L</sub>E/R. So:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">V<sub>L<sub>s</sub></sub></span> = <span class="m">V<sub>C<sub>s</sub></sub></span> = <span class="m">Q<sub>s</sub> E</span></div>
-      <ul class="vars">
-        <li>the voltages across L and C at resonance are <b>Q times the source voltage</b></li>
-        <li>lecture example: Q<sub>s</sub> = 480 Ω / 6 Ω = 80, E = 10 V → V<sub>L</sub> = V<sub>C</sub> = <b>800 V</b>!</li>
-      </ul>
-    </div>
-
-    <div class="callout warn"><b class="tag">Don't be fooled</b>
+<div class="fbox">
+<div class="fml ktx">Q_{s} = \frac{X_{L}}{R} = \frac{1}{R}\sqrt{\frac{L}{C}}</div>
+<ul class="vars">
+<li><b>Q<sub>s</sub></b> – dimensionless; bigger Q = sharper, more selective circuit</li>
+<li>small series R → high Q</li>
+</ul>
+</div>
+<h3>Resonant voltage rise — the classic exam surprise</h3>
+<p>Apply the voltage divider at resonance: V<sub>L</sub> = X<sub>L</sub>E/Z<sub>T</sub> = X<sub>L</sub>E/R. So:</p>
+<div class="fbox">
+<div class="fml ktx">V_{L_{s}} = V_{C_{s}} = Q_{s} E</div>
+<ul class="vars">
+<li>the voltages across L and C at resonance are <b>Q times the source voltage</b></li>
+<li>lecture example: Q<sub>s</sub> = 480 Ω / 6 Ω = 80, E = 10 V → V<sub>L</sub> = V<sub>C</sub> = <b>800 V</b>!</li>
+</ul>
+</div>
+<div class="callout warn"><b class="tag">Don't be fooled</b>
     Individual element voltages inside a resonant circuit can hugely exceed the supply voltage, even though
     they cancel in the loop sum (KVL still holds — they are 180° apart).</div>
-    <p class="ref">Reference: Boylestad, Ch. 20.3–20.5.</p>
-  </section>
-
-  <!-- ============ 3. BANDWIDTH ============ -->
-  <section class="topic" id="bandwidth">
-    <h2><span class="nr">3</span> Selectivity &amp; Bandwidth</h2>
-    <p>Plot the current versus frequency: it peaks at <span class="m">f<sub>s</sub></span> and falls off on both
+<p class="ref">Reference: Boylestad, Ch. 20.3–20.5.</p>
+</section>
+<!-- ============ 3. BANDWIDTH ============ -->
+<section class="topic" id="bandwidth">
+<h2><span class="nr">3</span> Selectivity &amp; Bandwidth</h2>
+<p>Plot the current versus frequency: it peaks at <span class="m">f<sub>s</sub></span> and falls off on both
     sides. The frequencies <span class="m">f</span><sub>1</sub>, <span class="m">f</span><sub>2</sub> where the
     current drops to 0.707 I<sub>max</sub> (the <b>half-power points</b>, since P ∝ I²) bound the band the circuit
     "accepts":</p>
-
-    <figure class="fig">
-      <img src="assets/img/selectivity-curve.png" alt="Selectivity curve with bandwidth between half-power frequencies">
-      <figcaption><b>Selectivity curve:</b> the band between f₁ and f₂ (at 0.707 I<sub>max</sub>) is the bandwidth. <span class="src-note">— Lecture 7</span></figcaption>
-    </figure>
-
-    <div class="fbox">
-      <div class="fml">BW = <span class="m">f</span><sub>2</sub> − <span class="m">f</span><sub>1</sub> = <span class="fr"><span class="nu"><span class="m">R</span></span><span class="de">2π<span class="m">L</span></span></span> = <span class="fr"><span class="nu"><span class="m">f<sub>s</sub></span></span><span class="de"><span class="m">Q<sub>s</sub></span></span></span></div>
-      <ul class="vars">
-        <li><b>BW</b> – bandwidth (Hz)</li>
-        <li>high Q ⇒ narrow band ⇒ very <b>selective</b> (good for picking one radio station)</li>
-        <li>also from the lecture: f<sub>s</sub> = √(f₁f₂) — the resonant frequency is the geometric mean</li>
-      </ul>
-    </div>
-    <p class="ref">Reference: Boylestad, Ch. 20.6–20.7.</p>
-  </section>
-
-  <!-- ============ 4. PARALLEL RESONANCE ============ -->
-  <section class="topic" id="parallel-res">
-    <h2><span class="nr">4</span> The Parallel Resonant Circuit</h2>
-    <p>Now put L and C <b>in parallel</b> (a "tank circuit") fed by a current source. The same resonance condition
+<figure class="fig">
+<img alt="Selectivity curve with bandwidth between half-power frequencies" src="assets/img/selectivity-curve.png"/>
+<figcaption><b>Selectivity curve:</b> the band between f₁ and f₂ (at 0.707 I<sub>max</sub>) is the bandwidth. <span class="src-note">— Lecture 7</span></figcaption>
+</figure>
+<div class="fbox">
+<div class="fml ktx">\text{BW} = f_{2} - f_{1} = \frac{R}{2\pi L} = \frac{f_{s}}{Q_{s}}</div>
+<ul class="vars">
+<li><b>BW</b> – bandwidth (Hz)</li>
+<li>high Q ⇒ narrow band ⇒ very <b>selective</b> (good for picking one radio station)</li>
+<li>also from the lecture: f<sub>s</sub> = √(f₁f₂) — the resonant frequency is the geometric mean</li>
+</ul>
+</div>
+<p class="ref">Reference: Boylestad, Ch. 20.6–20.7.</p>
+</section>
+<!-- ============ 4. PARALLEL RESONANCE ============ -->
+<section class="topic" id="parallel-res">
+<h2><span class="nr">4</span> The Parallel Resonant Circuit</h2>
+<p>Now put L and C <b>in parallel</b> (a "tank circuit") fed by a current source. The same resonance condition
     flips every behaviour upside-down:</p>
-
-    <figure class="fig">
-      <img src="assets/img/parallel-resonant-circuit.png" alt="Ideal parallel resonant circuit">
-      <figcaption><b>Ideal parallel resonant (tank) circuit.</b> <span class="src-note">— Lecture 7</span></figcaption>
-    </figure>
-
-    <table class="data">
-      <tr><th></th><th>Series resonance</th><th>Parallel resonance</th></tr>
-      <tr><td>Impedance at f<sub>r</sub></td><td><b>Minimum</b> (= R)</td><td><b>Maximum</b></td></tr>
-      <tr><td>Current from source</td><td><b>Maximum</b> (E/R)</td><td><b>Minimum</b></td></tr>
-      <tr><td>Phase at f<sub>r</sub></td><td>unity F<sub>p</sub> (resistive)</td><td>unity F<sub>p</sub> (resistive)</td></tr>
-      <tr><td>What's huge inside</td><td>V<sub>L</sub> = V<sub>C</sub> = QE</td><td>circulating current in the L–C loop</td></tr>
-    </table>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">f<sub>p</sub></span> ≈ <span class="fr"><span class="nu">1</span><span class="de">2π<span class="sq"><span class="rad">√</span><span class="vinc"><span class="m">L C</span></span></span></span></span>&nbsp;&nbsp;(ideal / high-Q case)&nbsp;&nbsp;,&nbsp;&nbsp;BW = <span class="fr"><span class="nu"><span class="m">f<sub>p</sub></span></span><span class="de"><span class="m">Q<sub>p</sub></span></span></span></div>
-      <ul class="vars">
-        <li>for a high-Q coil (Q ≥ 10), Q<sub>p</sub> ≈ Q<sub>l</sub> of the coil itself = X<sub>L</sub>/R<sub>l</sub></li>
-        <li>energy sloshes between L and C; the source only tops up the losses</li>
-      </ul>
-    </div>
-    <p class="ref">Reference: Boylestad, Ch. 20.8–20.12.</p>
-  </section>
-
-  <!-- ============ 5. TRANSFORMERS ============ -->
-  <section class="topic" id="transformer">
-    <h2><span class="nr">5</span> Transformers &amp; Mutual Inductance</h2>
-    <p>A transformer is two coils sharing a magnetic path. AC current in the <b>primary</b> creates a changing flux;
+<figure class="fig">
+<img alt="Ideal parallel resonant circuit" src="assets/img/parallel-resonant-circuit.png"/>
+<figcaption><b>Ideal parallel resonant (tank) circuit.</b> <span class="src-note">— Lecture 7</span></figcaption>
+</figure>
+<table class="data">
+<tr><th></th><th>Series resonance</th><th>Parallel resonance</th></tr>
+<tr><td>Impedance at f<sub>r</sub></td><td><b>Minimum</b> (= R)</td><td><b>Maximum</b></td></tr>
+<tr><td>Current from source</td><td><b>Maximum</b> (E/R)</td><td><b>Minimum</b></td></tr>
+<tr><td>Phase at f<sub>r</sub></td><td>unity F<sub>p</sub> (resistive)</td><td>unity F<sub>p</sub> (resistive)</td></tr>
+<tr><td>What's huge inside</td><td>V<sub>L</sub> = V<sub>C</sub> = QE</td><td>circulating current in the L–C loop</td></tr>
+</table>
+<div class="fbox">
+<div class="fml ktx">f_{p} \approx \frac{1}{2\pi \sqrt{L C}}\quad (\text{ideal} / \text{high-Q case}),\quad \text{BW} = \frac{f_{p}}{Q_{p}}</div>
+<ul class="vars">
+<li>for a high-Q coil (Q ≥ 10), Q<sub>p</sub> ≈ Q<sub>l</sub> of the coil itself = X<sub>L</sub>/R<sub>l</sub></li>
+<li>energy sloshes between L and C; the source only tops up the losses</li>
+</ul>
+</div>
+<p class="ref">Reference: Boylestad, Ch. 20.8–20.12.</p>
+</section>
+<!-- ============ 5. TRANSFORMERS ============ -->
+<section class="topic" id="transformer">
+<h2><span class="nr">5</span> Transformers &amp; Mutual Inductance</h2>
+<p>A transformer is two coils sharing a magnetic path. AC current in the <b>primary</b> creates a changing flux;
     by Faraday's law that changing flux induces a voltage in the <b>secondary</b> — no electrical contact needed:</p>
-
-    <figure class="fig">
-      <img src="assets/img/transformer.png" alt="Transformer with primary and secondary coils and changing flux pattern">
-      <figcaption><b>Transformer action:</b> changing flux from the primary links the secondary and induces e<sub>s</sub>. <span class="src-note">— Lecture 7</span></figcaption>
-    </figure>
-
-    <p><b>Mutual inductance</b> M measures how well flux from one coil links the other, via the
+<figure class="fig">
+<img alt="Transformer with primary and secondary coils and changing flux pattern" src="assets/img/transformer.png"/>
+<figcaption><b>Transformer action:</b> changing flux from the primary links the secondary and induces e<sub>s</sub>. <span class="src-note">— Lecture 7</span></figcaption>
+</figure>
+<p><b>Mutual inductance</b> M measures how well flux from one coil links the other, via the
     <b>coefficient of coupling k</b> (the fraction of primary flux that reaches the secondary, 0…1):</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">M</span> = <span class="m">k</span><span class="sq"><span class="rad">√</span><span class="vinc"><span class="m">L<sub>p</sub>L<sub>s</sub></span></span></span>&nbsp;&nbsp;,&nbsp;&nbsp;<span class="m">k</span> = <span class="fr"><span class="nu"><span class="m">Φ<sub>m</sub></span></span><span class="de"><span class="m">Φ<sub>p</sub></span></span></span></div>
-      <ul class="vars">
-        <li><b>M</b> – mutual inductance (H); <b>k</b> – coupling coefficient (iron core ≈ 1, air core much less)</li>
-        <li>induced voltages: <b>e<sub>s</sub> = M di<sub>p</sub>/dt</b> and <b>e<sub>p</sub> = M di<sub>s</sub>/dt</b></li>
-      </ul>
-    </div>
-
-    <h3>Mutually coupled coils in series</h3>
-    <p>When coupled coils are wired in series, their mutual flux either helps or fights, so total inductance picks up
+<div class="fbox">
+<div class="fml ktx">M = k\sqrt{L_{p}L_{s}},\quad k = \frac{\Phi _{m}}{\Phi _{p}}</div>
+<ul class="vars">
+<li><b>M</b> – mutual inductance (H); <b>k</b> – coupling coefficient (iron core ≈ 1, air core much less)</li>
+<li>induced voltages: <b>e<sub>s</sub> = M di<sub>p</sub>/dt</b> and <b>e<sub>p</sub> = M di<sub>s</sub>/dt</b></li>
+</ul>
+</div>
+<h3>Mutually coupled coils in series</h3>
+<p>When coupled coils are wired in series, their mutual flux either helps or fights, so total inductance picks up
     a ±2M term per coupled pair:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">L<sub>T</sub></span> = <span class="m">L</span><sub>1</sub> + <span class="m">L</span><sub>2</sub> ± 2<span class="m">M</span></div>
-      <ul class="vars">
-        <li>+2M when fluxes <b>aid</b>, −2M when they <b>oppose</b> (lecture example combines three coils with mixed signs)</li>
-      </ul>
-    </div>
-    <p class="ref">Reference: Boylestad, Ch. 22.2–22.4.</p>
-  </section>
-
-  <!-- ============ 6. TURNS RATIO ============ -->
-  <section class="topic" id="turns">
-    <h2><span class="nr">6</span> Turns Ratio &amp; Reflected Impedance</h2>
-    <p>For an iron-core transformer (k ≈ 1) everything follows from the <b>turns ratio</b>:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">a</span> = <span class="fr"><span class="nu"><span class="m">N<sub>p</sub></span></span><span class="de"><span class="m">N<sub>s</sub></span></span></span>&nbsp;&nbsp;,&nbsp;&nbsp;<span class="fr"><span class="nu"><span class="m">E<sub>p</sub></span></span><span class="de"><span class="m">E<sub>s</sub></span></span></span> = <span class="fr"><span class="nu"><span class="m">N<sub>p</sub></span></span><span class="de"><span class="m">N<sub>s</sub></span></span></span>&nbsp;&nbsp;,&nbsp;&nbsp;<span class="fr"><span class="nu"><span class="m">I<sub>p</sub></span></span><span class="de"><span class="m">I<sub>s</sub></span></span></span> = <span class="fr"><span class="nu"><span class="m">N<sub>s</sub></span></span><span class="de"><span class="m">N<sub>p</sub></span></span></span></div>
-      <ul class="vars">
-        <li><b>N<sub>p</sub>, N<sub>s</sub></b> – primary / secondary turns</li>
-        <li>voltages scale <i>with</i> turns; currents scale <i>inversely</i> (energy is conserved)</li>
-        <li>a &gt; 1: step-down voltage; a &lt; 1: step-up</li>
-      </ul>
-    </div>
-
-    <h3>Reflected impedance — the impedance transformer</h3>
-    <p>From the primary's point of view, a load <span class="m">Z<sub>L</sub></span> on the secondary looks
+<div class="fbox">
+<div class="fml ktx">L_{T} = L_{1} + L_{2} \pm 2M</div>
+<ul class="vars">
+<li>+2M when fluxes <b>aid</b>, −2M when they <b>oppose</b> (lecture example combines three coils with mixed signs)</li>
+</ul>
+</div>
+<p class="ref">Reference: Boylestad, Ch. 22.2–22.4.</p>
+</section>
+<!-- ============ 6. TURNS RATIO ============ -->
+<section class="topic" id="turns">
+<h2><span class="nr">6</span> Turns Ratio &amp; Reflected Impedance</h2>
+<p>For an iron-core transformer (k ≈ 1) everything follows from the <b>turns ratio</b>:</p>
+<div class="fbox">
+<div class="fml ktx">a = \frac{N_{p}}{N_{s}},\quad \frac{E_{p}}{E_{s}} = \frac{N_{p}}{N_{s}},\quad \frac{I_{p}}{I_{s}} = \frac{N_{s}}{N_{p}}</div>
+<ul class="vars">
+<li><b>N<sub>p</sub>, N<sub>s</sub></b> – primary / secondary turns</li>
+<li>voltages scale <i>with</i> turns; currents scale <i>inversely</i> (energy is conserved)</li>
+<li>a &gt; 1: step-down voltage; a &lt; 1: step-up</li>
+</ul>
+</div>
+<h3>Reflected impedance — the impedance transformer</h3>
+<p>From the primary's point of view, a load <span class="m">Z<sub>L</sub></span> on the secondary looks
     <span class="m">a</span>² times bigger:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">Z<sub>p</sub></span> = <span class="m">a</span><sup>2</sup><span class="m">Z<sub>L</sub></span></div>
-      <ul class="vars">
-        <li><b>Z<sub>p</sub></b> – impedance seen at the primary terminals</li>
-        <li>lecture example: a = 8, speaker Z<sub>L</sub> = 8 Ω → Z<sub>p</sub> = 8² × 8 = <b>512 Ω</b></li>
-      </ul>
-    </div>
-
-    <figure class="fig">
-      <img src="assets/img/transformer-matching.png" alt="Transformer used for impedance matching a speaker">
-      <figcaption><b>Impedance matching:</b> an 8:1 transformer makes an 8 Ω speaker look like 512 Ω to the amplifier — maximizing power transfer. <span class="src-note">— Lecture 7</span></figcaption>
-    </figure>
-
-    <div class="callout tip"><b class="tag">Why transformers matter</b>
+<div class="fbox">
+<div class="fml ktx">Z_{p} = a^{2}Z_{L}</div>
+<ul class="vars">
+<li><b>Z<sub>p</sub></b> – impedance seen at the primary terminals</li>
+<li>lecture example: a = 8, speaker Z<sub>L</sub> = 8 Ω → Z<sub>p</sub> = 8² × 8 = <b>512 Ω</b></li>
+</ul>
+</div>
+<figure class="fig">
+<img alt="Transformer used for impedance matching a speaker" src="assets/img/transformer-matching.png"/>
+<figcaption><b>Impedance matching:</b> an 8:1 transformer makes an 8 Ω speaker look like 512 Ω to the amplifier — maximizing power transfer. <span class="src-note">— Lecture 7</span></figcaption>
+</figure>
+<div class="callout tip"><b class="tag">Why transformers matter</b>
     Three superpowers in one device: change voltage levels (power grid), isolate circuits galvanically,
     and match impedances (audio, RF). All from Faraday's law.</div>
-    <p class="ref">Reference: Boylestad, Ch. 22.5–22.7.</p>
-  </section>
-
-  <div class="next-prev">
-    <a href="ac-circuits.html"><span class="sub">← Previous</span> AC Circuits</a>
-    <a href="formulas.html"><span class="sub">Next →</span> Formula Cheat Sheet</a>
-  </div>
+<p class="ref">Reference: Boylestad, Ch. 22.5–22.7.</p>
+</section>
+<div class="next-prev">
+<a href="ac-circuits.html"><span class="sub">← Previous</span> AC Circuits</a>
+<a href="formulas.html"><span class="sub">Next →</span> Formula Cheat Sheet</a>
+</div>
 </main>
 </div>
-
 <footer class="site">
   Built from the Electronics lecture slides (Lectures 1–7) · Explanations cross-checked with Boylestad,
   <i>Introductory Circuit Analysis</i> · Figures © their original sources, reproduced from the lecture PDF for personal study.
 </footer>
-
+<script src="vendor/katex/katex.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

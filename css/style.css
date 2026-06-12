@@ -117,15 +117,10 @@ section.topic p { margin: 8px 0; max-width: 78ch; }
 .m b, .m strong { font-style: normal; }
 .un { font-family: Georgia, serif; font-style: normal; }
 .fml {
-  font-family: Georgia, "Times New Roman", serif; font-size: 1.18rem; color: var(--ink);
-  padding: 2px 0; white-space: nowrap; overflow-x: auto;
+  font-size: 1.05rem; color: var(--ink);
+  padding: 2px 0; overflow-x: auto; overflow-y: hidden;
 }
-.fr { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 3px; }
-.fr .nu { padding: 0 5px 1px; border-bottom: 1.4px solid currentColor; display: block; }
-.fr .de { padding: 1px 5px 0; display: block; }
-.sq { display: inline-flex; align-items: stretch; vertical-align: middle; }
-.sq .rad { font-style: normal; align-self: flex-end; transform: translateY(1px); font-size: 1.15em; }
-.sq .vinc { border-top: 1.4px solid currentColor; padding: 0 4px 0 2px; }
+.fml .katex { font-size: 1.18em; }
 sub, sup { font-size: .68em; }
 
 .fbox {

@@ -1,550 +1,469 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>DC Circuits — Electronics Study Guide</title>
-<link rel="stylesheet" href="css/style.css">
-<meta name="theme-color" content="#1e3a8a">
+<link href="css/style.css" rel="stylesheet"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<meta content="#1e3a8a" name="theme-color"/>
 <script>(function(){try{var t=localStorage.getItem("eguide-theme");if(!t&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){t="dark"}if(t==="dark"){document.documentElement.setAttribute("data-theme","dark")}}catch(e){}})();</script>
 </head>
 <body data-page="dc">
-
 <nav class="topnav"><div class="wrap">
-  <a class="brand" href="index.html"><span class="bolt">⚡</span> Electronics Study Guide</a>
-  <div class="navlinks" id="navlinks">
-    <a class="navlink" data-nav="home" href="index.html">Home</a>
-    <a class="navlink" data-nav="dc" href="dc-circuits.html">DC Circuits</a>
-    <a class="navlink" data-nav="cap" href="capacitors-inductors.html">Capacitors &amp; Inductors</a>
-    <a class="navlink" data-nav="ac" href="ac-circuits.html">AC Circuits</a>
-    <a class="navlink" data-nav="res" href="resonance-transformers.html">Resonance &amp; Transformers</a>
-    <a class="navlink" data-nav="formulas" href="formulas.html">Formula Sheet</a>
-    <a class="navlink" data-nav="quiz" href="quiz.html">Quiz</a>
-  </div>
-  <button class="themetoggle" id="themetoggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
-  <button class="navtoggle" id="navtoggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+<a class="brand" href="index.html"><span class="bolt">⚡</span> Electronics Study Guide</a>
+<div class="navlinks" id="navlinks">
+<a class="navlink" data-nav="home" href="index.html">Home</a>
+<a class="navlink" data-nav="dc" href="dc-circuits.html">DC Circuits</a>
+<a class="navlink" data-nav="cap" href="capacitors-inductors.html">Capacitors &amp; Inductors</a>
+<a class="navlink" data-nav="ac" href="ac-circuits.html">AC Circuits</a>
+<a class="navlink" data-nav="res" href="resonance-transformers.html">Resonance &amp; Transformers</a>
+<a class="navlink" data-nav="formulas" href="formulas.html">Formula Sheet</a>
+<a class="navlink" data-nav="quiz" href="quiz.html">Quiz</a>
+</div>
+<button aria-label="Toggle dark mode" class="themetoggle" id="themetoggle" title="Toggle dark mode" type="button">🌙</button>
+<button aria-expanded="false" aria-label="Menu" class="navtoggle" id="navtoggle" type="button">☰</button>
 </div></nav>
-
 <div class="layout">
-
 <aside class="sidebar">
-  <h3>On this page</h3>
-  <ul class="toc">
-    <li><input type="checkbox" data-sec="units" title="Mark as studied"><a href="#units">1. Units &amp; Notation</a></li>
-    <li><input type="checkbox" data-sec="charge" title="Mark as studied"><a href="#charge">2. Charge &amp; Voltage</a></li>
-    <li><input type="checkbox" data-sec="current" title="Mark as studied"><a href="#current">3. Current</a></li>
-    <li><input type="checkbox" data-sec="resistance" title="Mark as studied"><a href="#resistance">4. Resistance</a></li>
-    <li><input type="checkbox" data-sec="ohm" title="Mark as studied"><a href="#ohm">5. Ohm's Law</a></li>
-    <li><input type="checkbox" data-sec="power" title="Mark as studied"><a href="#power">6. Power &amp; Energy</a></li>
-    <li><input type="checkbox" data-sec="series" title="Mark as studied"><a href="#series">7. Series Circuits &amp; KVL</a></li>
-    <li><input type="checkbox" data-sec="parallel" title="Mark as studied"><a href="#parallel">8. Parallel Circuits &amp; KCL</a></li>
-    <li><input type="checkbox" data-sec="conversions" title="Mark as studied"><a href="#conversions">9. Y–Δ &amp; Source Conversions</a></li>
-    <li><input type="checkbox" data-sec="methods" title="Mark as studied"><a href="#methods">10. Analysis Methods</a></li>
-    <li><input type="checkbox" data-sec="theorems" title="Mark as studied"><a href="#theorems">11. Network Theorems</a></li>
-  </ul>
-  <div class="progress-wrap">
-    <div class="progress-label">Studied: <b>0 / 11</b></div>
-    <div class="pbar"><span></span></div>
-  </div>
+<h3>On this page</h3>
+<ul class="toc">
+<li><input data-sec="units" title="Mark as studied" type="checkbox"/><a href="#units">1. Units &amp; Notation</a></li>
+<li><input data-sec="charge" title="Mark as studied" type="checkbox"/><a href="#charge">2. Charge &amp; Voltage</a></li>
+<li><input data-sec="current" title="Mark as studied" type="checkbox"/><a href="#current">3. Current</a></li>
+<li><input data-sec="resistance" title="Mark as studied" type="checkbox"/><a href="#resistance">4. Resistance</a></li>
+<li><input data-sec="ohm" title="Mark as studied" type="checkbox"/><a href="#ohm">5. Ohm's Law</a></li>
+<li><input data-sec="power" title="Mark as studied" type="checkbox"/><a href="#power">6. Power &amp; Energy</a></li>
+<li><input data-sec="series" title="Mark as studied" type="checkbox"/><a href="#series">7. Series Circuits &amp; KVL</a></li>
+<li><input data-sec="parallel" title="Mark as studied" type="checkbox"/><a href="#parallel">8. Parallel Circuits &amp; KCL</a></li>
+<li><input data-sec="conversions" title="Mark as studied" type="checkbox"/><a href="#conversions">9. Y–Δ &amp; Source Conversions</a></li>
+<li><input data-sec="methods" title="Mark as studied" type="checkbox"/><a href="#methods">10. Analysis Methods</a></li>
+<li><input data-sec="theorems" title="Mark as studied" type="checkbox"/><a href="#theorems">11. Network Theorems</a></li>
+</ul>
+<div class="progress-wrap">
+<div class="progress-label">Studied: <b>0 / 11</b></div>
+<div class="pbar"><span></span></div>
+</div>
 </aside>
-
 <main>
-  <div class="page-head">
-    <span class="crumb">Part 1 of 4</span>
-    <h1>DC Circuits <span class="lecture-tag">Lectures 1–2</span></h1>
-    <p class="lead">Everything starts here: what voltage, current and resistance actually are, how Ohm's law ties
+<div class="page-head">
+<span class="crumb">Part 1 of 4</span>
+<h1>DC Circuits <span class="lecture-tag">Lectures 1–2</span></h1>
+<p class="lead">Everything starts here: what voltage, current and resistance actually are, how Ohm's law ties
     them together, and the rules and theorems used to solve any DC network. Master this page first — the
     AC material reuses every single idea.</p>
-  </div>
-
-  <!-- ============ 1. UNITS ============ -->
-  <section class="topic" id="units">
-    <h2><span class="nr">1</span> Units, Prefixes &amp; Notation</h2>
-    <p>Electrical quantities span an enormous range — from picofarads (10<sup>−12</sup>) to megaohms (10<sup>6</sup>).
+</div>
+<!-- ============ 1. UNITS ============ -->
+<section class="topic" id="units">
+<h2><span class="nr">1</span> Units, Prefixes &amp; Notation</h2>
+<p>Electrical quantities span an enormous range — from picofarads (10<sup>−12</sup>) to megaohms (10<sup>6</sup>).
     Engineers handle this with <b>powers of ten</b> and <b>SI prefixes</b> instead of writing long strings of zeros.</p>
-
-    <figure class="fig">
-      <img src="assets/img/prefixes-table.png" alt="Table of SI prefixes and multiplication factors">
-      <figcaption><b>SI prefixes.</b> Memorize the everyday ones: p (10⁻¹²), n (10⁻⁹), µ (10⁻⁶), m (10⁻³), k (10³), M (10⁶), G (10⁹). <span class="src-note">— Lecture 1</span></figcaption>
-    </figure>
-
-    <h3>Three ways to write a number</h3>
-    <p><b>Fixed-point</b> keeps the decimal point in the same place (e.g. 0.063).
+<figure class="fig">
+<img alt="Table of SI prefixes and multiplication factors" src="assets/img/prefixes-table.png"/>
+<figcaption><b>SI prefixes.</b> Memorize the everyday ones: p (10⁻¹²), n (10⁻⁹), µ (10⁻⁶), m (10⁻³), k (10³), M (10⁶), G (10⁹). <span class="src-note">— Lecture 1</span></figcaption>
+</figure>
+<h3>Three ways to write a number</h3>
+<p><b>Fixed-point</b> keeps the decimal point in the same place (e.g. 0.063).
     <b>Floating-point</b> lets the number decide where the point goes.
     <b>Scientific notation</b> uses a power of ten with exactly one non-zero digit before the decimal point
     (e.g. 6.3 × 10<sup>−2</sup>).</p>
-
-    <details class="example"><summary>Worked example — converting between prefix levels (from Lecture 1)</summary>
-      <div class="body">
-        <p>Convert 20 kHz to megahertz. Moving from kilo (10³) to mega (10⁶) means the multiplier grows by 10³,
+<details class="example"><summary>Worked example — converting between prefix levels (from Lecture 1)</summary>
+<div class="body">
+<p>Convert 20 kHz to megahertz. Moving from kilo (10³) to mega (10⁶) means the multiplier grows by 10³,
         so the number must shrink by 10³:</p>
-        <p class="fml">20 kHz = 20 × 10<sup>3</sup> Hz = 0.02 × 10<sup>6</sup> Hz = <b>0.02 MHz</b></p>
-        <p class="muted">Rule of thumb: if the prefix gets bigger, the number gets smaller (and vice versa).</p>
-      </div>
-    </details>
-    <p class="ref">Reference: Boylestad, <i>Introductory Circuit Analysis</i>, Ch. 1.</p>
-  </section>
-
-  <!-- ============ 2. CHARGE & VOLTAGE ============ -->
-  <section class="topic" id="charge">
-    <h2><span class="nr">2</span> Charge, Coulomb's Law &amp; Voltage</h2>
-    <p>Everything electrical begins with <b>charge</b>. Like charges repel, opposite charges attract, and the
+<p class="fml ktx">20 \text{kHz} = 20 \times 10^{3} \text{Hz} = 0.02 \times 10^{6} \text{Hz} = 0.02 \text{MHz}</p>
+<p class="muted">Rule of thumb: if the prefix gets bigger, the number gets smaller (and vice versa).</p>
+</div>
+</details>
+<p class="ref">Reference: Boylestad, <i>Introductory Circuit Analysis</i>, Ch. 1.</p>
+</section>
+<!-- ============ 2. CHARGE & VOLTAGE ============ -->
+<section class="topic" id="charge">
+<h2><span class="nr">2</span> Charge, Coulomb's Law &amp; Voltage</h2>
+<p>Everything electrical begins with <b>charge</b>. Like charges repel, opposite charges attract, and the
     strength of that force is given by <b>Coulomb's law</b>:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">F</span> = <span class="fr"><span class="nu"><span class="m">k Q</span><sub>1</sub><span class="m">Q</span><sub>2</sub></span><span class="de"><span class="m">r</span><sup> 2</sup></span></span></div>
-      <ul class="vars">
-        <li><b>F</b> – force of attraction/repulsion (newtons, N)</li>
-        <li><b>k</b> – constant = 9.0 × 10⁹ N·m²/C²</li>
-        <li><b>Q₁, Q₂</b> – charges (coulombs, C)</li>
-        <li><b>r</b> – distance between charges (m)</li>
-      </ul>
-    </div>
-
-    <p>Force drops with the <i>square</i> of distance — double the distance, quarter the force.
+<div class="fbox">
+<div class="fml ktx">F = \frac{k Q_{1}Q_{2}}{r^{2}}</div>
+<ul class="vars">
+<li><b>F</b> – force of attraction/repulsion (newtons, N)</li>
+<li><b>k</b> – constant = 9.0 × 10⁹ N·m²/C²</li>
+<li><b>Q₁, Q₂</b> – charges (coulombs, C)</li>
+<li><b>r</b> – distance between charges (m)</li>
+</ul>
+</div>
+<p>Force drops with the <i>square</i> of distance — double the distance, quarter the force.
     In a copper atom the single outer (<b>valence</b>) electron is far from the nucleus and weakly held,
     so it escapes easily: 1 cubic inch of copper at room temperature holds about 1.4 × 10²⁴ <b>free electrons</b>.
     That is why copper conducts so well.</p>
-
-    <figure class="fig">
-      <img src="assets/img/copper-atom.png" alt="Atomic structure of copper showing the single valence electron">
-      <figcaption><b>The copper atom.</b> One lone valence electron in the outermost shell → easy to set in motion. <span class="src-note">— Lecture 1</span></figcaption>
-    </figure>
-
-    <h3>Voltage = potential difference</h3>
-    <p>Separating positive and negative charges takes work, and that stored "pressure" between two points is the
+<figure class="fig">
+<img alt="Atomic structure of copper showing the single valence electron" src="assets/img/copper-atom.png"/>
+<figcaption><b>The copper atom.</b> One lone valence electron in the outermost shell → easy to set in motion. <span class="src-note">— Lecture 1</span></figcaption>
+</figure>
+<h3>Voltage = potential difference</h3>
+<p>Separating positive and negative charges takes work, and that stored "pressure" between two points is the
     <b>potential difference</b>, or <b>voltage</b>. A point has a <i>potential</i>; between two points there is a <i>voltage</i>.</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">V</span> = <span class="fr"><span class="nu"><span class="m">W</span></span><span class="de"><span class="m">Q</span></span></span></div>
-      <ul class="vars">
-        <li><b>V</b> – voltage (volts, V)</li>
-        <li><b>W</b> – energy/work (joules, J)</li>
-        <li><b>Q</b> – charge (coulombs, C)</li>
-      </ul>
-    </div>
-
-    <p class="muted">1 volt = 1 joule of energy per 1 coulomb of charge. A point at 4 V and a point at 2 V have a
+<div class="fbox">
+<div class="fml ktx">V = \frac{W}{Q}</div>
+<ul class="vars">
+<li><b>V</b> – voltage (volts, V)</li>
+<li><b>W</b> – energy/work (joules, J)</li>
+<li><b>Q</b> – charge (coulombs, C)</li>
+</ul>
+</div>
+<p class="muted">1 volt = 1 joule of energy per 1 coulomb of charge. A point at 4 V and a point at 2 V have a
     voltage of 2 V between them — only <i>differences</i> matter.</p>
-
-    <div class="callout idea"><b class="tag">Intuition</b>
+<div class="callout idea"><b class="tag">Intuition</b>
     Think of voltage as water pressure between two ends of a pipe. No pressure difference → no flow.
     The battery is the pump that maintains the pressure.</div>
-    <p class="ref">Reference: Boylestad, Ch. 2.2–2.5.</p>
-  </section>
-
-  <!-- ============ 3. CURRENT ============ -->
-  <section class="topic" id="current">
-    <h2><span class="nr">3</span> Current</h2>
-    <p><b>Current is the orderly movement of electrons.</b> Free electrons drift through the wire when a voltage
+<p class="ref">Reference: Boylestad, Ch. 2.2–2.5.</p>
+</section>
+<!-- ============ 3. CURRENT ============ -->
+<section class="topic" id="current">
+<h2><span class="nr">3</span> Current</h2>
+<p><b>Current is the orderly movement of electrons.</b> Free electrons drift through the wire when a voltage
     pushes them; the amount of charge passing a cross-section each second is the current:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">I</span> = <span class="fr"><span class="nu"><span class="m">Q</span></span><span class="de"><span class="m">t</span></span></span></div>
-      <ul class="vars">
-        <li><b>I</b> – current (amperes, A)</li>
-        <li><b>Q</b> – charge (coulombs, C)</li>
-        <li><b>t</b> – time (seconds, s)</li>
-      </ul>
-    </div>
-
-    <p class="muted">1 ampere = 1 coulomb per second, and 1 coulomb is the charge of 6.242 × 10¹⁸ electrons.</p>
-
-    <figure class="fig">
-      <img src="assets/img/current-flow-circuit.png" alt="Battery driving electron flow through a copper wire">
-      <figcaption><b>A basic circuit.</b> Chemical action in the battery maintains the voltage; the voltage drives electrons around the loop. <span class="src-note">— Lecture 1</span></figcaption>
-    </figure>
-
-    <h3>Measuring current and voltage</h3>
-    <p>An <b>ammeter</b> measures current, so the current must flow <i>through</i> it → connect it <b>in series</b>
+<div class="fbox">
+<div class="fml ktx">I = \frac{Q}{t}</div>
+<ul class="vars">
+<li><b>I</b> – current (amperes, A)</li>
+<li><b>Q</b> – charge (coulombs, C)</li>
+<li><b>t</b> – time (seconds, s)</li>
+</ul>
+</div>
+<p class="muted">1 ampere = 1 coulomb per second, and 1 coulomb is the charge of 6.242 × 10¹⁸ electrons.</p>
+<figure class="fig">
+<img alt="Battery driving electron flow through a copper wire" src="assets/img/current-flow-circuit.png"/>
+<figcaption><b>A basic circuit.</b> Chemical action in the battery maintains the voltage; the voltage drives electrons around the loop. <span class="src-note">— Lecture 1</span></figcaption>
+</figure>
+<h3>Measuring current and voltage</h3>
+<p>An <b>ammeter</b> measures current, so the current must flow <i>through</i> it → connect it <b>in series</b>
     (break the circuit and insert it). A <b>voltmeter</b> measures a difference between two points → connect it
     <b>in parallel</b> (across the element), without breaking anything.</p>
-
-    <figure class="fig">
-      <img src="assets/img/ammeter-voltmeter.png" alt="Correct placement of ammeters and voltmeters">
-      <figcaption><b>Ammeter in series, voltmeter in parallel.</b> A favourite exam detail. <span class="src-note">— Lecture 1</span></figcaption>
-    </figure>
-    <p class="ref">Reference: Boylestad, Ch. 2.4 &amp; 2.10.</p>
-  </section>
-
-  <!-- ============ 4. RESISTANCE ============ -->
-  <section class="topic" id="resistance">
-    <h2><span class="nr">4</span> Resistance</h2>
-    <p>Moving electrons collide with ions and other electrons — a kind of internal friction that converts electrical
+<figure class="fig">
+<img alt="Correct placement of ammeters and voltmeters" src="assets/img/ammeter-voltmeter.png"/>
+<figcaption><b>Ammeter in series, voltmeter in parallel.</b> A favourite exam detail. <span class="src-note">— Lecture 1</span></figcaption>
+</figure>
+<p class="ref">Reference: Boylestad, Ch. 2.4 &amp; 2.10.</p>
+</section>
+<!-- ============ 4. RESISTANCE ============ -->
+<section class="topic" id="resistance">
+<h2><span class="nr">4</span> Resistance</h2>
+<p>Moving electrons collide with ions and other electrons — a kind of internal friction that converts electrical
     energy into heat. This opposition to current is <b>resistance</b>. For a uniform conductor it depends on the
     material, its length, its cross-section and its temperature:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">R</span> = <span class="m">ρ</span> <span class="fr"><span class="nu"><span class="m">l</span></span><span class="de"><span class="m">A</span></span></span></div>
-      <ul class="vars">
-        <li><b>R</b> – resistance (ohms, Ω)</li>
-        <li><b>ρ</b> – resistivity, a material property (Ω·cm in metric units)</li>
-        <li><b>l</b> – length of the conductor</li>
-        <li><b>A</b> – cross-sectional area</li>
-      </ul>
-    </div>
-
-    <figure class="fig">
-      <img src="assets/img/resistance-geometry.png" alt="Conductor with length, area and temperature labelled">
-      <figcaption><b>What sets resistance:</b> longer wire → more R; thicker wire → less R; material (ρ) and temperature matter too. <span class="src-note">— Lecture 1</span></figcaption>
-    </figure>
-
-    <p class="muted">Copper has very low resistivity (≈ 1.72 × 10⁻⁶ Ω·cm) — only silver beats it. That is why wires are copper.</p>
-
-    <h3>Temperature effects</h3>
-    <p>For <b>good conductors</b>, resistance <b>rises</b> roughly linearly with temperature — more thermal vibration
+<div class="fbox">
+<div class="fml ktx">R = \rho \frac{l}{A}</div>
+<ul class="vars">
+<li><b>R</b> – resistance (ohms, Ω)</li>
+<li><b>ρ</b> – resistivity, a material property (Ω·cm in metric units)</li>
+<li><b>l</b> – length of the conductor</li>
+<li><b>A</b> – cross-sectional area</li>
+</ul>
+</div>
+<figure class="fig">
+<img alt="Conductor with length, area and temperature labelled" src="assets/img/resistance-geometry.png"/>
+<figcaption><b>What sets resistance:</b> longer wire → more R; thicker wire → less R; material (ρ) and temperature matter too. <span class="src-note">— Lecture 1</span></figcaption>
+</figure>
+<p class="muted">Copper has very low resistivity (≈ 1.72 × 10⁻⁶ Ω·cm) — only silver beats it. That is why wires are copper.</p>
+<h3>Temperature effects</h3>
+<p>For <b>good conductors</b>, resistance <b>rises</b> roughly linearly with temperature — more thermal vibration
     means more collisions. The lecture gives the linear model using the temperature coefficient
     <span class="m">α</span><sub>20</sub> (measured at 20 °C):</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">R</span><sub>1</sub> = <span class="m">R</span><sub>20</sub>[1 + <span class="m">α</span><sub>20</sub>(<span class="m">T</span><sub>1</sub> − 20 °C)]</div>
-      <ul class="vars">
-        <li><b>R₂₀</b> – resistance at 20 °C (Ω)</li>
-        <li><b>α₂₀</b> – temperature coefficient of the material (1/°C), e.g. copper 0.00393</li>
-        <li><b>T₁</b> – new temperature (°C)</li>
-      </ul>
-    </div>
-
-    <figure class="fig">
-      <img src="assets/img/resistance-temperature.png" alt="Resistance rising with temperature">
-      <figcaption><b>R vs. temperature</b> for a conductor — approximately a straight line over the normal operating range. <span class="src-note">— Lecture 1</span></figcaption>
-    </figure>
-
-    <p>Resistor makers state sensitivity to temperature in <b>PPM/°C</b> (parts per million per degree).
+<div class="fbox">
+<div class="fml ktx">R_{1} = R_{20}[1 + \alpha _{20}(T_{1} - 20^{\circ}\text{C})]</div>
+<ul class="vars">
+<li><b>R₂₀</b> – resistance at 20 °C (Ω)</li>
+<li><b>α₂₀</b> – temperature coefficient of the material (1/°C), e.g. copper 0.00393</li>
+<li><b>T₁</b> – new temperature (°C)</li>
+</ul>
+</div>
+<figure class="fig">
+<img alt="Resistance rising with temperature" src="assets/img/resistance-temperature.png"/>
+<figcaption><b>R vs. temperature</b> for a conductor — approximately a straight line over the normal operating range. <span class="src-note">— Lecture 1</span></figcaption>
+</figure>
+<p>Resistor makers state sensitivity to temperature in <b>PPM/°C</b> (parts per million per degree).
     A 1000 Ω resistor rated 5000 PPM/°C changes by
-    <span class="fml" style="font-size:1rem">Δ<span class="m">R</span> = (<span class="m">R</span><sub>nominal</sub>/10⁶)(PPM)(Δ<span class="m">T</span>)</span>
+    <span class="fml ktx" style="font-size:1rem">\Delta R = (R_{\text{nominal}}/10^{6})(\text{PPM})(\Delta T)</span>
     — that's 5 Ω for each 1 °C.</p>
-
-    <h3>Types of resistors &amp; colour code</h3>
-    <p>Resistors are either <b>fixed</b> or <b>variable</b> (the three-terminal <b>potentiometer</b>).
+<h3>Types of resistors &amp; colour code</h3>
+<p>Resistors are either <b>fixed</b> or <b>variable</b> (the three-terminal <b>potentiometer</b>).
     Small fixed resistors carry their value as coloured bands:</p>
-
-    <figure class="fig">
-      <img src="assets/img/resistor-color-code.png" alt="Resistor colour coding chart">
-      <figcaption><b>Colour code:</b> band 1–2 = digits, band 3 = multiplier, band 4 = tolerance (gold ±5 %, silver ±10 %).
+<figure class="fig">
+<img alt="Resistor colour coding chart" src="assets/img/resistor-color-code.png"/>
+<figcaption><b>Colour code:</b> band 1–2 = digits, band 3 = multiplier, band 4 = tolerance (gold ±5 %, silver ±10 %).
       Memory hook for 0–9: black, brown, red, orange, yellow, green, blue, violet, grey, white. <span class="src-note">— Lecture 1</span></figcaption>
-    </figure>
-
-    <details class="example"><summary>Worked example — reading a colour code</summary>
-      <div class="body">
-        <p>Bands: <b>yellow, violet, orange, gold</b>.</p>
-        <p class="fml">4 7 × 10³ Ω ± 5 % = <b>47 kΩ ± 5 %</b></p>
-        <p class="muted">Yellow = 4, violet = 7, orange multiplier = 10³, gold = ±5 % tolerance.</p>
-      </div>
-    </details>
-
-    <h3>Conductance</h3>
-    <p>Sometimes it's handier to ask "how well does it conduct?" — the reciprocal of resistance:</p>
-    <div class="fbox">
-      <div class="fml"><span class="m">G</span> = <span class="fr"><span class="nu">1</span><span class="de"><span class="m">R</span></span></span></div>
-      <ul class="vars"><li><b>G</b> – conductance (siemens, S)</li><li><b>R</b> – resistance (Ω)</li></ul>
-    </div>
-    <p class="ref">Reference: Boylestad, Ch. 3.</p>
-  </section>
-
-  <!-- ============ 5. OHM'S LAW ============ -->
-  <section class="topic" id="ohm">
-    <h2><span class="nr">5</span> Ohm's Law</h2>
-    <p>The single most important equation in electronics. Current is directly proportional to the applied voltage
+</figure>
+<details class="example"><summary>Worked example — reading a colour code</summary>
+<div class="body">
+<p>Bands: <b>yellow, violet, orange, gold</b>.</p>
+<p class="fml ktx">47 \times 10^{3} \Omega \pm 5 \% = 47 k\Omega \pm 5 \%</p>
+<p class="muted">Yellow = 4, violet = 7, orange multiplier = 10³, gold = ±5 % tolerance.</p>
+</div>
+</details>
+<h3>Conductance</h3>
+<p>Sometimes it's handier to ask "how well does it conduct?" — the reciprocal of resistance:</p>
+<div class="fbox">
+<div class="fml ktx">G = \frac{1}{R}</div>
+<ul class="vars"><li><b>G</b> – conductance (siemens, S)</li><li><b>R</b> – resistance (Ω)</li></ul>
+</div>
+<p class="ref">Reference: Boylestad, Ch. 3.</p>
+</section>
+<!-- ============ 5. OHM'S LAW ============ -->
+<section class="topic" id="ohm">
+<h2><span class="nr">5</span> Ohm's Law</h2>
+<p>The single most important equation in electronics. Current is directly proportional to the applied voltage
     and inversely proportional to the resistance:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">I</span> = <span class="fr"><span class="nu"><span class="m">E</span></span><span class="de"><span class="m">R</span></span></span>&nbsp;&nbsp;⇒&nbsp;&nbsp;<span class="m">E</span> = <span class="m">I R</span>&nbsp;&nbsp;⇒&nbsp;&nbsp;<span class="m">R</span> = <span class="fr"><span class="nu"><span class="m">E</span></span><span class="de"><span class="m">I</span></span></span></div>
-      <ul class="vars">
-        <li><b>I</b> – current (A)</li>
-        <li><b>E</b> – applied voltage / emf (V)</li>
-        <li><b>R</b> – resistance (Ω)</li>
-      </ul>
-    </div>
-
-    <figure class="fig">
-      <img src="assets/img/ohms-law-polarity.png" alt="Defining polarity and current direction for Ohm's law">
-      <figcaption><b>Sign convention:</b> current enters the + terminal of a resistor's voltage drop. The polarity of <i>V</i> and direction of <i>I</i> always match this pattern. <span class="src-note">— Lecture 1</span></figcaption>
-    </figure>
-
-    <h3>Plotting Ohm's law</h3>
-    <p>For a fixed resistor the <span class="m">I</span>–<span class="m">V</span> graph is a <b>straight line through the origin</b> —
+<div class="fbox">
+<div class="fml ktx">I = \frac{E}{R} \;\Rightarrow\; E = I R \;\Rightarrow\; R = \frac{E}{I}</div>
+<ul class="vars">
+<li><b>I</b> – current (A)</li>
+<li><b>E</b> – applied voltage / emf (V)</li>
+<li><b>R</b> – resistance (Ω)</li>
+</ul>
+</div>
+<figure class="fig">
+<img alt="Defining polarity and current direction for Ohm's law" src="assets/img/ohms-law-polarity.png"/>
+<figcaption><b>Sign convention:</b> current enters the + terminal of a resistor's voltage drop. The polarity of <i>V</i> and direction of <i>I</i> always match this pattern. <span class="src-note">— Lecture 1</span></figcaption>
+</figure>
+<h3>Plotting Ohm's law</h3>
+<p>For a fixed resistor the <span class="m">I</span>–<span class="m">V</span> graph is a <b>straight line through the origin</b> —
     resistors are <i>linear</i> devices. The slope tells you the resistance: a steeper line means <i>less</i> resistance.
     From any two points on the line:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">R</span> = <span class="fr"><span class="nu">Δ<span class="m">V</span></span><span class="de">Δ<span class="m">I</span></span></span></div>
-      <ul class="vars"><li><b>ΔV, ΔI</b> – changes in voltage and current between two points on the curve</li></ul>
-    </div>
-
-    <div class="figrow">
-      <figure class="fig">
-        <img src="assets/img/ohms-law-plot.png" alt="Linear I-V characteristic of a resistor">
-        <figcaption><b>Linear device:</b> a resistor's I–V plot. <span class="src-note">— Lecture 1</span></figcaption>
-      </figure>
-      <figure class="fig">
-        <img src="assets/img/diode-curve.png" alt="Nonlinear I-V characteristic of a semiconductor diode">
-        <figcaption><b>Nonlinear device:</b> a semiconductor diode — its "resistance" depends on the operating point. <span class="src-note">— Lecture 1</span></figcaption>
-      </figure>
-    </div>
-    <p class="ref">Reference: Boylestad, Ch. 4.1–4.3.</p>
-  </section>
-
-  <!-- ============ 6. POWER & ENERGY ============ -->
-  <section class="topic" id="power">
-    <h2><span class="nr">6</span> Power &amp; Energy</h2>
-    <p><b>Power</b> is how fast energy is converted — joules per second. In a circuit it can always be found from
+<div class="fbox">
+<div class="fml ktx">R = \frac{\Delta V}{\Delta I}</div>
+<ul class="vars"><li><b>ΔV, ΔI</b> – changes in voltage and current between two points on the curve</li></ul>
+</div>
+<div class="figrow">
+<figure class="fig">
+<img alt="Linear I-V characteristic of a resistor" src="assets/img/ohms-law-plot.png"/>
+<figcaption><b>Linear device:</b> a resistor's I–V plot. <span class="src-note">— Lecture 1</span></figcaption>
+</figure>
+<figure class="fig">
+<img alt="Nonlinear I-V characteristic of a semiconductor diode" src="assets/img/diode-curve.png"/>
+<figcaption><b>Nonlinear device:</b> a semiconductor diode — its "resistance" depends on the operating point. <span class="src-note">— Lecture 1</span></figcaption>
+</figure>
+</div>
+<p class="ref">Reference: Boylestad, Ch. 4.1–4.3.</p>
+</section>
+<!-- ============ 6. POWER & ENERGY ============ -->
+<section class="topic" id="power">
+<h2><span class="nr">6</span> Power &amp; Energy</h2>
+<p><b>Power</b> is how fast energy is converted — joules per second. In a circuit it can always be found from
     current and voltage, and with Ohm's law it takes three equivalent forms:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">P</span> = <span class="fr"><span class="nu"><span class="m">W</span></span><span class="de"><span class="m">t</span></span></span> ,&nbsp;&nbsp; <span class="m">P</span> = <span class="m">V I</span> = <span class="fr"><span class="nu"><span class="m">V</span><sup> 2</sup></span><span class="de"><span class="m">R</span></span></span> = <span class="m">I</span><sup> 2</sup><span class="m">R</span></div>
-      <ul class="vars">
-        <li><b>P</b> – power (watts, W); 1 W = 1 J/s</li>
-        <li><b>W</b> – energy (J); <b>t</b> – time (s)</li>
-        <li><b>V, I, R</b> – voltage (V), current (A), resistance (Ω)</li>
-      </ul>
-    </div>
-
-    <div class="callout tip"><b class="tag">Exam tip</b>
+<div class="fbox">
+<div class="fml ktx">P = \frac{W}{t},\; \quad P = V I = \frac{V^{2}}{R} = I^{2}R</div>
+<ul class="vars">
+<li><b>P</b> – power (watts, W); 1 W = 1 J/s</li>
+<li><b>W</b> – energy (J); <b>t</b> – time (s)</li>
+<li><b>V, I, R</b> – voltage (V), current (A), resistance (Ω)</li>
+</ul>
+</div>
+<div class="callout tip"><b class="tag">Exam tip</b>
     Pick the form that uses the two quantities you already know: have V and I? Use <span class="m">P = VI</span>.
     Only I and R? Use <span class="m">P = I²R</span>. Only V and R? Use <span class="m">P = V²/R</span>.</div>
-
-    <h3>Energy</h3>
-    <p>Energy is power sustained over time: <span class="fml" style="font-size:1.05rem"><span class="m">W</span> = <span class="m">P t</span></span>.
+<h3>Energy</h3>
+<p>Energy is power sustained over time: <span class="fml ktx" style="font-size:1.05rem">W = P t</span>.
     Utilities bill you in <b>kilowatt-hours</b>:</p>
-    <div class="fbox">
-      <div class="fml">Energy (kWh) = <span class="fr"><span class="nu"><span class="m">P</span> (W) × <span class="m">t</span> (h)</span><span class="de">1000</span></span></div>
-      <ul class="vars"><li>1 kWh = the energy of 1000 W running for 1 hour (= 3.6 MJ)</li></ul>
-    </div>
-    <p class="ref">Reference: Boylestad, Ch. 4.4–4.5.</p>
-  </section>
-
-  <!-- ============ 7. SERIES ============ -->
-  <section class="topic" id="series">
-    <h2><span class="nr">7</span> Series Circuits, KVL &amp; the Voltage Divider</h2>
-    <p>Elements are <b>in series</b> when they are connected end-to-end so the <b>same current</b> flows through all
+<div class="fbox">
+<div class="fml ktx">\text{Energy} (\text{kWh}) = \frac{P (\text{W}) \times t (\text{h})}{1000}</div>
+<ul class="vars"><li>1 kWh = the energy of 1000 W running for 1 hour (= 3.6 MJ)</li></ul>
+</div>
+<p class="ref">Reference: Boylestad, Ch. 4.4–4.5.</p>
+</section>
+<!-- ============ 7. SERIES ============ -->
+<section class="topic" id="series">
+<h2><span class="nr">7</span> Series Circuits, KVL &amp; the Voltage Divider</h2>
+<p>Elements are <b>in series</b> when they are connected end-to-end so the <b>same current</b> flows through all
     of them. Total resistance simply adds up:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">R</span><sub>T</sub> = <span class="m">R</span><sub>1</sub> + <span class="m">R</span><sub>2</sub> + <span class="m">R</span><sub>3</sub> + … + <span class="m">R</span><sub>N</sub></div>
-      <ul class="vars"><li><b>R<sub>T</sub></b> – total (equivalent) resistance seen by the source</li></ul>
-    </div>
-
-    <figure class="fig">
-      <img src="assets/img/series-resistors.png" alt="Resistors in series">
-      <figcaption><b>Series connection:</b> one path, one current. <span class="src-note">— Lecture 2</span></figcaption>
-    </figure>
-
-    <h3>Kirchhoff's Voltage Law (KVL)</h3>
-    <p><b>The algebraic sum of the potential rises and drops around any closed loop is zero.</b>
+<div class="fbox">
+<div class="fml ktx">R_{T} = R_{1} + R_{2} + R_{3} + \dots + R_{N}</div>
+<ul class="vars"><li><b>R<sub>T</sub></b> – total (equivalent) resistance seen by the source</li></ul>
+</div>
+<figure class="fig">
+<img alt="Resistors in series" src="assets/img/series-resistors.png"/>
+<figcaption><b>Series connection:</b> one path, one current. <span class="src-note">— Lecture 2</span></figcaption>
+</figure>
+<h3>Kirchhoff's Voltage Law (KVL)</h3>
+<p><b>The algebraic sum of the potential rises and drops around any closed loop is zero.</b>
     Walk around the loop: count source rises as + and resistor drops as −; the total must balance.</p>
-
-    <div class="fbox">
-      <div class="fml">∑<span class="m">V</span> = 0&nbsp;&nbsp;&nbsp;(around a closed loop)</div>
-      <ul class="vars"><li>e.g. <b>+E − V₁ − V₂ = 0</b>, so <b>E = V₁ + V₂</b></li></ul>
-    </div>
-
-    <figure class="fig">
-      <img src="assets/img/kvl-loop.png" alt="KVL applied around a closed loop">
-      <figcaption><b>KVL:</b> the supply voltage is shared between the series drops. <span class="src-note">— Lecture 2</span></figcaption>
-    </figure>
-
-    <h3>Voltage Divider Rule (VDR)</h3>
-    <p>In a series circuit the applied voltage divides <i>in proportion to resistance</i> — the biggest resistor grabs
+<div class="fbox">
+<div class="fml ktx">\Sigma V = 0\quad (\text{around a closed loop})</div>
+<ul class="vars"><li>e.g. <b>+E − V₁ − V₂ = 0</b>, so <b>E = V₁ + V₂</b></li></ul>
+</div>
+<figure class="fig">
+<img alt="KVL applied around a closed loop" src="assets/img/kvl-loop.png"/>
+<figcaption><b>KVL:</b> the supply voltage is shared between the series drops. <span class="src-note">— Lecture 2</span></figcaption>
+</figure>
+<h3>Voltage Divider Rule (VDR)</h3>
+<p>In a series circuit the applied voltage divides <i>in proportion to resistance</i> — the biggest resistor grabs
     the biggest share. Directly, without computing the current first:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">V</span><sub>x</sub> = <span class="fr"><span class="nu"><span class="m">R</span><sub>x</sub><span class="m">E</span></span><span class="de"><span class="m">R</span><sub>T</sub></span></span></div>
-      <ul class="vars">
-        <li><b>V<sub>x</sub></b> – voltage across resistor R<sub>x</sub> (V)</li>
-        <li><b>E</b> – total applied voltage (V)</li>
-        <li><b>R<sub>T</sub></b> – total series resistance (Ω)</li>
-      </ul>
-    </div>
-
-    <figure class="fig">
-      <img src="assets/img/vdr-circuit.png" alt="Voltage divider circuit">
-      <figcaption><b>VDR:</b> <i>V₂ = R₂E / R<sub>T</sub></i> — straight to the answer. <span class="src-note">— Lecture 2</span></figcaption>
-    </figure>
-
-    <p class="muted">Real sources also have a small <b>internal resistance</b> in series with the ideal source — under load,
+<div class="fbox">
+<div class="fml ktx">V_{x} = \frac{R_{x}E}{R_{T}}</div>
+<ul class="vars">
+<li><b>V<sub>x</sub></b> – voltage across resistor R<sub>x</sub> (V)</li>
+<li><b>E</b> – total applied voltage (V)</li>
+<li><b>R<sub>T</sub></b> – total series resistance (Ω)</li>
+</ul>
+</div>
+<figure class="fig">
+<img alt="Voltage divider circuit" src="assets/img/vdr-circuit.png"/>
+<figcaption><b>VDR:</b> <i>V₂ = R₂E / R<sub>T</sub></i> — straight to the answer. <span class="src-note">— Lecture 2</span></figcaption>
+</figure>
+<p class="muted">Real sources also have a small <b>internal resistance</b> in series with the ideal source — under load,
     the terminal voltage sags slightly below the emf.</p>
-    <p class="ref">Reference: Boylestad, Ch. 5.</p>
-  </section>
-
-  <!-- ============ 8. PARALLEL ============ -->
-  <section class="topic" id="parallel">
-    <h2><span class="nr">8</span> Parallel Circuits, KCL &amp; the Current Divider</h2>
-    <p>Elements are <b>in parallel</b> when they share the same two nodes, so the <b>same voltage</b> appears across
+<p class="ref">Reference: Boylestad, Ch. 5.</p>
+</section>
+<!-- ============ 8. PARALLEL ============ -->
+<section class="topic" id="parallel">
+<h2><span class="nr">8</span> Parallel Circuits, KCL &amp; the Current Divider</h2>
+<p>Elements are <b>in parallel</b> when they share the same two nodes, so the <b>same voltage</b> appears across
     all of them. Conductances add, which means resistances combine by reciprocals:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="fr"><span class="nu">1</span><span class="de"><span class="m">R</span><sub>T</sub></span></span> = <span class="fr"><span class="nu">1</span><span class="de"><span class="m">R</span><sub>1</sub></span></span> + <span class="fr"><span class="nu">1</span><span class="de"><span class="m">R</span><sub>2</sub></span></span> + … + <span class="fr"><span class="nu">1</span><span class="de"><span class="m">R</span><sub>N</sub></span></span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;two resistors: <span class="m">R</span><sub>T</sub> = <span class="fr"><span class="nu"><span class="m">R</span><sub>1</sub><span class="m">R</span><sub>2</sub></span><span class="de"><span class="m">R</span><sub>1</sub> + <span class="m">R</span><sub>2</sub></span></span></div>
-      <ul class="vars"><li><b>R<sub>T</sub></b> is always <i>smaller</i> than the smallest branch resistance</li></ul>
-    </div>
-
-    <figure class="fig">
-      <img src="assets/img/parallel-resistors.png" alt="Resistors in parallel">
-      <figcaption><b>Parallel connection:</b> same voltage, current splits between branches. <span class="src-note">— Lecture 2</span></figcaption>
-    </figure>
-
-    <h3>Kirchhoff's Current Law (KCL)</h3>
-    <p><b>The sum of currents entering a junction equals the sum leaving it.</b> Charge cannot pile up at a node.</p>
-
-    <div class="fbox">
-      <div class="fml">∑<span class="m">I</span><sub>in</sub> = ∑<span class="m">I</span><sub>out</sub></div>
-      <ul class="vars"><li>e.g. at a node: <b>I₁ − I₂ − I₃ = 0</b></li></ul>
-    </div>
-
-    <figure class="fig">
-      <img src="assets/img/kcl-junction.png" alt="Currents at a junction">
-      <figcaption><b>KCL at a junction:</b> what flows in must flow out. <span class="src-note">— Lecture 2</span></figcaption>
-    </figure>
-
-    <h3>Current Divider Rule (CDR)</h3>
-    <p>In parallel branches the current divides <i>inversely</i> with resistance — <b>most current takes the easiest
+<div class="fbox">
+<div class="fml ktx">\frac{1}{R_{T}} = \frac{1}{R_{1}} + \frac{1}{R_{2}} + \dots + \frac{1}{R_{N}}\quad\big|\quad \text{two resistors: } R_{T} = \frac{R_{1}R_{2}}{R_{1} + R_{2}}</div>
+<ul class="vars"><li><b>R<sub>T</sub></b> is always <i>smaller</i> than the smallest branch resistance</li></ul>
+</div>
+<figure class="fig">
+<img alt="Resistors in parallel" src="assets/img/parallel-resistors.png"/>
+<figcaption><b>Parallel connection:</b> same voltage, current splits between branches. <span class="src-note">— Lecture 2</span></figcaption>
+</figure>
+<h3>Kirchhoff's Current Law (KCL)</h3>
+<p><b>The sum of currents entering a junction equals the sum leaving it.</b> Charge cannot pile up at a node.</p>
+<div class="fbox">
+<div class="fml ktx">\Sigma I_{\text{in}} = \Sigma I_{\text{out}}</div>
+<ul class="vars"><li>e.g. at a node: <b>I₁ − I₂ − I₃ = 0</b></li></ul>
+</div>
+<figure class="fig">
+<img alt="Currents at a junction" src="assets/img/kcl-junction.png"/>
+<figcaption><b>KCL at a junction:</b> what flows in must flow out. <span class="src-note">— Lecture 2</span></figcaption>
+</figure>
+<h3>Current Divider Rule (CDR)</h3>
+<p>In parallel branches the current divides <i>inversely</i> with resistance — <b>most current takes the easiest
     path</b> (the smallest resistor). In general and for the very common two-branch case:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">I</span><sub>x</sub> = <span class="fr"><span class="nu"><span class="m">R</span><sub>T</sub></span><span class="de"><span class="m">R</span><sub>x</sub></span></span><span class="m">I</span><sub>T</sub>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span class="m">I</span><sub>1</sub> = <span class="fr"><span class="nu"><span class="m">R</span><sub>2</sub><span class="m">I</span><sub>T</sub></span><span class="de"><span class="m">R</span><sub>1</sub> + <span class="m">R</span><sub>2</sub></span></span></div>
-      <ul class="vars">
-        <li><b>I<sub>T</sub></b> – total current entering the parallel combination (A)</li>
-        <li><b>R<sub>T</sub></b> – total parallel resistance (Ω)</li>
-        <li>Note the two-branch form uses the <i>other</i> branch's resistance in the numerator</li>
-      </ul>
-    </div>
-
-    <figure class="fig">
-      <img src="assets/img/cdr-circuit.png" alt="Current divider between two parallel resistors">
-      <figcaption><b>CDR:</b> the smaller resistor carries the larger share of the current. <span class="src-note">— Lecture 2</span></figcaption>
-    </figure>
-    <p class="ref">Reference: Boylestad, Ch. 6.</p>
-  </section>
-
-  <!-- ============ 9. CONVERSIONS ============ -->
-  <section class="topic" id="conversions">
-    <h2><span class="nr">9</span> Y–Δ Conversions &amp; Source Conversions</h2>
-    <h3>Y–Δ (T–π) conversions</h3>
-    <p>Some resistor arrangements are neither series nor parallel. Converting a <b>Y (star/T)</b> pattern into an
+<div class="fbox">
+<div class="fml ktx">I_{x} = \frac{R_{T}}{R_{x}}I_{T}\quad\big|\quad I_{1} = \frac{R_{2}I_{T}}{R_{1} + R_{2}}</div>
+<ul class="vars">
+<li><b>I<sub>T</sub></b> – total current entering the parallel combination (A)</li>
+<li><b>R<sub>T</sub></b> – total parallel resistance (Ω)</li>
+<li>Note the two-branch form uses the <i>other</i> branch's resistance in the numerator</li>
+</ul>
+</div>
+<figure class="fig">
+<img alt="Current divider between two parallel resistors" src="assets/img/cdr-circuit.png"/>
+<figcaption><b>CDR:</b> the smaller resistor carries the larger share of the current. <span class="src-note">— Lecture 2</span></figcaption>
+</figure>
+<p class="ref">Reference: Boylestad, Ch. 6.</p>
+</section>
+<!-- ============ 9. CONVERSIONS ============ -->
+<section class="topic" id="conversions">
+<h2><span class="nr">9</span> Y–Δ Conversions &amp; Source Conversions</h2>
+<h3>Y–Δ (T–π) conversions</h3>
+<p>Some resistor arrangements are neither series nor parallel. Converting a <b>Y (star/T)</b> pattern into an
     equivalent <b>Δ (delta/π)</b> — or back — unlocks the simplification:</p>
-
-    <div class="fbox">
-      <div class="fml">Δ→Y:&nbsp; <span class="m">R</span><sub>1</sub> = <span class="fr"><span class="nu"><span class="m">R</span><sub>B</sub><span class="m">R</span><sub>C</sub></span><span class="de"><span class="m">R</span><sub>A</sub>+<span class="m">R</span><sub>B</sub>+<span class="m">R</span><sub>C</sub></span></span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Y→Δ:&nbsp; <span class="m">R</span><sub>A</sub> = <span class="fr"><span class="nu"><span class="m">R</span><sub>1</sub><span class="m">R</span><sub>2</sub>+<span class="m">R</span><sub>1</sub><span class="m">R</span><sub>3</sub>+<span class="m">R</span><sub>2</sub><span class="m">R</span><sub>3</sub></span><span class="de"><span class="m">R</span><sub>1</sub></span></span></div>
-      <ul class="vars">
-        <li>Δ→Y: each Y resistor = product of the two <i>adjacent</i> Δ resistors ÷ sum of all three</li>
-        <li>Y→Δ: each Δ resistor = sum of all pairwise products ÷ the <i>opposite</i> Y resistor</li>
-      </ul>
-    </div>
-
-    <figure class="fig">
-      <img src="assets/img/wye-delta.png" alt="Y-delta conversion diagram">
-      <figcaption><b>Y–Δ conversion:</b> the two networks are indistinguishable from their three terminals. <span class="src-note">— Lecture 2</span></figcaption>
-    </figure>
-
-    <h3>Source conversions</h3>
-    <p>A real voltage source (<span class="m">E</span> in series with <span class="m">R</span><sub>s</sub>) and a real
+<div class="fbox">
+<div class="fml ktx">\Delta \to Y:\; R_{1} = \frac{R_{B}R_{C}}{R_{A}+R_{B}+R_{C}}\quad\big|\quad Y\to \Delta :\; R_{A} = \frac{R_{1}R_{2}+R_{1}R_{3}+R_{2}R_{3}}{R_{1}}</div>
+<ul class="vars">
+<li>Δ→Y: each Y resistor = product of the two <i>adjacent</i> Δ resistors ÷ sum of all three</li>
+<li>Y→Δ: each Δ resistor = sum of all pairwise products ÷ the <i>opposite</i> Y resistor</li>
+</ul>
+</div>
+<figure class="fig">
+<img alt="Y-delta conversion diagram" src="assets/img/wye-delta.png"/>
+<figcaption><b>Y–Δ conversion:</b> the two networks are indistinguishable from their three terminals. <span class="src-note">— Lecture 2</span></figcaption>
+</figure>
+<h3>Source conversions</h3>
+<p>A real voltage source (<span class="m">E</span> in series with <span class="m">R</span><sub>s</sub>) and a real
     current source (<span class="m">I</span> in parallel with the same <span class="m">R</span><sub>s</sub>) are
     interchangeable as far as the rest of the circuit can tell:</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">I</span> = <span class="fr"><span class="nu"><span class="m">E</span></span><span class="de"><span class="m">R</span><sub>s</sub></span></span> &nbsp;&nbsp;⇄&nbsp;&nbsp; <span class="m">E</span> = <span class="m">I R</span><sub>s</sub></div>
-      <ul class="vars"><li>The internal resistance <b>R<sub>s</sub></b> keeps its value — series with E, parallel with I</li></ul>
-    </div>
-
-    <figure class="fig">
-      <img src="assets/img/source-conversion.png" alt="Voltage source to current source conversion">
-      <figcaption><b>Source conversion</b> — handy before mesh (voltage sources) or nodal (current sources) analysis. <span class="src-note">— Lecture 2</span></figcaption>
-    </figure>
-    <p class="ref">Reference: Boylestad, Ch. 8.2 &amp; 8.12.</p>
-  </section>
-
-  <!-- ============ 10. METHODS ============ -->
-  <section class="topic" id="methods">
-    <h2><span class="nr">10</span> Analysis Methods: Branch, Mesh &amp; Nodal</h2>
-    <p>When a network has several sources or loops, these systematic methods always work. All three end in a small
+<div class="fbox">
+<div class="fml ktx">I = \frac{E}{R_{s}} \;\rightleftarrows\; E = I R_{s}</div>
+<ul class="vars"><li>The internal resistance <b>R<sub>s</sub></b> keeps its value — series with E, parallel with I</li></ul>
+</div>
+<figure class="fig">
+<img alt="Voltage source to current source conversion" src="assets/img/source-conversion.png"/>
+<figcaption><b>Source conversion</b> — handy before mesh (voltage sources) or nodal (current sources) analysis. <span class="src-note">— Lecture 2</span></figcaption>
+</figure>
+<p class="ref">Reference: Boylestad, Ch. 8.2 &amp; 8.12.</p>
+</section>
+<!-- ============ 10. METHODS ============ -->
+<section class="topic" id="methods">
+<h2><span class="nr">10</span> Analysis Methods: Branch, Mesh &amp; Nodal</h2>
+<p>When a network has several sources or loops, these systematic methods always work. All three end in a small
     system of simultaneous equations.</p>
-
-    <h3>Branch-current analysis</h3>
-    <p>The most direct method — one unknown current per branch.</p>
-    <p><b>Procedure:</b> ① assign a current to every branch (direction is your guess — a negative answer just means
+<h3>Branch-current analysis</h3>
+<p>The most direct method — one unknown current per branch.</p>
+<p><b>Procedure:</b> ① assign a current to every branch (direction is your guess — a negative answer just means
     "other way"); ② mark resistor polarities from those directions; ③ write KVL around each independent closed loop;
     ④ apply KCL at the minimum number of nodes to tie the currents together; ⑤ solve.</p>
-
-    <h3>Mesh (loop) analysis</h3>
-    <p>Instead of branch currents, assign a circulating <b>loop current</b> to each window ("mesh") of the network —
+<h3>Mesh (loop) analysis</h3>
+<p>Instead of branch currents, assign a circulating <b>loop current</b> to each window ("mesh") of the network —
     usually all clockwise. KCL is then satisfied automatically, and you only write KVL once per loop.
     Elements shared by two loops carry the <i>difference</i> of the loop currents.</p>
-
-    <figure class="fig">
-      <img src="assets/img/mesh-analysis.png" alt="Mesh analysis with two loop currents">
-      <figcaption><b>Mesh analysis:</b> one KVL equation per window; shared elements see both loop currents. <span class="src-note">— Lecture 2</span></figcaption>
-    </figure>
-
-    <h3>Nodal analysis</h3>
-    <p>The mirror image of mesh. Pick one node as the <b>0 V reference</b>; for a network of
+<figure class="fig">
+<img alt="Mesh analysis with two loop currents" src="assets/img/mesh-analysis.png"/>
+<figcaption><b>Mesh analysis:</b> one KVL equation per window; shared elements see both loop currents. <span class="src-note">— Lecture 2</span></figcaption>
+</figure>
+<h3>Nodal analysis</h3>
+<p>The mirror image of mesh. Pick one node as the <b>0 V reference</b>; for a network of
     <span class="m">N</span> nodes the remaining <span class="m">N</span>−1 node voltages are the unknowns.
     Write KCL at each non-reference node, expressing every branch current with Ohm's law
     (<span class="m">I</span> = (<span class="m">V</span><sub>a</sub>−<span class="m">V</span><sub>b</sub>)/<span class="m">R</span>), then solve.</p>
-
-    <div class="callout tip"><b class="tag">Which method?</b>
+<div class="callout tip"><b class="tag">Which method?</b>
     Mostly voltage sources and obvious loops → <b>mesh</b>. Mostly current sources or everything sharing
     common nodes → <b>nodal</b>. Either way: count equations = independent loops (mesh) or N−1 nodes (nodal).</div>
-    <p class="ref">Reference: Boylestad, Ch. 8.</p>
-  </section>
-
-  <!-- ============ 11. THEOREMS ============ -->
-  <section class="topic" id="theorems">
-    <h2><span class="nr">11</span> Network Theorems: Superposition, Thévenin &amp; Norton</h2>
-
-    <h3>Superposition theorem</h3>
-    <p><b>The current through (or voltage across) any element equals the algebraic sum of the contributions of each
+<p class="ref">Reference: Boylestad, Ch. 8.</p>
+</section>
+<!-- ============ 11. THEOREMS ============ -->
+<section class="topic" id="theorems">
+<h2><span class="nr">11</span> Network Theorems: Superposition, Thévenin &amp; Norton</h2>
+<h3>Superposition theorem</h3>
+<p><b>The current through (or voltage across) any element equals the algebraic sum of the contributions of each
     source acting alone.</b> To let one source act alone, kill all the others: replace ideal voltage sources with a
     <b>short circuit</b> and ideal current sources with an <b>open circuit</b>, solve, repeat per source, then add the
     results with their signs.</p>
-    <div class="callout warn"><b class="tag">Careful</b>
+<div class="callout warn"><b class="tag">Careful</b>
     Superposition works for currents and voltages but <b>not for power</b> — power is proportional to <i>I²</i>,
     and squares don't add.</div>
-
-    <h3>Thévenin's theorem</h3>
-    <p>Any two-terminal DC network can be replaced by one voltage source <span class="m">E</span><sub>Th</sub> in
+<h3>Thévenin's theorem</h3>
+<p>Any two-terminal DC network can be replaced by one voltage source <span class="m">E</span><sub>Th</sub> in
     series with one resistor <span class="m">R</span><sub>Th</sub> — identical behaviour at the two terminals,
     whatever load you connect.</p>
-    <p><b>Procedure:</b> ① remove the load and mark the two terminals; ② find
+<p><b>Procedure:</b> ① remove the load and mark the two terminals; ② find
     <span class="m">R</span><sub>Th</sub>: set all sources to zero (E → short, I → open) and compute the resistance
     seen from the terminals; ③ find <span class="m">E</span><sub>Th</sub>: with sources back on, compute the
     <b>open-circuit voltage</b> between the terminals; ④ redraw E<sub>Th</sub>–R<sub>Th</sub> in series and reconnect
     the load.</p>
-
-    <figure class="fig">
-      <img src="assets/img/thevenin-equivalent.png" alt="Thevenin equivalent circuit">
-      <figcaption><b>Thévenin equivalent:</b> the whole network collapses to E<sub>Th</sub> + R<sub>Th</sub>. <span class="src-note">— Lecture 2</span></figcaption>
-    </figure>
-
-    <h3>Norton's theorem</h3>
-    <p>The twin statement with a current source: any two-terminal network ≡ current source
+<figure class="fig">
+<img alt="Thevenin equivalent circuit" src="assets/img/thevenin-equivalent.png"/>
+<figcaption><b>Thévenin equivalent:</b> the whole network collapses to E<sub>Th</sub> + R<sub>Th</sub>. <span class="src-note">— Lecture 2</span></figcaption>
+</figure>
+<h3>Norton's theorem</h3>
+<p>The twin statement with a current source: any two-terminal network ≡ current source
     <span class="m">I</span><sub>N</sub> in parallel with <span class="m">R</span><sub>N</sub>.
     Here <span class="m">I</span><sub>N</sub> is the <b>short-circuit current</b> between the terminals and
     <span class="m">R</span><sub>N</sub> is found exactly like <span class="m">R</span><sub>Th</sub>.</p>
-
-    <div class="fbox">
-      <div class="fml"><span class="m">R</span><sub>N</sub> = <span class="m">R</span><sub>Th</sub>&nbsp;,&nbsp;&nbsp;<span class="m">I</span><sub>N</sub> = <span class="fr"><span class="nu"><span class="m">E</span><sub>Th</sub></span><span class="de"><span class="m">R</span><sub>Th</sub></span></span></div>
-      <ul class="vars"><li>Thévenin ⇄ Norton is just a source conversion</li></ul>
-    </div>
-
-    <figure class="fig">
-      <img src="assets/img/norton-equivalent.png" alt="Norton equivalent circuit">
-      <figcaption><b>Norton equivalent:</b> I<sub>N</sub> in parallel with R<sub>N</sub>. <span class="src-note">— Lecture 2</span></figcaption>
-    </figure>
-    <p class="ref">Reference: Boylestad, Ch. 9.</p>
-  </section>
-
-  <div class="next-prev">
-    <a href="index.html"><span class="sub">← Back</span> Home</a>
-    <a href="capacitors-inductors.html"><span class="sub">Next →</span> Capacitors &amp; Inductors</a>
-  </div>
+<div class="fbox">
+<div class="fml ktx">R_{N} = R_{\text{Th}},\quad I_{N} = \frac{E_{\text{Th}}}{R_{\text{Th}}}</div>
+<ul class="vars"><li>Thévenin ⇄ Norton is just a source conversion</li></ul>
+</div>
+<figure class="fig">
+<img alt="Norton equivalent circuit" src="assets/img/norton-equivalent.png"/>
+<figcaption><b>Norton equivalent:</b> I<sub>N</sub> in parallel with R<sub>N</sub>. <span class="src-note">— Lecture 2</span></figcaption>
+</figure>
+<p class="ref">Reference: Boylestad, Ch. 9.</p>
+</section>
+<div class="next-prev">
+<a href="index.html"><span class="sub">← Back</span> Home</a>
+<a href="capacitors-inductors.html"><span class="sub">Next →</span> Capacitors &amp; Inductors</a>
+</div>
 </main>
 </div>
-
 <footer class="site">
   Built from the Electronics lecture slides (Lectures 1–7) · Explanations cross-checked with Boylestad,
   <i>Introductory Circuit Analysis</i> · Figures © their original sources, reproduced from the lecture PDF for personal study.
 </footer>
-
+<script src="vendor/katex/katex.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -130,6 +130,15 @@
     applyFilter();
   }
 
+  /* ---------- KaTeX rendering (local, vendor/katex) ---------- */
+  if (typeof katex !== "undefined") {
+    document.querySelectorAll(".ktx").forEach(function (el) {
+      var src = el.textContent;
+      try { katex.render(src, el, { throwOnError: false, displayMode: false }); }
+      catch (e) { /* leave LaTeX source visible as fallback */ }
+    });
+  }
+
   /* ---------- dark mode toggle (persisted in localStorage) ---------- */
   var THEME_KEY = "eguide-theme";
   var root = document.documentElement;
