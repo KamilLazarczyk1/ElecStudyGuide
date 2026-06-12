@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Self-Test Quiz — Electronics Study Guide</title>
+<link rel="stylesheet" href="css/style.css">
+<meta name="theme-color" content="#1e3a8a">
+<script>(function(){try{var t=localStorage.getItem("eguide-theme");if(!t&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){t="dark"}if(t==="dark"){document.documentElement.setAttribute("data-theme","dark")}}catch(e){}})();</script>
+</head>
+<body data-page="quiz">
+
+<nav class="topnav"><div class="wrap">
+  <a class="brand" href="index.html"><span class="bolt">⚡</span> Electronics Study Guide</a>
+  <div class="navlinks" id="navlinks">
+    <a class="navlink" data-nav="home" href="index.html">Home</a>
+    <a class="navlink" data-nav="dc" href="dc-circuits.html">DC Circuits</a>
+    <a class="navlink" data-nav="cap" href="capacitors-inductors.html">Capacitors &amp; Inductors</a>
+    <a class="navlink" data-nav="ac" href="ac-circuits.html">AC Circuits</a>
+    <a class="navlink" data-nav="res" href="resonance-transformers.html">Resonance &amp; Transformers</a>
+    <a class="navlink" data-nav="formulas" href="formulas.html">Formula Sheet</a>
+    <a class="navlink" data-nav="quiz" href="quiz.html">Quiz</a>
+  </div>
+  <button class="themetoggle" id="themetoggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+  <button class="navtoggle" id="navtoggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+</div></nav>
+
+<div class="layout single">
+<main>
+  <div class="page-head">
+    <span class="crumb">Check yourself</span>
+    <h1>Self-Test Quiz</h1>
+    <p class="lead">16 quick questions spanning Lectures 1–7. Click an answer to check it instantly —
+    every question includes a short explanation. Aim for 13+ before exam day.</p>
+  </div>
+
+  <div class="score-banner">
+    <span class="big" id="scoretext">Score: 0 / 0</span>
+    <span id="scoremsg" style="opacity:.85"></span>
+    <button id="resetquiz" style="margin-left:auto">↻ Reset quiz</button>
+  </div>
+
+  <div id="quiz"></div>
+
+  <div class="next-prev">
+    <a href="formulas.html"><span class="sub">← Back</span> Formula Cheat Sheet</a>
+    <a href="index.html"><span class="sub">↩</span> Home</a>
+  </div>
+</main>
+</div>
+
+<footer class="site">
+  Built from the Electronics lecture slides (Lectures 1–7) · Explanations cross-checked with Boylestad,
+  <i>Introductory Circuit Analysis</i>.
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+(function () {
+  var QS = [
+    { t: "A 12 V battery is connected across a 4 Ω resistor. What current flows?",
+      o: ["48 A", "3 A", "0.33 A", "8 A"], a: 1,
+      e: "Ohm's law: I = E/R = 12 V / 4 Ω = 3 A." },
+    { t: "How do you correctly connect measuring instruments?",
+      o: ["Ammeter in parallel, voltmeter in series", "Both in series", "Ammeter in series, voltmeter in parallel", "Both in parallel"], a: 2,
+      e: "Current must flow through the ammeter (series); the voltmeter compares two points (parallel)." },
+    { t: "A resistor has bands yellow–violet–orange–gold. Its value is:",
+      o: ["47 kΩ ± 5 %", "4.7 kΩ ± 5 %", "470 Ω ± 10 %", "47 Ω ± 5 %"], a: 0,
+      e: "Yellow = 4, violet = 7, orange = ×10³, gold = ±5 % → 47 kΩ ± 5 %." },
+    { t: "A 2 A current flows through a 10 Ω resistor. The power dissipated is:",
+      o: ["20 W", "5 W", "40 W", "200 W"], a: 2,
+      e: "P = I²R = (2)² × 10 = 40 W." },
+    { t: "Kirchhoff's Voltage Law states that…",
+      o: ["voltage divides equally among series resistors", "the sum of currents at a node is zero", "the algebraic sum of voltages around a closed loop is zero", "voltage is proportional to current"], a: 2,
+      e: "KVL: around any closed loop, rises and drops cancel — ΣV = 0." },
+    { t: "Two resistors in parallel: 1 kΩ and 100 Ω. Which carries more current?",
+      o: ["The 1 kΩ resistor", "The 100 Ω resistor", "They carry equal currents", "Cannot tell without the source voltage"], a: 1,
+      e: "Current divides inversely with resistance — the smaller resistor (100 Ω) takes the larger share (CDR)." },
+    { t: "Capacitors connected in SERIES all share the same…",
+      o: ["voltage", "charge", "capacitance", "power"], a: 1,
+      e: "The same charging current flows for the same time, so Q_T = Q₁ = Q₂ = Q₃; voltages then differ as V = Q/C." },
+    { t: "An RC circuit has R = 10 kΩ and C = 100 µF. Roughly how long until charging is complete?",
+      o: ["1 s", "5 s", "0.5 s", "10 s"], a: 1,
+      e: "τ = RC = 10×10³ × 100×10⁻⁶ = 1 s, and a transient needs ≈ 5τ = 5 s to finish." },
+    { t: "In steady-state DC, an ideal inductor and an ideal capacitor behave as:",
+      o: ["L: open, C: short", "L: short, C: open", "both short circuits", "both open circuits"], a: 1,
+      e: "v_L = L·di/dt = 0 → short; i_C = C·dv/dt = 0 → open." },
+    { t: "A sinusoidal voltage has a peak of 311 V. A voltmeter (RMS) reads about:",
+      o: ["311 V", "440 V", "220 V", "156 V"], a: 2,
+      e: "V_rms = 0.707 × V_m = 0.707 × 311 ≈ 220 V — that's European mains." },
+    { t: "The angular velocity of a 50 Hz waveform is approximately:",
+      o: ["50 rad/s", "100 rad/s", "314 rad/s", "377 rad/s"], a: 2,
+      e: "ω = 2πf = 2π × 50 ≈ 314 rad/s. (377 rad/s corresponds to 60 Hz.)" },
+    { t: "In a purely inductive AC circuit, the voltage…",
+      o: ["lags the current by 90°", "is in phase with the current", "leads the current by 90°", "leads the current by 45°"], a: 2,
+      e: "v_L = L·di/dt peaks where the current slope is greatest → v_L leads i_L by 90° (ELI)." },
+    { t: "As frequency increases, capacitive reactance X_C…",
+      o: ["increases linearly", "decreases", "stays constant", "first rises then falls"], a: 1,
+      e: "X_C = 1/(2πfC) — a hyperbola: higher f → smaller X_C. The capacitor approaches a short at high frequency." },
+    { t: "A series circuit has R = 6 Ω, X_L = 10 Ω, X_C = 12 Ω. The total impedance is:",
+      o: ["6 + j22 Ω", "6 − j2 Ω (slightly capacitive)", "6 + j2 Ω (slightly inductive)", "28 Ω purely resistive"], a: 1,
+      e: "Z_T = R + j(X_L − X_C) = 6 + j(10−12) = 6 − j2 Ω. Negative j-part → capacitive (lecture example)." },
+    { t: "A series resonant circuit has Q_s = 80 and is fed 10 V. The capacitor voltage at resonance is about:",
+      o: ["10 V", "80 V", "800 V", "0.125 V"], a: 2,
+      e: "V_C = Q_s·E = 80 × 10 = 800 V — the famous resonant voltage rise (lecture example)." },
+    { t: "An 8:1 transformer (a = 8) drives an 8 Ω speaker. The amplifier 'sees':",
+      o: ["1 Ω", "64 Ω", "8 Ω", "512 Ω"], a: 3,
+      e: "Reflected impedance Z_p = a²·Z_L = 64 × 8 = 512 Ω (lecture example)." }
+  ];
+
+  var quiz = document.getElementById("quiz");
+  var answered = 0, correct = 0;
+
+  function esc(s) { var d = document.createElement("div"); d.textContent = s; return d.innerHTML; }
+
+  function render() {
+    quiz.innerHTML = "";
+    answered = 0; correct = 0; updateScore();
+    QS.forEach(function (q, qi) {
+      var card = document.createElement("div");
+      card.className = "qcard";
+      var h = "<h3><span class='qno'>Q" + (qi + 1) + ".</span>" + esc(q.t) + "</h3><div class='opts'>";
+      q.o.forEach(function (opt, oi) {
+        h += "<button class='opt' data-q='" + qi + "' data-o='" + oi + "'>" + String.fromCharCode(65 + oi) + ".&nbsp; " + esc(opt) + "</button>";
+      });
+      h += "</div><div class='qexpl'>" + esc(q.e) + "</div>";
+      card.innerHTML = h;
+      quiz.appendChild(card);
+    });
+    quiz.querySelectorAll(".opt").forEach(function (btn) {
+      btn.addEventListener("click", onAnswer);
+    });
+  }
+
+  function onAnswer(ev) {
+    var btn = ev.currentTarget;
+    var qi = +btn.dataset.q, oi = +btn.dataset.o;
+    var card = btn.closest(".qcard");
+    if (card.dataset.done) return;
+    card.dataset.done = "1";
+    answered++;
+    var ok = oi === QS[qi].a;
+    if (ok) correct++;
+    card.querySelectorAll(".opt").forEach(function (b) {
+      b.disabled = true;
+      if (+b.dataset.o === QS[qi].a) b.classList.add("correct");
+    });
+    if (!ok) btn.classList.add("wrong");
+    card.querySelector(".qexpl").classList.add("show");
+    updateScore();
+  }
+
+  function updateScore() {
+    document.getElementById("scoretext").textContent = "Score: " + correct + " / " + answered;
+    var msg = "";
+    if (answered === QS.length) {
+      var pct = correct / QS.length;
+      msg = pct === 1 ? "Perfect! You're ready. 🎉" :
+            pct >= 0.8 ? "Great — review the misses and you're set." :
+            pct >= 0.5 ? "Solid start — revisit the linked sections for the gaps." :
+                         "Go back through the guide section by section, then retry.";
+      msg = "Finished: " + correct + "/" + QS.length + ". " + msg;
+    }
+    document.getElementById("scoremsg").textContent = msg;
+  }
+
+  document.getElementById("resetquiz").addEventListener("click", render);
+  render();
+})();
+</script>
+</body>
+</html>

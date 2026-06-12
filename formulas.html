@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formula Cheat Sheet — Electronics Study Guide</title>
+<link rel="stylesheet" href="css/style.css">
+<meta name="theme-color" content="#1e3a8a">
+<script>(function(){try{var t=localStorage.getItem("eguide-theme");if(!t&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){t="dark"}if(t==="dark"){document.documentElement.setAttribute("data-theme","dark")}}catch(e){}})();</script>
+</head>
+<body data-page="formulas">
+
+<nav class="topnav"><div class="wrap">
+  <a class="brand" href="index.html"><span class="bolt">⚡</span> Electronics Study Guide</a>
+  <div class="navlinks" id="navlinks">
+    <a class="navlink" data-nav="home" href="index.html">Home</a>
+    <a class="navlink" data-nav="dc" href="dc-circuits.html">DC Circuits</a>
+    <a class="navlink" data-nav="cap" href="capacitors-inductors.html">Capacitors &amp; Inductors</a>
+    <a class="navlink" data-nav="ac" href="ac-circuits.html">AC Circuits</a>
+    <a class="navlink" data-nav="res" href="resonance-transformers.html">Resonance &amp; Transformers</a>
+    <a class="navlink" data-nav="formulas" href="formulas.html">Formula Sheet</a>
+    <a class="navlink" data-nav="quiz" href="quiz.html">Quiz</a>
+  </div>
+  <button class="themetoggle" id="themetoggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+  <button class="navtoggle" id="navtoggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+</div></nav>
+
+<div class="layout single">
+<main>
+  <div class="page-head">
+    <span class="crumb">Quick Reference</span>
+    <h1>Formula Cheat Sheet</h1>
+    <p class="lead">Every formula from Lectures 1–7 with its variables defined. Search by name or symbol,
+    filter by topic, or print the whole sheet for offline revision.</p>
+  </div>
+
+  <div class="toolbar">
+    <input type="search" id="fsearch" placeholder="Search… e.g. Ohm, reactance, τ, RMS, divider">
+    <button class="fchip on" data-tag="all">All</button>
+    <button class="fchip" data-tag="dc">DC Basics</button>
+    <button class="fchip" data-tag="net">Networks</button>
+    <button class="fchip" data-tag="cap">Capacitors</button>
+    <button class="fchip" data-tag="ind">Inductors</button>
+    <button class="fchip" data-tag="wave">Waveforms</button>
+    <button class="fchip" data-tag="imp">Impedance</button>
+    <button class="fchip" data-tag="pow">AC Power</button>
+    <button class="fchip" data-tag="res">Resonance</button>
+    <button class="fchip" data-tag="trf">Transformers</button>
+    <button class="printbtn" onclick="window.print()">🖨 Print</button>
+  </div>
+  <p class="count-note" id="fcount"></p>
+
+  <!-- ====================== DC BASICS ====================== -->
+  <div class="fgroup">
+  <h2 class="fgroup-title">DC Basics <span class="lecture-tag">Lecture 1</span></h2>
+  <div class="fgrid">
+
+    <article class="fcard" data-tags="dc">
+      <h4>Coulomb's Law</h4>
+      <div class="fml"><span class="m">F</span> = <span class="fr"><span class="nu"><span class="m">k Q</span><sub>1</sub><span class="m">Q</span><sub>2</sub></span><span class="de"><span class="m">r</span><sup>2</sup></span></span></div>
+      <ul class="vars">
+        <li><b>F</b> – force between charges (N)</li>
+        <li><b>k</b> = 9.0 × 10⁹ N·m²/C²</li>
+        <li><b>Q₁, Q₂</b> – charges (C); <b>r</b> – distance (m)</li>
+      </ul>
+      <p class="note">Attraction for opposite charges, repulsion for like charges.</p>
+    </article>
+
+    <article class="fcard" data-tags="dc">
+      <h4>Voltage (potential difference)</h4>
+      <div class="fml"><span class="m">V</span> = <span class="fr"><span class="nu"><span class="m">W</span></span><span class="de"><span class="m">Q</span></span></span></div>
+      <ul class="vars">
+        <li><b>V</b> – voltage (V); 1 V = 1 J/C</li>
+        <li><b>W</b> – energy (J); <b>Q</b> – charge (C)</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="dc">
+      <h4>Current</h4>
+      <div class="fml"><span class="m">I</span> = <span class="fr"><span class="nu"><span class="m">Q</span></span><span class="de"><span class="m">t</span></span></span></div>
+      <ul class="vars">
+        <li><b>I</b> – current (A); 1 A = 1 C/s</li>
+        <li><b>Q</b> – charge (C); <b>t</b> – time (s)</li>
+        <li>1 C = charge of 6.242 × 10¹⁸ electrons</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="dc">
+      <h4>Resistance of a conductor</h4>
+      <div class="fml"><span class="m">R</span> = <span class="m">ρ</span> <span class="fr"><span class="nu"><span class="m">l</span></span><span class="de"><span class="m">A</span></span></span></div>
+      <ul class="vars">
+        <li><b>R</b> – resistance (Ω)</li>
+        <li><b>ρ</b> – resistivity of the material</li>
+        <li><b>l</b> – length; <b>A</b> – cross-section area</li>
+      </ul>
+      <p class="note">Longer → more R; thicker → less R.</p>
+    </article>
+
+    <article class="fcard" data-tags="dc">
+      <h4>Temperature effect on R</h4>
+      <div class="fml"><span class="m">R</span><sub>1</sub> = <span class="m">R</span><sub>20</sub>[1 + <span class="m">α</span><sub>20</sub>(<span class="m">T</span><sub>1</sub> − 20 °C)]</div>
+      <ul class="vars">
+        <li><b>R₂₀</b> – resistance at 20 °C (Ω)</li>
+        <li><b>α₂₀</b> – temperature coefficient (1/°C)</li>
+        <li><b>T₁</b> – new temperature (°C)</li>
+      </ul>
+      <p class="note">Conductors: R rises with temperature.</p>
+    </article>
+
+    <article class="fcard" data-tags="dc">
+      <h4>PPM temperature sensitivity</h4>
+      <div class="fml">Δ<span class="m">R</span> = <span class="fr"><span class="nu"><span class="m">R</span><sub>nominal</sub></span><span class="de">10⁶</span></span> (PPM)(Δ<span class="m">T</span>)</div>
+      <ul class="vars">
+        <li><b>ΔR</b> – resistance change (Ω)</li>
+        <li><b>PPM</b> – rating in parts-per-million/°C</li>
+        <li><b>ΔT</b> – temperature change (°C)</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="dc">
+      <h4>Conductance</h4>
+      <div class="fml"><span class="m">G</span> = <span class="fr"><span class="nu">1</span><span class="de"><span class="m">R</span></span></span></div>
+      <ul class="vars">
+        <li><b>G</b> – conductance (siemens, S)</li>
+        <li><b>R</b> – resistance (Ω)</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="dc">
+      <h4>Ohm's Law</h4>
+      <div class="fml"><span class="m">I</span> = <span class="fr"><span class="nu"><span class="m">E</span></span><span class="de"><span class="m">R</span></span></span>&nbsp;&nbsp;⇔&nbsp;&nbsp;<span class="m">E</span> = <span class="m">I R</span></div>
+      <ul class="vars">
+        <li><b>I</b> – current (A)</li>
+        <li><b>E</b> – applied voltage (V)</li>
+        <li><b>R</b> – resistance (Ω)</li>
+      </ul>
+      <p class="note">The most-used equation on the exam.</p>
+    </article>
+
+    <article class="fcard" data-tags="dc">
+      <h4>Resistance from a plot</h4>
+      <div class="fml"><span class="m">R</span> = <span class="fr"><span class="nu">Δ<span class="m">V</span></span><span class="de">Δ<span class="m">I</span></span></span></div>
+      <ul class="vars">
+        <li><b>ΔV, ΔI</b> – changes between two points of the I–V characteristic</li>
+      </ul>
+      <p class="note">Linear device = straight line; diode = nonlinear.</p>
+    </article>
+
+    <article class="fcard" data-tags="dc">
+      <h4>Power</h4>
+      <div class="fml"><span class="m">P</span> = <span class="fr"><span class="nu"><span class="m">W</span></span><span class="de"><span class="m">t</span></span></span> = <span class="m">V I</span> = <span class="fr"><span class="nu"><span class="m">V</span><sup>2</sup></span><span class="de"><span class="m">R</span></span></span> = <span class="m">I</span><sup>2</sup><span class="m">R</span></div>
+      <ul class="vars">
+        <li><b>P</b> – power (W); 1 W = 1 J/s</li>
+        <li><b>W</b> – energy (J); <b>t</b> – time (s)</li>
+      </ul>
+      <p class="note">Pick the form matching your two known quantities.</p>
+    </article>
+
+    <article class="fcard" data-tags="dc">
+      <h4>Energy &amp; the kilowatt-hour</h4>
+      <div class="fml"><span class="m">W</span> = <span class="m">P t</span>&nbsp;;&nbsp;&nbsp;kWh = <span class="fr"><span class="nu"><span class="m">P</span>(W) · <span class="m">t</span>(h)</span><span class="de">1000</span></span></div>
+      <ul class="vars">
+        <li><b>W</b> – energy (J, or kWh for billing)</li>
+        <li><b>P</b> – power; <b>t</b> – time</li>
+      </ul>
+    </article>
+
+  </div>
+  </div>
+
+  <!-- ====================== NETWORKS ====================== -->
+  <div class="fgroup">
+  <h2 class="fgroup-title">Series, Parallel &amp; Network Theorems <span class="lecture-tag">Lecture 2</span></h2>
+  <div class="fgrid">
+
+    <article class="fcard" data-tags="net">
+      <h4>Series resistance</h4>
+      <div class="fml"><span class="m">R<sub>T</sub></span> = <span class="m">R</span><sub>1</sub> + <span class="m">R</span><sub>2</sub> + … + <span class="m">R</span><sub>N</sub></div>
+      <ul class="vars"><li><b>R<sub>T</sub></b> – total resistance (Ω); same current through every element</li></ul>
+    </article>
+
+    <article class="fcard" data-tags="net">
+      <h4>Parallel resistance</h4>
+      <div class="fml"><span class="fr"><span class="nu">1</span><span class="de"><span class="m">R<sub>T</sub></span></span></span> = <span class="fr"><span class="nu">1</span><span class="de"><span class="m">R</span><sub>1</sub></span></span> + … + <span class="fr"><span class="nu">1</span><span class="de"><span class="m">R</span><sub>N</sub></span></span>&nbsp;;&nbsp;&nbsp;<span class="m">R<sub>T</sub></span> = <span class="fr"><span class="nu"><span class="m">R</span><sub>1</sub><span class="m">R</span><sub>2</sub></span><span class="de"><span class="m">R</span><sub>1</sub>+<span class="m">R</span><sub>2</sub></span></span></div>
+      <ul class="vars"><li>R<sub>T</sub> &lt; smallest branch; same voltage across every element</li></ul>
+    </article>
+
+    <article class="fcard" data-tags="net">
+      <h4>Kirchhoff's Voltage Law (KVL)</h4>
+      <div class="fml">∑<span class="m">V</span> = 0&nbsp;&nbsp;(closed loop)</div>
+      <ul class="vars"><li>sum of rises = sum of drops around any closed path</li></ul>
+    </article>
+
+    <article class="fcard" data-tags="net">
+      <h4>Voltage Divider Rule (VDR)</h4>
+      <div class="fml"><span class="m">V<sub>x</sub></span> = <span class="fr"><span class="nu"><span class="m">R<sub>x</sub></span><span class="m">E</span></span><span class="de"><span class="m">R<sub>T</sub></span></span></span></div>
+      <ul class="vars">
+        <li><b>V<sub>x</sub></b> – voltage across R<sub>x</sub> in a series string</li>
+        <li><b>E</b> – applied voltage; <b>R<sub>T</sub></b> – total series resistance</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="net">
+      <h4>Kirchhoff's Current Law (KCL)</h4>
+      <div class="fml">∑<span class="m">I</span><sub>in</sub> = ∑<span class="m">I</span><sub>out</sub></div>
+      <ul class="vars"><li>at any node/junction; charge can't accumulate</li></ul>
+    </article>
+
+    <article class="fcard" data-tags="net">
+      <h4>Current Divider Rule (CDR)</h4>
+      <div class="fml"><span class="m">I<sub>x</sub></span> = <span class="fr"><span class="nu"><span class="m">R<sub>T</sub></span></span><span class="de"><span class="m">R<sub>x</sub></span></span></span><span class="m">I<sub>T</sub></span>&nbsp;;&nbsp;&nbsp;<span class="m">I</span><sub>1</sub> = <span class="fr"><span class="nu"><span class="m">R</span><sub>2</sub><span class="m">I<sub>T</sub></span></span><span class="de"><span class="m">R</span><sub>1</sub>+<span class="m">R</span><sub>2</sub></span></span></div>
+      <ul class="vars">
+        <li><b>I<sub>T</sub></b> – current entering the parallel set</li>
+        <li>two-branch form: <i>other</i> resistor on top</li>
+      </ul>
+      <p class="note">Smallest R carries the largest current.</p>
+    </article>
+
+    <article class="fcard" data-tags="net">
+      <h4>Δ→Y conversion</h4>
+      <div class="fml"><span class="m">R</span><sub>1</sub> = <span class="fr"><span class="nu"><span class="m">R<sub>B</sub>R<sub>C</sub></span></span><span class="de"><span class="m">R<sub>A</sub></span>+<span class="m">R<sub>B</sub></span>+<span class="m">R<sub>C</sub></span></span></span></div>
+      <ul class="vars">
+        <li>each Y resistor = product of the two adjacent Δ resistors ÷ sum of all three</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="net">
+      <h4>Y→Δ conversion</h4>
+      <div class="fml"><span class="m">R<sub>A</sub></span> = <span class="fr"><span class="nu"><span class="m">R</span><sub>1</sub><span class="m">R</span><sub>2</sub>+<span class="m">R</span><sub>1</sub><span class="m">R</span><sub>3</sub>+<span class="m">R</span><sub>2</sub><span class="m">R</span><sub>3</sub></span><span class="de"><span class="m">R</span><sub>1</sub></span></span></div>
+      <ul class="vars">
+        <li>each Δ resistor = sum of pairwise products ÷ the opposite Y resistor</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="net">
+      <h4>Source conversion</h4>
+      <div class="fml"><span class="m">I</span> = <span class="fr"><span class="nu"><span class="m">E</span></span><span class="de"><span class="m">R<sub>s</sub></span></span></span>&nbsp;&nbsp;⇄&nbsp;&nbsp;<span class="m">E</span> = <span class="m">I R<sub>s</sub></span></div>
+      <ul class="vars">
+        <li>E series R<sub>s</sub> ⇄ I parallel R<sub>s</sub>; same R<sub>s</sub> both ways</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="net">
+      <h4>Thévenin ⇄ Norton</h4>
+      <div class="fml"><span class="m">R<sub>N</sub></span> = <span class="m">R<sub>Th</sub></span>&nbsp;,&nbsp;&nbsp;<span class="m">I<sub>N</sub></span> = <span class="fr"><span class="nu"><span class="m">E<sub>Th</sub></span></span><span class="de"><span class="m">R<sub>Th</sub></span></span></span></div>
+      <ul class="vars">
+        <li><b>E<sub>Th</sub></b> – open-circuit terminal voltage</li>
+        <li><b>I<sub>N</sub></b> – short-circuit terminal current</li>
+        <li><b>R<sub>Th</sub></b> – resistance with all sources zeroed (E→short, I→open)</li>
+      </ul>
+    </article>
+
+  </div>
+  </div>
+
+  <!-- ====================== CAPACITORS ====================== -->
+  <div class="fgroup">
+  <h2 class="fgroup-title">Capacitors &amp; RC Transients <span class="lecture-tag">Lecture 3</span></h2>
+  <div class="fgrid">
+
+    <article class="fcard" data-tags="cap">
+      <h4>Electric flux density</h4>
+      <div class="fml"><span class="m">D</span> = <span class="fr"><span class="nu"><span class="m">Ψ</span></span><span class="de"><span class="m">A</span></span></span>&nbsp;,&nbsp;&nbsp;<span class="m">Ψ</span> = <span class="m">Q</span></div>
+      <ul class="vars">
+        <li><b>D</b> – flux density; <b>Ψ</b> – electric flux (C)</li>
+        <li><b>A</b> – area the flux passes through</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="cap">
+      <h4>Capacitance (definition)</h4>
+      <div class="fml"><span class="m">C</span> = <span class="fr"><span class="nu"><span class="m">Q</span></span><span class="de"><span class="m">V</span></span></span></div>
+      <ul class="vars">
+        <li><b>C</b> – capacitance (farads, F)</li>
+        <li><b>Q</b> – stored charge (C); <b>V</b> – voltage (V)</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="cap">
+      <h4>Parallel-plate capacitance</h4>
+      <div class="fml"><span class="m">C</span> = <span class="m">ε</span><span class="fr"><span class="nu"><span class="m">A</span></span><span class="de"><span class="m">d</span></span></span>&nbsp;,&nbsp;&nbsp;<span class="m">ε</span> = <span class="m">ε<sub>r</sub></span><span class="m">ε</span><sub>0</sub></div>
+      <ul class="vars">
+        <li><b>A</b> – plate area; <b>d</b> – separation</li>
+        <li><b>ε₀</b> = 8.85 × 10⁻¹² F/m; <b>ε<sub>r</sub></b> – relative permittivity of dielectric</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="cap">
+      <h4>RC time constant</h4>
+      <div class="fml"><span class="m">τ</span> = <span class="m">R C</span></div>
+      <ul class="vars">
+        <li><b>τ</b> – time constant (s); transient ≈ done after 5τ</li>
+        <li>63.2 % of the change happens in the first τ</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="cap">
+      <h4>RC charging</h4>
+      <div class="fml"><span class="m">v<sub>C</sub></span> = <span class="m">E</span>(1 − e<sup>−t/τ</sup>)&nbsp;,&nbsp;&nbsp;<span class="m">i<sub>C</sub></span> = <span class="fr"><span class="nu"><span class="m">E</span></span><span class="de"><span class="m">R</span></span></span>e<sup>−t/τ</sup></div>
+      <ul class="vars">
+        <li><b>E</b> – supply voltage; <b>τ = RC</b></li>
+        <li>v<sub>C</sub>: 0 → E; i<sub>C</sub>: E/R → 0</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="cap">
+      <h4>RC with initial conditions</h4>
+      <div class="fml"><span class="m">v<sub>C</sub></span> = <span class="m">V<sub>f</sub></span> + (<span class="m">V<sub>i</sub></span> − <span class="m">V<sub>f</sub></span>)e<sup>−t/τ</sup></div>
+      <ul class="vars">
+        <li><b>V<sub>i</sub></b> – initial voltage; <b>V<sub>f</sub></b> – final (steady-state) voltage</li>
+      </ul>
+      <p class="note">Works for every first-order transient.</p>
+    </article>
+
+    <article class="fcard" data-tags="cap">
+      <h4>RC discharging</h4>
+      <div class="fml"><span class="m">v<sub>C</sub></span> = <span class="m">E</span> e<sup>−t/τ</sup></div>
+      <ul class="vars">
+        <li>capacitor (charged to E) drains through R; current reverses direction</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="cap">
+      <h4>Capacitor current (defining law)</h4>
+      <div class="fml"><span class="m">i<sub>C</sub></span> = <span class="m">C</span> <span class="fr"><span class="nu">d<span class="m">v<sub>C</sub></span></span><span class="de">d<span class="m">t</span></span></span></div>
+      <ul class="vars">
+        <li>steady DC → i<sub>C</sub> = 0 → capacitor = <b>open circuit</b></li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="cap">
+      <h4>Capacitors in series</h4>
+      <div class="fml"><span class="m">Q<sub>T</sub></span> = <span class="m">Q</span><sub>1</sub> = <span class="m">Q</span><sub>2</sub>&nbsp;;&nbsp;&nbsp;<span class="fr"><span class="nu">1</span><span class="de"><span class="m">C<sub>T</sub></span></span></span> = <span class="fr"><span class="nu">1</span><span class="de"><span class="m">C</span><sub>1</sub></span></span> + <span class="fr"><span class="nu">1</span><span class="de"><span class="m">C</span><sub>2</sub></span></span> + …</div>
+      <ul class="vars"><li>same charge on all; total capacitance shrinks (opposite of resistors)</li></ul>
+    </article>
+
+    <article class="fcard" data-tags="cap">
+      <h4>Capacitors in parallel</h4>
+      <div class="fml"><span class="m">Q<sub>T</sub></span> = <span class="m">Q</span><sub>1</sub> + <span class="m">Q</span><sub>2</sub>&nbsp;;&nbsp;&nbsp;<span class="m">C<sub>T</sub></span> = <span class="m">C</span><sub>1</sub> + <span class="m">C</span><sub>2</sub> + …</div>
+      <ul class="vars"><li>same voltage on all; capacitances add</li></ul>
+    </article>
+
+    <article class="fcard" data-tags="cap">
+      <h4>Energy stored in a capacitor</h4>
+      <div class="fml"><span class="m">W<sub>C</sub></span> = <span class="fr"><span class="nu"><span class="m">C V</span><sup>2</sup></span><span class="de">2</span></span></div>
+      <ul class="vars">
+        <li><b>W<sub>C</sub></b> – energy (J) in the electric field</li>
+        <li><b>V</b> – capacitor voltage (V)</li>
+      </ul>
+    </article>
+
+  </div>
+  </div>
+
+  <!-- ====================== INDUCTORS ====================== -->
+  <div class="fgroup">
+  <h2 class="fgroup-title">Inductors &amp; RL Transients <span class="lecture-tag">Lecture 3</span></h2>
+  <div class="fgrid">
+
+    <article class="fcard" data-tags="ind">
+      <h4>Magnetic flux density</h4>
+      <div class="fml"><span class="m">B</span> = <span class="fr"><span class="nu"><span class="m">Φ</span></span><span class="de"><span class="m">A</span></span></span></div>
+      <ul class="vars">
+        <li><b>B</b> – flux density (teslas, T = Wb/m²)</li>
+        <li><b>Φ</b> – flux (webers, Wb); <b>A</b> – area (m²)</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="ind">
+      <h4>Permeability</h4>
+      <div class="fml"><span class="m">µ</span> = <span class="m">µ<sub>r</sub></span><span class="m">µ</span><sub>0</sub></div>
+      <ul class="vars">
+        <li><b>µ₀</b> = 4π × 10⁻⁷ Wb/(A·m)</li>
+        <li><b>µ<sub>r</sub></b> ≫ 1 for ferromagnetic cores (beware saturation)</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="ind">
+      <h4>Inductance of a coil</h4>
+      <div class="fml"><span class="m">L</span> = <span class="fr"><span class="nu"><span class="m">N</span><sup>2</sup><span class="m">µ A</span></span><span class="de"><span class="m">l</span></span></span></div>
+      <ul class="vars">
+        <li><b>L</b> – inductance (henries, H)</li>
+        <li><b>N</b> – turns (squared!); <b>A</b> – core area; <b>l</b> – length</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="ind">
+      <h4>Faraday's law</h4>
+      <div class="fml"><span class="m">e</span> = <span class="m">N</span> <span class="fr"><span class="nu">d<span class="m">Φ</span></span><span class="de">d<span class="m">t</span></span></span></div>
+      <ul class="vars">
+        <li><b>e</b> – induced voltage (V)</li>
+        <li><b>N</b> – turns; <b>dΦ/dt</b> – rate of flux change (Wb/s)</li>
+      </ul>
+      <p class="note">Lenz: polarity opposes the change that caused it.</p>
+    </article>
+
+    <article class="fcard" data-tags="ind">
+      <h4>Inductor voltage (defining law)</h4>
+      <div class="fml"><span class="m">v<sub>L</sub></span> = <span class="m">L</span> <span class="fr"><span class="nu">d<span class="m">i<sub>L</sub></span></span><span class="de">d<span class="m">t</span></span></span></div>
+      <ul class="vars">
+        <li>steady DC → v<sub>L</sub> = 0 → inductor = <b>short circuit</b></li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="ind">
+      <h4>RL time constant &amp; storage</h4>
+      <div class="fml"><span class="m">τ</span> = <span class="fr"><span class="nu"><span class="m">L</span></span><span class="de"><span class="m">R</span></span></span>&nbsp;;&nbsp;&nbsp;<span class="m">i<sub>L</sub></span> = <span class="fr"><span class="nu"><span class="m">E</span></span><span class="de"><span class="m">R</span></span></span>(1 − e<sup>−t/τ</sup>)&nbsp;,&nbsp;&nbsp;<span class="m">v<sub>L</sub></span> = <span class="m">E</span>e<sup>−t/τ</sup></div>
+      <ul class="vars">
+        <li>current climbs to I<sub>m</sub> = E/R in ≈ 5τ; R in the <i>denominator</i> of τ</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="ind">
+      <h4>RL release-phase spike</h4>
+      <div class="fml"><span class="m">v<sub>L</sub></span> = −(1 + <span class="fr"><span class="nu"><span class="m">R</span><sub>2</sub></span><span class="de"><span class="m">R</span><sub>1</sub></span></span>)<span class="m">E</span></div>
+      <ul class="vars">
+        <li>at the instant the switch opens; decays with τ′ = L/(R₁+R₂)</li>
+        <li>inductor current cannot change instantaneously</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="ind">
+      <h4>Inductors in series / parallel</h4>
+      <div class="fml"><span class="m">L<sub>T</sub></span> = <span class="m">L</span><sub>1</sub>+<span class="m">L</span><sub>2</sub>+…&nbsp;;&nbsp;&nbsp;<span class="fr"><span class="nu">1</span><span class="de"><span class="m">L<sub>T</sub></span></span></span> = <span class="fr"><span class="nu">1</span><span class="de"><span class="m">L</span><sub>1</sub></span></span>+<span class="fr"><span class="nu">1</span><span class="de"><span class="m">L</span><sub>2</sub></span></span>+…</div>
+      <ul class="vars"><li>combine exactly like resistors</li></ul>
+    </article>
+
+    <article class="fcard" data-tags="ind">
+      <h4>Energy stored in an inductor</h4>
+      <div class="fml"><span class="m">W<sub>L</sub></span> = <span class="fr"><span class="nu"><span class="m">L I</span><sup>2</sup></span><span class="de">2</span></span></div>
+      <ul class="vars">
+        <li><b>W<sub>L</sub></b> – energy (J) in the magnetic field</li>
+        <li><b>I</b> – steady current (A)</li>
+      </ul>
+    </article>
+
+  </div>
+  </div>
+
+  <!-- ====================== WAVEFORMS ====================== -->
+  <div class="fgroup">
+  <h2 class="fgroup-title">Sinusoidal Waveforms <span class="lecture-tag">Lecture 4</span></h2>
+  <div class="fgrid">
+
+    <article class="fcard" data-tags="wave">
+      <h4>Frequency &amp; period</h4>
+      <div class="fml"><span class="m">f</span> = <span class="fr"><span class="nu">1</span><span class="de"><span class="m">T</span></span></span></div>
+      <ul class="vars">
+        <li><b>f</b> – frequency (Hz); <b>T</b> – period (s)</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="wave">
+      <h4>Angular velocity</h4>
+      <div class="fml"><span class="m">ω</span> = <span class="fr"><span class="nu"><span class="m">α</span></span><span class="de"><span class="m">t</span></span></span> = <span class="fr"><span class="nu">2π</span><span class="de"><span class="m">T</span></span></span> = 2π<span class="m">f</span></div>
+      <ul class="vars">
+        <li><b>ω</b> – angular velocity (rad/s); <b>α</b> – angle travelled (rad)</li>
+        <li>at 60 Hz: ω ≈ 377 rad/s</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="wave">
+      <h4>Degrees ⇄ radians</h4>
+      <div class="fml">rad = <span class="fr"><span class="nu">π</span><span class="de">180°</span></span>(deg)&nbsp;;&nbsp;&nbsp;deg = <span class="fr"><span class="nu">180°</span><span class="de">π</span></span>(rad)</div>
+      <ul class="vars"><li>2π rad = 360°; 1 rad ≈ 57.3°</li></ul>
+    </article>
+
+    <article class="fcard" data-tags="wave">
+      <h4>General sinusoid</h4>
+      <div class="fml"><span class="m">v</span> = <span class="m">V<sub>m</sub></span> sin(<span class="m">ω t</span> ± <span class="m">θ</span>)</div>
+      <ul class="vars">
+        <li><b>V<sub>m</sub></b> – peak value; <b>ωt</b> – running angle</li>
+        <li><b>+θ</b> leads (peaks earlier), <b>−θ</b> lags</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="wave">
+      <h4>Average value</h4>
+      <div class="fml"><span class="m">G</span> = <span class="fr"><span class="nu">algebraic area</span><span class="de">length of curve</span></span></div>
+      <ul class="vars">
+        <li>area below the axis is negative</li>
+        <li>full sine cycle → average 0</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="wave">
+      <h4>RMS (effective) value</h4>
+      <div class="fml"><span class="m">I</span><sub>rms</sub> = <span class="fr"><span class="nu"><span class="m">I<sub>m</sub></span></span><span class="de"><span class="sq"><span class="rad">√</span><span class="vinc">2</span></span></span></span> = 0.707<span class="m">I<sub>m</sub></span>&nbsp;;&nbsp;&nbsp;<span class="m">I<sub>m</sub></span> = 1.414<span class="m">I</span><sub>rms</sub></div>
+      <ul class="vars">
+        <li>same heating effect as the equal DC value (sinusoids only)</li>
+        <li>unlabelled AC ratings are RMS</li>
+      </ul>
+    </article>
+
+  </div>
+  </div>
+
+  <!-- ====================== IMPEDANCE ====================== -->
+  <div class="fgroup">
+  <h2 class="fgroup-title">Reactance, Impedance &amp; Phasors <span class="lecture-tag">Lectures 5–6</span></h2>
+  <div class="fgrid">
+
+    <article class="fcard" data-tags="imp">
+      <h4>Inductive reactance</h4>
+      <div class="fml"><span class="m">X<sub>L</sub></span> = <span class="m">ω L</span> = 2π<span class="m">f L</span></div>
+      <ul class="vars">
+        <li><b>X<sub>L</sub></b> – (Ω); grows linearly with f</li>
+        <li>v<sub>L</sub> <b>leads</b> i<sub>L</sub> by 90°</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="imp">
+      <h4>Capacitive reactance</h4>
+      <div class="fml"><span class="m">X<sub>C</sub></span> = <span class="fr"><span class="nu">1</span><span class="de"><span class="m">ω C</span></span></span> = <span class="fr"><span class="nu">1</span><span class="de">2π<span class="m">f C</span></span></span></div>
+      <ul class="vars">
+        <li><b>X<sub>C</sub></b> – (Ω); shrinks as f grows</li>
+        <li>i<sub>C</sub> <b>leads</b> v<sub>C</sub> by 90°</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="imp">
+      <h4>Element impedances</h4>
+      <div class="fml"><b>Z</b><sub>R</sub> = <span class="m">R</span>∠0°&nbsp;,&nbsp;<b>Z</b><sub>L</sub> = <span class="m">X<sub>L</sub></span>∠90°&nbsp;,&nbsp;<b>Z</b><sub>C</sub> = <span class="m">X<sub>C</sub></span>∠−90°</div>
+      <ul class="vars">
+        <li>rectangular: Z<sub>L</sub> = jX<sub>L</sub>, Z<sub>C</sub> = −jX<sub>C</sub></li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="imp">
+      <h4>Series impedance</h4>
+      <div class="fml"><b>Z</b><sub>T</sub> = <b>Z</b><sub>1</sub> + <b>Z</b><sub>2</sub> + …&nbsp;;&nbsp;&nbsp;RLC: <b>Z</b><sub>T</sub> = <span class="m">R</span> + j(<span class="m">X<sub>L</sub></span>−<span class="m">X<sub>C</sub></span>)</div>
+      <ul class="vars"><li>complex addition; X<sub>L</sub> and X<sub>C</sub> partially cancel</li></ul>
+    </article>
+
+    <article class="fcard" data-tags="imp">
+      <h4>Parallel impedance</h4>
+      <div class="fml"><span class="fr"><span class="nu">1</span><span class="de"><b>Z</b><sub>T</sub></span></span> = <span class="fr"><span class="nu">1</span><span class="de"><b>Z</b><sub>1</sub></span></span>+<span class="fr"><span class="nu">1</span><span class="de"><b>Z</b><sub>2</sub></span></span>+…&nbsp;;&nbsp;&nbsp;<b>Z</b><sub>T</sub> = <span class="fr"><span class="nu"><b>Z</b><sub>1</sub><b>Z</b><sub>2</sub></span><span class="de"><b>Z</b><sub>1</sub>+<b>Z</b><sub>2</sub></span></span></div>
+      <ul class="vars"><li>same form as parallel resistors, complex arithmetic</li></ul>
+    </article>
+
+    <article class="fcard" data-tags="imp">
+      <h4>AC voltage divider</h4>
+      <div class="fml"><b>V</b><sub>x</sub> = <span class="fr"><span class="nu"><b>Z</b><sub>x</sub><b>E</b></span><span class="de"><b>Z</b><sub>T</sub></span></span></div>
+      <ul class="vars"><li>identical to DC VDR with impedances</li></ul>
+    </article>
+
+    <article class="fcard" data-tags="imp">
+      <h4>AC current divider</h4>
+      <div class="fml"><b>I</b><sub>1</sub> = <span class="fr"><span class="nu"><b>Z</b><sub>2</sub><b>I</b><sub>T</sub></span><span class="de"><b>Z</b><sub>1</sub>+<b>Z</b><sub>2</sub></span></span></div>
+      <ul class="vars"><li>two-branch form; other branch's Z on top</li></ul>
+    </article>
+
+    <article class="fcard" data-tags="imp">
+      <h4>Rectangular → polar</h4>
+      <div class="fml"><span class="m">Z</span> = <span class="sq"><span class="rad">√</span><span class="vinc"><span class="m">X</span><sup>2</sup>+<span class="m">Y</span><sup>2</sup></span></span>&nbsp;,&nbsp;&nbsp;<span class="m">θ</span> = tan<sup>−1</sup><span class="fr"><span class="nu"><span class="m">Y</span></span><span class="de"><span class="m">X</span></span></span></div>
+      <ul class="vars">
+        <li><b>C</b> = X + jY → Z∠θ; mind the quadrant if X &lt; 0</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="imp">
+      <h4>Polar → rectangular</h4>
+      <div class="fml"><span class="m">X</span> = <span class="m">Z</span> cos<span class="m">θ</span>&nbsp;,&nbsp;&nbsp;<span class="m">Y</span> = <span class="m">Z</span> sin<span class="m">θ</span></div>
+      <ul class="vars">
+        <li>add/subtract in rectangular; multiply/divide in polar</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="imp">
+      <h4>Maximum power transfer (AC)</h4>
+      <div class="fml"><span class="m">Z<sub>L</sub></span> = <span class="m">Z<sub>Th</sub></span>*&nbsp;&nbsp;⇒&nbsp;&nbsp;<span class="m">P</span><sub>max</sub> = <span class="fr"><span class="nu"><span class="m">E<sub>Th</sub></span><sup>2</sup></span><span class="de">4<span class="m">R</span></span></span></div>
+      <ul class="vars">
+        <li><b>Z<sub>Th</sub>*</b> – complex conjugate (same R, opposite X)</li>
+        <li><b>E<sub>Th</sub></b> – Thévenin (rms) voltage; <b>R</b> – its real part</li>
+      </ul>
+    </article>
+
+  </div>
+  </div>
+
+  <!-- ====================== AC POWER ====================== -->
+  <div class="fgroup">
+  <h2 class="fgroup-title">AC Power <span class="lecture-tag">Lecture 6</span></h2>
+  <div class="fgrid">
+
+    <article class="fcard" data-tags="pow">
+      <h4>Average (real) power</h4>
+      <div class="fml"><span class="m">P</span> = <span class="fr"><span class="nu"><span class="m">V<sub>m</sub>I<sub>m</sub></span></span><span class="de">2</span></span>cos<span class="m">θ</span> = <span class="m">V</span><sub>rms</sub><span class="m">I</span><sub>rms</sub> cos<span class="m">θ</span></div>
+      <ul class="vars">
+        <li><b>P</b> – watts (W); does real work</li>
+        <li><b>θ</b> – angle between v and i</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="pow">
+      <h4>Apparent power</h4>
+      <div class="fml"><span class="m">S</span> = <span class="m">V I</span></div>
+      <ul class="vars">
+        <li><b>S</b> – volt-amperes (VA), with V, I in rms</li>
+        <li>what the source/wiring must be rated for</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="pow">
+      <h4>Reactive power</h4>
+      <div class="fml"><span class="m">Q</span> = <span class="m">V I</span> sin<span class="m">θ</span></div>
+      <ul class="vars">
+        <li><b>Q</b> – volt-ampere reactive (VAR)</li>
+        <li>energy exchanged with L/C fields, not consumed</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="pow">
+      <h4>Power triangle</h4>
+      <div class="fml"><span class="m">S</span><sup>2</sup> = <span class="m">P</span><sup>2</sup> + <span class="m">Q</span><sup>2</sup></div>
+      <ul class="vars">
+        <li>P along the real axis, Q<sub>L</sub> up / Q<sub>C</sub> down, S the hypotenuse</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="pow">
+      <h4>Power factor</h4>
+      <div class="fml"><span class="m">F<sub>p</sub></span> = cos<span class="m">θ</span> = <span class="fr"><span class="nu"><span class="m">P</span></span><span class="de"><span class="m">S</span></span></span></div>
+      <ul class="vars">
+        <li>1 = purely resistive, 0 = purely reactive</li>
+        <li><b>lagging</b> = inductive; <b>leading</b> = capacitive</li>
+      </ul>
+      <p class="note">Correction: parallel C cancels Q<sub>L</sub> → F<sub>p</sub> → 1.</p>
+    </article>
+
+  </div>
+  </div>
+
+  <!-- ====================== RESONANCE ====================== -->
+  <div class="fgroup">
+  <h2 class="fgroup-title">Resonance <span class="lecture-tag">Lecture 7</span></h2>
+  <div class="fgrid">
+
+    <article class="fcard" data-tags="res">
+      <h4>Resonance condition (series)</h4>
+      <div class="fml"><span class="m">X<sub>L</sub></span> = <span class="m">X<sub>C</sub></span>&nbsp;&nbsp;⇒&nbsp;&nbsp;<b>Z</b><sub>T<sub>s</sub></sub> = <span class="m">R</span></div>
+      <ul class="vars">
+        <li>impedance minimum, current maximum (I = E/R), circuit purely resistive</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="res">
+      <h4>Resonant frequency</h4>
+      <div class="fml"><span class="m">f<sub>s</sub></span> = <span class="fr"><span class="nu">1</span><span class="de">2π<span class="sq"><span class="rad">√</span><span class="vinc"><span class="m">L C</span></span></span></span></span>&nbsp;,&nbsp;&nbsp;<span class="m">ω<sub>s</sub></span> = <span class="fr"><span class="nu">1</span><span class="de"><span class="sq"><span class="rad">√</span><span class="vinc"><span class="m">L C</span></span></span></span></span></div>
+      <ul class="vars">
+        <li><b>L</b> (H), <b>C</b> (F) → f<sub>s</sub> (Hz)</li>
+        <li>parallel (high-Q): f<sub>p</sub> ≈ same formula</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="res">
+      <h4>Quality factor (series)</h4>
+      <div class="fml"><span class="m">Q<sub>s</sub></span> = <span class="fr"><span class="nu"><span class="m">X<sub>L</sub></span></span><span class="de"><span class="m">R</span></span></span> = <span class="fr"><span class="nu">1</span><span class="de"><span class="m">R</span></span></span><span class="sq"><span class="rad">√</span><span class="vinc"><span class="m">L</span>/<span class="m">C</span></span></span></div>
+      <ul class="vars">
+        <li>dimensionless; high Q = sharp, selective resonance</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="res">
+      <h4>Resonant voltage rise</h4>
+      <div class="fml"><span class="m">V<sub>L<sub>s</sub></sub></span> = <span class="m">V<sub>C<sub>s</sub></sub></span> = <span class="m">Q<sub>s</sub>E</span></div>
+      <ul class="vars">
+        <li>element voltages = Q × source voltage (can be hundreds of volts!)</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="res">
+      <h4>Bandwidth</h4>
+      <div class="fml">BW = <span class="m">f</span><sub>2</sub> − <span class="m">f</span><sub>1</sub> = <span class="fr"><span class="nu"><span class="m">R</span></span><span class="de">2π<span class="m">L</span></span></span> = <span class="fr"><span class="nu"><span class="m">f<sub>s</sub></span></span><span class="de"><span class="m">Q<sub>s</sub></span></span></span></div>
+      <ul class="vars">
+        <li><b>f₁, f₂</b> – half-power frequencies (I = 0.707 I<sub>max</sub>)</li>
+        <li>also f<sub>s</sub> = √(f₁f₂)</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="res">
+      <h4>Parallel resonance highlights</h4>
+      <div class="fml">Z<sub>T</sub> max&nbsp;,&nbsp;&nbsp;I min&nbsp;,&nbsp;&nbsp;BW = <span class="fr"><span class="nu"><span class="m">f<sub>p</sub></span></span><span class="de"><span class="m">Q<sub>p</sub></span></span></span></div>
+      <ul class="vars">
+        <li>tank (L ∥ C): impedance peaks at resonance; Q<sub>p</sub> ≈ coil's Q<sub>l</sub> for high-Q circuits</li>
+      </ul>
+    </article>
+
+  </div>
+  </div>
+
+  <!-- ====================== TRANSFORMERS ====================== -->
+  <div class="fgroup">
+  <h2 class="fgroup-title">Transformers <span class="lecture-tag">Lecture 7</span></h2>
+  <div class="fgrid">
+
+    <article class="fcard" data-tags="trf">
+      <h4>Mutual inductance</h4>
+      <div class="fml"><span class="m">M</span> = <span class="m">k</span><span class="sq"><span class="rad">√</span><span class="vinc"><span class="m">L<sub>p</sub>L<sub>s</sub></span></span></span></div>
+      <ul class="vars">
+        <li><b>M</b> – mutual inductance (H)</li>
+        <li><b>k</b> = Φ<sub>m</sub>/Φ<sub>p</sub> – coupling coefficient (0…1)</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="trf">
+      <h4>Induced secondary voltage</h4>
+      <div class="fml"><span class="m">e<sub>s</sub></span> = <span class="m">M</span> <span class="fr"><span class="nu">d<span class="m">i<sub>p</sub></span></span><span class="de">d<span class="m">t</span></span></span></div>
+      <ul class="vars">
+        <li>changing primary current induces secondary voltage (and vice versa: e<sub>p</sub> = M di<sub>s</sub>/dt)</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="trf">
+      <h4>Turns ratio relations</h4>
+      <div class="fml"><span class="m">a</span> = <span class="fr"><span class="nu"><span class="m">N<sub>p</sub></span></span><span class="de"><span class="m">N<sub>s</sub></span></span></span>&nbsp;;&nbsp;&nbsp;<span class="fr"><span class="nu"><span class="m">E<sub>p</sub></span></span><span class="de"><span class="m">E<sub>s</sub></span></span></span> = <span class="m">a</span>&nbsp;;&nbsp;&nbsp;<span class="fr"><span class="nu"><span class="m">I<sub>p</sub></span></span><span class="de"><span class="m">I<sub>s</sub></span></span></span> = <span class="fr"><span class="nu">1</span><span class="de"><span class="m">a</span></span></span></div>
+      <ul class="vars">
+        <li><b>N<sub>p</sub>, N<sub>s</sub></b> – turns; voltage scales with turns, current inversely</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="trf">
+      <h4>Reflected impedance</h4>
+      <div class="fml"><span class="m">Z<sub>p</sub></span> = <span class="m">a</span><sup>2</sup><span class="m">Z<sub>L</sub></span></div>
+      <ul class="vars">
+        <li>load Z<sub>L</sub> on the secondary appears a² times larger at the primary</li>
+        <li>basis of impedance matching (8:1 → 8 Ω looks like 512 Ω)</li>
+      </ul>
+    </article>
+
+    <article class="fcard" data-tags="trf">
+      <h4>Coupled coils in series</h4>
+      <div class="fml"><span class="m">L<sub>T</sub></span> = <span class="m">L</span><sub>1</sub> + <span class="m">L</span><sub>2</sub> ± 2<span class="m">M</span></div>
+      <ul class="vars">
+        <li>+2M fluxes aiding, −2M opposing</li>
+      </ul>
+    </article>
+
+  </div>
+  </div>
+
+  <div class="next-prev">
+    <a href="resonance-transformers.html"><span class="sub">← Previous</span> Resonance &amp; Transformers</a>
+    <a href="quiz.html"><span class="sub">Test yourself →</span> Quiz</a>
+  </div>
+</main>
+</div>
+
+<footer class="site">
+  Built from the Electronics lecture slides (Lectures 1–7) · Explanations cross-checked with Boylestad,
+  <i>Introductory Circuit Analysis</i> · Figures © their original sources, reproduced from the lecture PDF for personal study.
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

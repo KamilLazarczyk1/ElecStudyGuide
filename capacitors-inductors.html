@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capacitors &amp; Inductors — Electronics Study Guide</title>
+<link rel="stylesheet" href="css/style.css">
+<meta name="theme-color" content="#1e3a8a">
+<script>(function(){try{var t=localStorage.getItem("eguide-theme");if(!t&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){t="dark"}if(t==="dark"){document.documentElement.setAttribute("data-theme","dark")}}catch(e){}})();</script>
+</head>
+<body data-page="cap">
+
+<nav class="topnav"><div class="wrap">
+  <a class="brand" href="index.html"><span class="bolt">⚡</span> Electronics Study Guide</a>
+  <div class="navlinks" id="navlinks">
+    <a class="navlink" data-nav="home" href="index.html">Home</a>
+    <a class="navlink" data-nav="dc" href="dc-circuits.html">DC Circuits</a>
+    <a class="navlink" data-nav="cap" href="capacitors-inductors.html">Capacitors &amp; Inductors</a>
+    <a class="navlink" data-nav="ac" href="ac-circuits.html">AC Circuits</a>
+    <a class="navlink" data-nav="res" href="resonance-transformers.html">Resonance &amp; Transformers</a>
+    <a class="navlink" data-nav="formulas" href="formulas.html">Formula Sheet</a>
+    <a class="navlink" data-nav="quiz" href="quiz.html">Quiz</a>
+  </div>
+  <button class="themetoggle" id="themetoggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+  <button class="navtoggle" id="navtoggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+</div></nav>
+
+<div class="layout">
+
+<aside class="sidebar">
+  <h3>On this page</h3>
+  <ul class="toc">
+    <li><input type="checkbox" data-sec="efield" title="Mark as studied"><a href="#efield">1. The Electric Field</a></li>
+    <li><input type="checkbox" data-sec="capacitance" title="Mark as studied"><a href="#capacitance">2. Capacitance &amp; Dielectrics</a></li>
+    <li><input type="checkbox" data-sec="charging" title="Mark as studied"><a href="#charging">3. RC Transients: Charging</a></li>
+    <li><input type="checkbox" data-sec="discharging" title="Mark as studied"><a href="#discharging">4. RC Transients: Discharging</a></li>
+    <li><input type="checkbox" data-sec="capcombo" title="Mark as studied"><a href="#capcombo">5. Capacitor Combinations &amp; Energy</a></li>
+    <li><input type="checkbox" data-sec="magnetic" title="Mark as studied"><a href="#magnetic">6. The Magnetic Field</a></li>
+    <li><input type="checkbox" data-sec="inductance" title="Mark as studied"><a href="#inductance">7. Inductance &amp; Faraday's Law</a></li>
+    <li><input type="checkbox" data-sec="rl" title="Mark as studied"><a href="#rl">8. RL Transients</a></li>
+    <li><input type="checkbox" data-sec="indcombo" title="Mark as studied"><a href="#indcombo">9. Inductor Combinations &amp; Steady State</a></li>
+  </ul>
+  <div class="progress-wrap">
+    <div class="progress-label">Studied: <b>0 / 9</b></div>
+    <div class="pbar"><span></span></div>
+  </div>
+</aside>
+
+<main>
+  <div class="page-head">
+    <span class="crumb">Part 2 of 4</span>
+    <h1>Capacitors &amp; Inductors <span class="lecture-tag">Lecture 3</span></h1>
+    <p class="lead">The two energy-storing elements. Capacitors store energy in an <b>electric field</b> and fight
+    changes in <i>voltage</i>; inductors store energy in a <b>magnetic field</b> and fight changes in <i>current</i>.
+    Their charging/discharging behaviour follows the same exponential curve — learn it once, use it twice.</p>
+  </div>
+
+  <!-- ============ 1. E FIELD ============ -->
+  <section class="topic" id="efield">
+    <h2><span class="nr">1</span> The Electric Field</h2>
+    <p>Around every charged body there is an <b>electric field</b>, drawn as <b>electric flux lines</b> that show its
+    strength and direction at every point: they leave + charges, enter − charges, take the most direct path, and
+    never cross. Denser lines = stronger field.</p>
+
+    <figure class="fig">
+      <img src="assets/img/electric-flux.png" alt="Electric flux lines around a charged body">
+      <figcaption><b>Flux lines</b> radiate from a positive charge; their density indicates field strength. <span class="src-note">— Lecture 3</span></figcaption>
+    </figure>
+
+    <p>The total flux is proportional to the charge that produces it (<span class="m">Ψ</span> = <span class="m">Q</span>),
+    and the <b>flux density</b> is flux per unit area:</p>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">D</span> = <span class="fr"><span class="nu"><span class="m">Ψ</span></span><span class="de"><span class="m">A</span></span></span>&nbsp;&nbsp;,&nbsp;&nbsp;<span class="m">E</span> = <span class="fr"><span class="nu"><span class="m">F</span></span><span class="de"><span class="m">Q</span></span></span></div>
+      <ul class="vars">
+        <li><b>D</b> – electric flux density (flux/area)</li>
+        <li><b>Ψ</b> – electric flux (numerically = charge Q, in coulombs)</li>
+        <li><b>E</b> – electric field strength (N/C): force per unit charge</li>
+      </ul>
+    </div>
+    <p class="ref">Reference: Boylestad, Ch. 10.2.</p>
+  </section>
+
+  <!-- ============ 2. CAPACITANCE ============ -->
+  <section class="topic" id="capacitance">
+    <h2><span class="nr">2</span> Capacitance &amp; Dielectrics</h2>
+    <p>Put two conducting plates close together, connect a battery, and charge piles up: +Q on one plate, −Q on the
+    other, with a uniform electric field between them. <b>Capacitance measures how much charge is stored per volt:</b></p>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">C</span> = <span class="fr"><span class="nu"><span class="m">Q</span></span><span class="de"><span class="m">V</span></span></span></div>
+      <ul class="vars">
+        <li><b>C</b> – capacitance (farads, F); 1 F = 1 C/V (huge — practical caps are µF, nF, pF)</li>
+        <li><b>Q</b> – charge stored on each plate (C)</li>
+        <li><b>V</b> – voltage across the plates (V)</li>
+      </ul>
+    </div>
+
+    <p>For a parallel-plate capacitor, geometry and the insulating material decide the capacitance:</p>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">C</span> = <span class="m">ε</span> <span class="fr"><span class="nu"><span class="m">A</span></span><span class="de"><span class="m">d</span></span></span>&nbsp;&nbsp;,&nbsp;&nbsp;<span class="m">ε</span> = <span class="m">ε</span><sub>r</sub><span class="m">ε</span><sub>0</sub></div>
+      <ul class="vars">
+        <li><b>A</b> – plate area; <b>d</b> – plate separation</li>
+        <li><b>ε</b> – permittivity of the dielectric (F/m)</li>
+        <li><b>ε₀</b> = 8.85 × 10⁻¹² F/m (vacuum); <b>ε<sub>r</sub></b> – relative permittivity (air ≈ 1, mica ≈ 5, ceramics up to thousands)</li>
+      </ul>
+    </div>
+
+    <h3>What the dielectric does</h3>
+    <p>The insulator between the plates isn't passive. Its molecules form little <b>dipoles</b> that align with the
+    field (<b>polarization</b>), partially cancelling the field inside. Less net field → less voltage needed for the
+    same charge → <b>more capacitance</b>. That's why ε<sub>r</sub> is also called the <i>dielectric constant</i>.</p>
+
+    <figure class="fig">
+      <img src="assets/img/capacitor-dielectric.png" alt="Dipole alignment in the dielectric of a capacitor">
+      <figcaption><b>Polarization:</b> dipoles in the dielectric align with the field and boost the stored charge. <span class="src-note">— Lecture 3</span></figcaption>
+    </figure>
+
+    <div class="callout warn"><b class="tag">Limits</b>
+    Every dielectric has a maximum voltage (<b>breakdown / V<sub>max</sub></b>) above which it conducts —
+    and real capacitors pass a tiny <b>leakage current</b> through the dielectric, so a charged capacitor slowly
+    self-discharges. Capacitance also drifts with temperature.</div>
+    <p class="ref">Reference: Boylestad, Ch. 10.3–10.5.</p>
+  </section>
+
+  <!-- ============ 3. CHARGING ============ -->
+  <section class="topic" id="charging">
+    <h2><span class="nr">3</span> RC Transients — the Charging Phase</h2>
+    <p>Connect a resistor and an uncharged capacitor to a battery. At the first instant the capacitor behaves like a
+    <b>short circuit</b> (no voltage on it yet) and current jumps to <span class="m">E/R</span>. As charge builds up,
+    the capacitor voltage rises and pushes back, so the current dies away. Everything follows the exponential
+    "universal time-constant" shape with:</p>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">τ</span> = <span class="m">R C</span></div>
+      <ul class="vars">
+        <li><b>τ</b> – time constant (seconds)</li>
+        <li><b>R</b> in ohms, <b>C</b> in farads</li>
+      </ul>
+    </div>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">v<sub>C</sub></span> = <span class="m">E</span>(1 − e<sup>−<span class="m">t</span>/<span class="m">τ</span></sup>)&nbsp;&nbsp;,&nbsp;&nbsp;<span class="m">i<sub>C</sub></span> = <span class="fr"><span class="nu"><span class="m">E</span></span><span class="de"><span class="m">R</span></span></span> e<sup>−<span class="m">t</span>/<span class="m">τ</span></sup>&nbsp;&nbsp;,&nbsp;&nbsp;<span class="m">v<sub>R</sub></span> = <span class="m">E</span> e<sup>−<span class="m">t</span>/<span class="m">τ</span></sup></div>
+      <ul class="vars">
+        <li><b>v<sub>C</sub></b> climbs from 0 toward E; <b>i<sub>C</sub></b> and <b>v<sub>R</sub></b> decay from their initial values to 0</li>
+        <li>After 1τ: 63.2 % of the way there; after 5τ: &gt; 99 % — <b>transient considered finished</b></li>
+      </ul>
+    </div>
+
+    <div class="figrow">
+      <figure class="fig">
+        <img src="assets/img/rc-charge-discharge-circuit.png" alt="RC charging network with switch">
+        <figcaption><b>The RC network.</b> Switch position selects charging or discharging. <span class="src-note">— Lecture 3</span></figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="assets/img/rc-charging-curve.png" alt="Capacitor voltage during charging with time constant markers">
+        <figcaption><b>v<sub>C</sub> while charging:</b> 63 % at 1τ, ~99 % at 5τ. <span class="src-note">— Lecture 3</span></figcaption>
+      </figure>
+    </div>
+
+    <figure class="fig">
+      <img src="assets/img/universal-time-constant.png" alt="Universal time constant chart">
+      <figcaption><b>Universal time-constant chart:</b> every RC (and RL) transient is one of these two curves,
+      y = 1 − e<sup>−t/τ</sup> (rising) or y = e<sup>−t/τ</sup> (falling). <span class="src-note">— Lecture 3</span></figcaption>
+    </figure>
+
+    <div class="callout idea"><b class="tag">Initial conditions</b>
+    If the capacitor already starts at voltage <span class="m">V<sub>i</sub></span> and heads to a final value
+    <span class="m">V<sub>f</sub></span>, the lecture's general formula covers it:
+    <span class="fml" style="font-size:1.02rem">&nbsp;<span class="m">v<sub>C</sub></span> = <span class="m">V<sub>f</sub></span> + (<span class="m">V<sub>i</sub></span> − <span class="m">V<sub>f</sub></span>)e<sup>−t/τ</sup></span>
+    &nbsp;Start value, end value, exponential glide between them.</div>
+    <p class="ref">Reference: Boylestad, Ch. 10.6–10.7.</p>
+  </section>
+
+  <!-- ============ 4. DISCHARGING ============ -->
+  <section class="topic" id="discharging">
+    <h2><span class="nr">4</span> RC Transients — Discharging &amp; <span class="m">i<sub>C</sub></span></h2>
+    <p>Flip the switch so the charged capacitor sees only the resistor: it now <i>acts as the source</i>, driving
+    current the opposite way until empty. Same time constant, falling curve:</p>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">v<sub>C</sub></span> = <span class="m">E</span> e<sup>−<span class="m">t</span>/<span class="m">τ</span></sup>&nbsp;&nbsp;,&nbsp;&nbsp;<span class="m">i<sub>C</sub></span> = <span class="fr"><span class="nu"><span class="m">E</span></span><span class="de"><span class="m">R</span></span></span> e<sup>−<span class="m">t</span>/<span class="m">τ</span></sup>&nbsp;&nbsp;(reversed direction)</div>
+      <ul class="vars"><li>discharging with <b>τ = RC</b>, complete after ≈ 5τ</li></ul>
+    </div>
+
+    <figure class="fig">
+      <img src="assets/img/rc-waveforms.png" alt="Capacitor voltage and current during charging and discharging cycles">
+      <figcaption><b>Full cycle:</b> v<sub>C</sub> and i<sub>C</sub> through charge → discharge. Note the current direction flips. <span class="src-note">— Lecture 3</span></figcaption>
+    </figure>
+
+    <h3>The defining current equation</h3>
+    <p>The capacitor current at any instant is set by <i>how fast its voltage changes</i>:</p>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">i<sub>C</sub></span> = <span class="m">C</span> <span class="fr"><span class="nu">d<span class="m">v<sub>C</sub></span></span><span class="de">d<span class="m">t</span></span></span></div>
+      <ul class="vars">
+        <li>Steady DC voltage → dv/dt = 0 → <b>i<sub>C</sub> = 0</b>: a capacitor is an <b>open circuit</b> to steady DC</li>
+        <li>Fast voltage changes → large current: capacitors resist sudden voltage jumps</li>
+      </ul>
+    </div>
+    <p class="ref">Reference: Boylestad, Ch. 10.8–10.10.</p>
+  </section>
+
+  <!-- ============ 5. CAP COMBINATIONS ============ -->
+  <section class="topic" id="capcombo">
+    <h2><span class="nr">5</span> Capacitors in Series &amp; Parallel, Stored Energy</h2>
+    <p><b>Opposite to resistors!</b> In <b>series</b> the same charging current flows for the same time, so every
+    capacitor stores the <b>same charge</b>, and total capacitance shrinks. In <b>parallel</b> all share the same
+    voltage and the charges add:</p>
+
+    <div class="fbox">
+      <div class="fml">Series:&nbsp; <span class="m">Q<sub>T</sub></span> = <span class="m">Q</span><sub>1</sub> = <span class="m">Q</span><sub>2</sub> = <span class="m">Q</span><sub>3</sub>&nbsp;,&nbsp;&nbsp;<span class="fr"><span class="nu">1</span><span class="de"><span class="m">C<sub>T</sub></span></span></span> = <span class="fr"><span class="nu">1</span><span class="de"><span class="m">C</span><sub>1</sub></span></span> + <span class="fr"><span class="nu">1</span><span class="de"><span class="m">C</span><sub>2</sub></span></span> + <span class="fr"><span class="nu">1</span><span class="de"><span class="m">C</span><sub>3</sub></span></span></div>
+      <ul class="vars"><li>From KVL: E = V₁ + V₂ + V₃ with V = Q/C per capacitor</li></ul>
+    </div>
+    <div class="fbox">
+      <div class="fml">Parallel:&nbsp; <span class="m">Q<sub>T</sub></span> = <span class="m">Q</span><sub>1</sub> + <span class="m">Q</span><sub>2</sub> + <span class="m">Q</span><sub>3</sub>&nbsp;,&nbsp;&nbsp;<span class="m">C<sub>T</sub></span> = <span class="m">C</span><sub>1</sub> + <span class="m">C</span><sub>2</sub> + <span class="m">C</span><sub>3</sub></div>
+      <ul class="vars"><li>Same E across all: E = V₁ = V₂ = V₃</li></ul>
+    </div>
+
+    <div class="figrow">
+      <figure class="fig">
+        <img src="assets/img/capacitors-series.png" alt="Capacitors in series share the same charge">
+        <figcaption><b>Series:</b> same Q on every capacitor. <span class="src-note">— Lecture 3</span></figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="assets/img/capacitors-parallel.png" alt="Capacitors in parallel share the same voltage">
+        <figcaption><b>Parallel:</b> same V, charges add. <span class="src-note">— Lecture 3</span></figcaption>
+      </figure>
+    </div>
+
+    <h3>Energy stored by a capacitor</h3>
+    <div class="fbox">
+      <div class="fml"><span class="m">W<sub>C</sub></span> = <span class="fr"><span class="nu"><span class="m">C V</span><sup> 2</sup></span><span class="de">2</span></span></div>
+      <ul class="vars">
+        <li><b>W<sub>C</sub></b> – energy stored in the electric field (joules, J)</li>
+        <li><b>V</b> – voltage across the capacitor (V)</li>
+      </ul>
+    </div>
+    <p class="ref">Reference: Boylestad, Ch. 10.11–10.12.</p>
+  </section>
+
+  <!-- ============ 6. MAGNETIC FIELD ============ -->
+  <section class="topic" id="magnetic">
+    <h2><span class="nr">6</span> The Magnetic Field</h2>
+    <p>A <b>magnetic field</b> surrounds every magnet and — crucially — every <b>current-carrying conductor</b>.
+    It is drawn as continuous <b>flux lines</b> (symbol <span class="m">Φ</span>) that leave the north pole and enter
+    the south pole, always forming closed loops.</p>
+
+    <div class="figrow">
+      <figure class="fig">
+        <img src="assets/img/magnet-flux.png" alt="Flux distribution around a permanent magnet">
+        <figcaption><b>Permanent magnet:</b> flux lines N → S outside the magnet. <span class="src-note">— Lecture 3</span></figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="assets/img/electromagnet.png" alt="Flux around a coil with a steel core - electromagnet">
+        <figcaption><b>Electromagnet:</b> a coil around a steel core concentrates the flux of the coil current. <span class="src-note">— Lecture 3</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">B</span> = <span class="fr"><span class="nu"><span class="m">Φ</span></span><span class="de"><span class="m">A</span></span></span>&nbsp;&nbsp;,&nbsp;&nbsp;<span class="m">µ</span> = <span class="m">µ</span><sub>r</sub><span class="m">µ</span><sub>0</sub></div>
+      <ul class="vars">
+        <li><b>B</b> – flux density (teslas, T); 1 T = 1 Wb/m²</li>
+        <li><b>Φ</b> – magnetic flux (webers, Wb); <b>A</b> – area (m²)</li>
+        <li><b>µ</b> – permeability: how easily a material carries flux; <b>µ₀</b> = 4π × 10⁻⁷ Wb/(A·m)</li>
+      </ul>
+    </div>
+
+    <p>Materials sort by relative permeability <span class="m">µ</span><sub>r</sub>: <b>diamagnetic</b>
+    (µ<sub>r</sub> &lt; 1), <b>paramagnetic</b> (µ<sub>r</sub> slightly &gt; 1, e.g. oxygen, sodium, platinum) and
+    <b>ferromagnetic</b> (µ<sub>r</sub> ≫ 1, hundreds to thousands — iron, nickel, steel). Ferromagnetic cores
+    multiply the flux of a coil enormously, but they <b>saturate</b>: beyond a point, more current barely adds flux.</p>
+    <p class="ref">Reference: Boylestad, Ch. 11.2 &amp; 12.</p>
+  </section>
+
+  <!-- ============ 7. INDUCTANCE ============ -->
+  <section class="topic" id="inductance">
+    <h2><span class="nr">7</span> Inductance, Faraday's Law &amp; Lenz's Law</h2>
+    <p>A coil's ability to oppose changes in current — and to store energy magnetically — is its
+    <b>inductance</b>. For a coil of <span class="m">N</span> turns wound on a core:</p>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">L</span> = <span class="fr"><span class="nu"><span class="m">N</span><sup> 2</sup><span class="m">µ A</span></span><span class="de"><span class="m">l</span></span></span></div>
+      <ul class="vars">
+        <li><b>L</b> – inductance (henries, H)</li>
+        <li><b>N</b> – number of turns (note the square!)</li>
+        <li><b>µ</b> – core permeability; <b>A</b> – core cross-section (m²); <b>l</b> – coil length (m)</li>
+      </ul>
+    </div>
+
+    <h3>Faraday's law — where induced voltage comes from</h3>
+    <p>Move a magnet through a coil (or change the current in a nearby coil) and a voltage appears across it.
+    The faster the flux changes and the more turns, the bigger the voltage:</p>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">e</span> = <span class="m">N</span> <span class="fr"><span class="nu">d<span class="m">Φ</span></span><span class="de">d<span class="m">t</span></span></span></div>
+      <ul class="vars">
+        <li><b>e</b> – induced voltage (V)</li>
+        <li><b>N</b> – turns; <b>dΦ/dt</b> – rate of change of flux (Wb/s)</li>
+        <li>No change in flux → no induced voltage</li>
+      </ul>
+    </div>
+
+    <figure class="fig">
+      <img src="assets/img/faraday-induction.png" alt="Conductor moving through a magnetic field inducing a voltage">
+      <figcaption><b>Faraday's law in action:</b> motion through a magnetic field induces a voltage. <span class="src-note">— Lecture 3</span></figcaption>
+    </figure>
+
+    <p><b>Lenz's law</b> fixes the sign: the induced voltage always acts to <b>oppose the change that caused it</b>
+    ("nature dislikes change"). Applied to a coil's own current, Faraday's law becomes the inductor's defining equation:</p>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">v<sub>L</sub></span> = <span class="m">L</span> <span class="fr"><span class="nu">d<span class="m">i<sub>L</sub></span></span><span class="de">d<span class="m">t</span></span></span></div>
+      <ul class="vars">
+        <li>Steady DC current → di/dt = 0 → <b>v<sub>L</sub> = 0</b>: an inductor is a <b>short circuit</b> to steady DC</li>
+        <li>Sudden current changes → large voltage: inductors resist sudden current jumps</li>
+      </ul>
+    </div>
+    <p class="ref">Reference: Boylestad, Ch. 11.2–11.4.</p>
+  </section>
+
+  <!-- ============ 8. RL TRANSIENTS ============ -->
+  <section class="topic" id="rl">
+    <h2><span class="nr">8</span> RL Transients — Storage &amp; Release</h2>
+    <h3>Storage phase (switch closes)</h3>
+    <p>At the instant of switching, the inductor refuses any jump in current (<span class="m">i<sub>L</sub></span>
+    starts at 0 — momentarily an <b>open circuit</b>) and the full supply voltage appears across it. The current then
+    climbs exponentially to its final value <span class="m">I<sub>m</sub></span> = <span class="m">E/R</span>:</p>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">i<sub>L</sub></span> = <span class="fr"><span class="nu"><span class="m">E</span></span><span class="de"><span class="m">R</span></span></span>(1 − e<sup>−<span class="m">t</span>/<span class="m">τ</span></sup>)&nbsp;&nbsp;,&nbsp;&nbsp;<span class="m">v<sub>L</sub></span> = <span class="m">E</span> e<sup>−<span class="m">t</span>/<span class="m">τ</span></sup>&nbsp;&nbsp;,&nbsp;&nbsp;<span class="m">τ</span> = <span class="fr"><span class="nu"><span class="m">L</span></span><span class="de"><span class="m">R</span></span></span></div>
+      <ul class="vars">
+        <li><b>τ = L/R</b> (seconds) — note: R in the <i>denominator</i>, unlike τ = RC</li>
+        <li>63.2 % of final current after 1τ; transient done after ≈ 5τ</li>
+      </ul>
+    </div>
+
+    <div class="figrow">
+      <figure class="fig">
+        <img src="assets/img/rl-circuit.png" alt="RL storage circuit with switch">
+        <figcaption><b>RL storage circuit.</b> <span class="src-note">— Lecture 3</span></figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="assets/img/rl-storage-curve.png" alt="Inductor current rising during the storage phase">
+        <figcaption><b>i<sub>L</sub> rising</b> toward E/R with τ = L/R. <span class="src-note">— Lecture 3</span></figcaption>
+      </figure>
+    </div>
+
+    <h3>Release phase (switch opens)</h3>
+    <p>Open the switch and the inductor insists its current keeps flowing for an instant. Forced through whatever
+    path remains (resistor <span class="m">R</span><sub>2</sub>), the collapsing field can generate a <b>voltage spike
+    much larger than the supply</b> with reversed polarity — from the lecture:</p>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">v<sub>L</sub></span> = −(1 + <span class="fr"><span class="nu"><span class="m">R</span><sub>2</sub></span><span class="de"><span class="m">R</span><sub>1</sub></span></span>)<span class="m">E</span>&nbsp;&nbsp;(at the instant the switch opens)</div>
+      <ul class="vars">
+        <li>then decays with <b>τ′ = L/(R₁+R₂)</b></li>
+        <li>e.g. R₂ = 2R₁ gives a spike of −3E — this is why switching inductive loads makes sparks</li>
+      </ul>
+    </div>
+
+    <div class="callout warn"><b class="tag">Remember</b>
+    Capacitor voltage cannot jump; <b>inductor current cannot jump</b>. Everything else can (and does).</div>
+    <p class="ref">Reference: Boylestad, Ch. 11.5–11.8.</p>
+  </section>
+
+  <!-- ============ 9. IND COMBINATIONS ============ -->
+  <section class="topic" id="indcombo">
+    <h2><span class="nr">9</span> Inductor Combinations, Steady State &amp; Energy</h2>
+    <p>Inductors combine <b>exactly like resistors</b> (and opposite to capacitors):</p>
+
+    <div class="fbox">
+      <div class="fml">Series:&nbsp; <span class="m">L<sub>T</sub></span> = <span class="m">L</span><sub>1</sub> + <span class="m">L</span><sub>2</sub> + … + <span class="m">L</span><sub>N</sub>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Parallel:&nbsp; <span class="fr"><span class="nu">1</span><span class="de"><span class="m">L<sub>T</sub></span></span></span> = <span class="fr"><span class="nu">1</span><span class="de"><span class="m">L</span><sub>1</sub></span></span> + … + <span class="fr"><span class="nu">1</span><span class="de"><span class="m">L</span><sub>N</sub></span></span>&nbsp;,&nbsp;&nbsp;<span class="m">L<sub>T</sub></span> = <span class="fr"><span class="nu"><span class="m">L</span><sub>1</sub><span class="m">L</span><sub>2</sub></span><span class="de"><span class="m">L</span><sub>1</sub>+<span class="m">L</span><sub>2</sub></span></span></div>
+      <ul class="vars"><li>two-inductor product/sum shortcut works just like for resistors</li></ul>
+    </div>
+
+    <h3>Steady-state DC: the golden shortcut</h3>
+    <p>Once all transients settle (≈ 5τ), in a DC circuit:</p>
+    <div class="callout idea"><b class="tag">Steady state</b>
+    <b>Inductor → short circuit</b> (v<sub>L</sub> = 0) &nbsp;·&nbsp; <b>Capacitor → open circuit</b> (i<sub>C</sub> = 0).
+    Redraw the circuit with those substitutions and solve it as plain resistors.</div>
+
+    <h3>Energy stored by an inductor</h3>
+    <div class="fbox">
+      <div class="fml"><span class="m">W<sub>L</sub></span> = <span class="fr"><span class="nu"><span class="m">L I</span><sup> 2</sup></span><span class="de">2</span></span></div>
+      <ul class="vars">
+        <li><b>W<sub>L</sub></b> – energy stored in the magnetic field (J)</li>
+        <li><b>I</b> – steady current through the coil (A)</li>
+      </ul>
+    </div>
+
+    <div class="callout tip"><b class="tag">Symmetry worth memorizing</b>
+    W<sub>C</sub> = ½CV² (capacitor, voltage) ↔ W<sub>L</sub> = ½LI² (inductor, current).
+    Each element stores energy via the quantity it refuses to change suddenly.</div>
+    <p class="ref">Reference: Boylestad, Ch. 11.9–11.12.</p>
+  </section>
+
+  <div class="next-prev">
+    <a href="dc-circuits.html"><span class="sub">← Previous</span> DC Circuits</a>
+    <a href="ac-circuits.html"><span class="sub">Next →</span> AC Circuits</a>
+  </div>
+</main>
+</div>
+
+<footer class="site">
+  Built from the Electronics lecture slides (Lectures 1–7) · Explanations cross-checked with Boylestad,
+  <i>Introductory Circuit Analysis</i> · Figures © their original sources, reproduced from the lecture PDF for personal study.
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AC Circuits — Electronics Study Guide</title>
+<link rel="stylesheet" href="css/style.css">
+<meta name="theme-color" content="#1e3a8a">
+<script>(function(){try{var t=localStorage.getItem("eguide-theme");if(!t&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){t="dark"}if(t==="dark"){document.documentElement.setAttribute("data-theme","dark")}}catch(e){}})();</script>
+</head>
+<body data-page="ac">
+
+<nav class="topnav"><div class="wrap">
+  <a class="brand" href="index.html"><span class="bolt">⚡</span> Electronics Study Guide</a>
+  <div class="navlinks" id="navlinks">
+    <a class="navlink" data-nav="home" href="index.html">Home</a>
+    <a class="navlink" data-nav="dc" href="dc-circuits.html">DC Circuits</a>
+    <a class="navlink" data-nav="cap" href="capacitors-inductors.html">Capacitors &amp; Inductors</a>
+    <a class="navlink" data-nav="ac" href="ac-circuits.html">AC Circuits</a>
+    <a class="navlink" data-nav="res" href="resonance-transformers.html">Resonance &amp; Transformers</a>
+    <a class="navlink" data-nav="formulas" href="formulas.html">Formula Sheet</a>
+    <a class="navlink" data-nav="quiz" href="quiz.html">Quiz</a>
+  </div>
+  <button class="themetoggle" id="themetoggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+  <button class="navtoggle" id="navtoggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+</div></nav>
+
+<div class="layout">
+
+<aside class="sidebar">
+  <h3>On this page</h3>
+  <ul class="toc">
+    <li><input type="checkbox" data-sec="sine" title="Mark as studied"><a href="#sine">1. The Sinusoidal Waveform</a></li>
+    <li><input type="checkbox" data-sec="freq" title="Mark as studied"><a href="#freq">2. Frequency, Radians &amp; ω</a></li>
+    <li><input type="checkbox" data-sec="phase" title="Mark as studied"><a href="#phase">3. General Format &amp; Phase</a></li>
+    <li><input type="checkbox" data-sec="rms" title="Mark as studied"><a href="#rms">4. Average &amp; RMS Values</a></li>
+    <li><input type="checkbox" data-sec="elements" title="Mark as studied"><a href="#elements">5. R, L, C Under AC</a></li>
+    <li><input type="checkbox" data-sec="fresponse" title="Mark as studied"><a href="#fresponse">6. Frequency Response</a></li>
+    <li><input type="checkbox" data-sec="complex" title="Mark as studied"><a href="#complex">7. Complex Numbers &amp; Phasors</a></li>
+    <li><input type="checkbox" data-sec="impedance" title="Mark as studied"><a href="#impedance">8. Impedance: Series &amp; Parallel</a></li>
+    <li><input type="checkbox" data-sec="acpower" title="Mark as studied"><a href="#acpower">9. AC Power &amp; Power Factor</a></li>
+  </ul>
+  <div class="progress-wrap">
+    <div class="progress-label">Studied: <b>0 / 9</b></div>
+    <div class="pbar"><span></span></div>
+  </div>
+</aside>
+
+<main>
+  <div class="page-head">
+    <span class="crumb">Part 3 of 4</span>
+    <h1>AC Circuits <span class="lecture-tag">Lectures 4–6</span></h1>
+    <p class="lead">Alternating current in three steps: first describe the sine wave itself (Lecture 4), then see how
+    R, L and C each respond to it and learn the phasor/complex-number language (Lecture 5), and finally solve whole
+    AC circuits and their power flow (Lecture 6). All the DC laws still apply — just with complex numbers.</p>
+  </div>
+
+  <!-- ============ 1. SINE WAVE ============ -->
+  <section class="topic" id="sine">
+    <h2><span class="nr">1</span> The Sinusoidal Waveform — Definitions</h2>
+    <p>Mains electricity alternates: the voltage swings smoothly positive and negative, over and over. The lecture's
+    vocabulary for this waveform is the foundation for everything after, so nail these terms:</p>
+
+    <figure class="fig">
+      <img src="assets/img/sine-definitions.png" alt="Sinusoidal waveform with peak value, peak-to-peak value and period labelled">
+      <figcaption><b>Key landmarks</b> of a sine wave. <span class="src-note">— Lecture 4</span></figcaption>
+    </figure>
+
+    <p><b>Instantaneous value</b> (<span class="m">e</span>, <span class="m">v</span>, <span class="m">i</span> —
+    lowercase): the value at one particular moment. <b>Peak amplitude</b> (<span class="m">E<sub>m</sub></span>,
+    <span class="m">V<sub>m</sub></span>): maximum value measured from the <i>average</i> level.
+    <b>Peak-to-peak value</b> (<span class="m">E</span><sub>p-p</sub>): from the negative peak to the positive peak —
+    twice the amplitude for a pure sine. <b>Periodic waveform</b>: one that repeats itself continually.
+    <b>Cycle</b>: one complete portion of the waveform. <b>Period</b> (<span class="m">T</span>): the time of one cycle.</p>
+
+    <figure class="fig">
+      <img src="assets/img/period-cycle.png" alt="Period measured between any two corresponding points of a waveform">
+      <figcaption><b>The period T</b> can be measured between <i>any</i> two corresponding points — peak to peak, zero-crossing to zero-crossing. <span class="src-note">— Lecture 4</span></figcaption>
+    </figure>
+    <p class="ref">Reference: Boylestad, Ch. 13.2.</p>
+  </section>
+
+  <!-- ============ 2. FREQUENCY ============ -->
+  <section class="topic" id="freq">
+    <h2><span class="nr">2</span> Frequency, Radians &amp; Angular Velocity</h2>
+    <p><b>Frequency</b> counts cycles per second:</p>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">f</span> = <span class="fr"><span class="nu">1</span><span class="de"><span class="m">T</span></span></span></div>
+      <ul class="vars">
+        <li><b>f</b> – frequency (hertz, Hz); 1 Hz = 1 cycle/s</li>
+        <li><b>T</b> – period (s)</li>
+        <li>European mains: 50 Hz → T = 20 ms; US: 60 Hz</li>
+      </ul>
+    </div>
+
+    <h3>Radians</h3>
+    <p>Angles in electronics are usually measured in <b>radians</b>: 2π rad = 360°, so 1 rad ≈ 57.3°.</p>
+
+    <div class="figrow">
+      <figure class="fig">
+        <img src="assets/img/radian-circle.png" alt="Definition of the radian">
+        <figcaption><b>1 radian</b> = the angle whose arc equals the radius; 2π of them fill a circle. <span class="src-note">— Lecture 4</span></figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="assets/img/sine-generation.png" alt="Sine wave generated by projecting a rotating vector">
+        <figcaption><b>Where the sine shape comes from:</b> the vertical projection of a vector rotating at constant speed. <span class="src-note">— Lecture 4</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="fbox">
+      <div class="fml">Radians = <span class="fr"><span class="nu">π</span><span class="de">180°</span></span> × (degrees)&nbsp;&nbsp;,&nbsp;&nbsp;Degrees = <span class="fr"><span class="nu">180°</span><span class="de">π</span></span> × (radians)</div>
+      <ul class="vars"><li>e.g. 90° = π/2 rad, 30° = π/6 rad</li></ul>
+    </div>
+
+    <h3>Angular velocity ω</h3>
+    <p>Picture the sine wave as the shadow of a spinning vector. How fast it spins is the <b>angular velocity</b>,
+    and it links time to angle:</p>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">ω</span> = <span class="fr"><span class="nu"><span class="m">α</span></span><span class="de"><span class="m">t</span></span></span>&nbsp;&nbsp;,&nbsp;&nbsp;<span class="m">ω</span> = <span class="fr"><span class="nu">2π</span><span class="de"><span class="m">T</span></span></span> = 2π<span class="m">f</span></div>
+      <ul class="vars">
+        <li><b>ω</b> – angular velocity (rad/s)</li>
+        <li><b>α</b> – angle travelled (rad) in time <b>t</b> (s)</li>
+        <li>e.g. at f = 60 Hz: ω = 2π(60) ≈ 377 rad/s (lecture example)</li>
+      </ul>
+    </div>
+    <p class="ref">Reference: Boylestad, Ch. 13.3–13.4.</p>
+  </section>
+
+  <!-- ============ 3. PHASE ============ -->
+  <section class="topic" id="phase">
+    <h2><span class="nr">3</span> General Format &amp; Phase Relations</h2>
+    <p>The complete mathematical description of a sinusoidal voltage or current:</p>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">v</span> = <span class="m">V<sub>m</sub></span> sin(<span class="m">ω t</span> ± <span class="m">θ</span>)&nbsp;&nbsp;,&nbsp;&nbsp;<span class="m">i</span> = <span class="m">I<sub>m</sub></span> sin(<span class="m">ω t</span> ± <span class="m">θ</span>)</div>
+      <ul class="vars">
+        <li><b>V<sub>m</sub>, I<sub>m</sub></b> – peak values</li>
+        <li><b>ωt</b> – the running angle (rad)</li>
+        <li><b>θ</b> – phase shift: <b>+θ</b> moves the wave <i>left</i> (starts earlier, "leads"); <b>−θ</b> moves it <i>right</i> ("lags")</li>
+      </ul>
+    </div>
+
+    <figure class="fig">
+      <img src="assets/img/phase-shift.png" alt="Sine wave shifted by a phase angle">
+      <figcaption><b>Phase shift:</b> sin(ωt + θ) crosses zero <i>before</i> t = 0 — it leads. <span class="src-note">— Lecture 4</span></figcaption>
+    </figure>
+
+    <p>When comparing two waveforms of the <b>same frequency</b>: the one that reaches its peak first <b>leads</b>
+    the other; the difference of their phase angles is the phase angle between them. Useful identities from the
+    lecture: cos x = sin(x + 90°), and sin and cos waves 90° apart will matter constantly for L and C.</p>
+
+    <div class="callout tip"><b class="tag">Quick check</b>
+    v = 10 sin(ωt + 30°) vs i = 5 sin(ωt − 30°): the voltage leads the current by 60°.</div>
+    <p class="ref">Reference: Boylestad, Ch. 13.5–13.6.</p>
+  </section>
+
+  <!-- ============ 4. RMS ============ -->
+  <section class="topic" id="rms">
+    <h2><span class="nr">4</span> Average &amp; Effective (RMS) Values</h2>
+    <h3>Average value</h3>
+    <p>The average of a waveform over a stretch is its <i>algebraic area divided by the length</i>:</p>
+    <div class="fbox">
+      <div class="fml"><span class="m">G</span> = <span class="fr"><span class="nu">algebraic sum of areas</span><span class="de">length of curve</span></span></div>
+      <ul class="vars"><li>Areas below the axis count negative — so a <b>full sine cycle averages to zero</b></li></ul>
+    </div>
+
+    <h3>Effective (RMS) value — the one meters read</h3>
+    <p>If the average is zero, how do we rate AC's ability to do work? Compare heating power. The lecture's
+    experiment: find the DC current that heats water exactly as fast as a given AC current. The answer defines the
+    <b>effective</b> or <b>RMS</b> value:</p>
+
+    <figure class="fig">
+      <img src="assets/img/rms-experiment.png" alt="Experiment comparing the heating effect of AC and DC currents">
+      <figcaption><b>Defining experiment:</b> same heating → equivalent DC value. <span class="src-note">— Lecture 4</span></figcaption>
+    </figure>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">I</span><sub>rms</sub> = <span class="fr"><span class="nu"><span class="m">I<sub>m</sub></span></span><span class="de"><span class="sq"><span class="rad">√</span><span class="vinc">2</span></span></span></span> = 0.707 <span class="m">I<sub>m</sub></span>&nbsp;&nbsp;,&nbsp;&nbsp;<span class="m">V</span><sub>rms</sub> = 0.707 <span class="m">V<sub>m</sub></span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="m">I<sub>m</sub></span> = <span class="sq"><span class="rad">√</span><span class="vinc">2</span></span> <span class="m">I</span><sub>rms</sub> ≈ 1.414 <span class="m">I</span><sub>rms</sub></div>
+      <ul class="vars">
+        <li>valid for <b>sinusoidal</b> waveforms (comes from averaging sin², via sin²x = ½(1 − cos 2x))</li>
+        <li>Unlabelled AC values are RMS by convention: "230 V mains" means V<sub>m</sub> ≈ 325 V!</li>
+      </ul>
+    </div>
+    <p class="ref">Reference: Boylestad, Ch. 13.7–13.8.</p>
+  </section>
+
+  <!-- ============ 5. ELEMENTS ============ -->
+  <section class="topic" id="elements">
+    <h2><span class="nr">5</span> How R, L and C Respond to AC</h2>
+    <p>Drive each basic element with a sinusoidal current and watch the voltage (recall
+    <span class="m">v<sub>L</sub></span> = <span class="m">L</span> d<span class="m">i<sub>L</sub></span>/d<span class="m">t</span> and
+    <span class="m">i<sub>C</sub></span> = <span class="m">C</span> d<span class="m">v<sub>C</sub></span>/d<span class="m">t</span> —
+    the derivative of a sine is a cosine, i.e. the same wave shifted 90°):</p>
+
+    <h3>Resistor — in phase</h3>
+    <figure class="fig">
+      <img src="assets/img/resistor-phase.png" alt="Voltage and current in phase for a resistor">
+      <figcaption><b>R:</b> v and i rise and fall together — <b>in phase</b>. Opposition: R (Ω), frequency-independent. <span class="src-note">— Lecture 5</span></figcaption>
+    </figure>
+
+    <h3>Inductor — voltage leads by 90°</h3>
+    <p>The inductor's voltage depends on the <i>slope</i> of the current, so
+    <span class="m">v<sub>L</sub></span> peaks where <span class="m">i<sub>L</sub></span> changes fastest:</p>
+    <figure class="fig">
+      <img src="assets/img/inductor-phase.png" alt="Inductor voltage leading current by 90 degrees">
+      <figcaption><b>L:</b> v<sub>L</sub> <b>leads</b> i<sub>L</sub> by 90°. <span class="src-note">— Lecture 5</span></figcaption>
+    </figure>
+    <div class="fbox">
+      <div class="fml"><span class="m">X<sub>L</sub></span> = <span class="m">ω L</span> = 2π<span class="m">f L</span></div>
+      <ul class="vars">
+        <li><b>X<sub>L</sub></b> – inductive reactance (Ω): the inductor's opposition to AC</li>
+        <li>grows with frequency and inductance</li>
+      </ul>
+    </div>
+
+    <h3>Capacitor — current leads by 90°</h3>
+    <figure class="fig">
+      <img src="assets/img/capacitor-phase.png" alt="Capacitor current leading voltage by 90 degrees">
+      <figcaption><b>C:</b> i<sub>C</sub> <b>leads</b> v<sub>C</sub> by 90° (equivalently: v<sub>C</sub> lags). <span class="src-note">— Lecture 5</span></figcaption>
+    </figure>
+    <div class="fbox">
+      <div class="fml"><span class="m">X<sub>C</sub></span> = <span class="fr"><span class="nu">1</span><span class="de"><span class="m">ω C</span></span></span> = <span class="fr"><span class="nu">1</span><span class="de">2π<span class="m">f C</span></span></span></div>
+      <ul class="vars">
+        <li><b>X<sub>C</sub></b> – capacitive reactance (Ω)</li>
+        <li>shrinks as frequency or capacitance grows</li>
+      </ul>
+    </div>
+
+    <div class="callout tip"><b class="tag">Memory aid — "ELI the ICE man"</b>
+    <b>ELI</b>: in an inductor (L), E (voltage) comes before I (current).
+    <b>ICE</b>: in a capacitor (C), I comes before E.
+    And the lecture's diagnostic: if the source current <i>leads</i> the applied voltage, the network is predominantly
+    <b>capacitive</b>; if the voltage leads, it's predominantly <b>inductive</b>.</div>
+    <p class="ref">Reference: Boylestad, Ch. 14.2.</p>
+  </section>
+
+  <!-- ============ 6. FREQ RESPONSE ============ -->
+  <section class="topic" id="fresponse">
+    <h2><span class="nr">6</span> Frequency Response of R, L, C</h2>
+    <p>Because <span class="m">X<sub>L</sub></span> and <span class="m">X<sub>C</sub></span> depend on frequency,
+    every element has a personality across the spectrum:</p>
+
+    <div class="figrow">
+      <figure class="fig">
+        <img src="assets/img/xl-frequency.png" alt="Inductive reactance versus frequency - straight line">
+        <figcaption><b>X<sub>L</sub> = 2πfL:</b> straight line from the origin — at DC (f = 0) the ideal inductor is a <b>short</b>; at high f it blocks. <span class="src-note">— Lecture 5</span></figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="assets/img/xc-frequency.png" alt="Capacitive reactance versus frequency - hyperbola">
+        <figcaption><b>X<sub>C</sub> = 1/(2πfC):</b> hyperbola — at DC the capacitor is an <b>open</b>; at high f it approaches a short. <span class="src-note">— Lecture 5</span></figcaption>
+      </figure>
+    </div>
+
+    <p>An ideal resistor is the boring one: R constant at every frequency (real resistors stay flat over a wide range).
+    These three curves are the seed of filters and of <b>resonance</b> — at one special frequency
+    X<sub>L</sub> and X<sub>C</sub> cross.</p>
+    <p class="ref">Reference: Boylestad, Ch. 14.3.</p>
+  </section>
+
+  <!-- ============ 7. COMPLEX & PHASORS ============ -->
+  <section class="topic" id="complex">
+    <h2><span class="nr">7</span> Complex Numbers &amp; Phasors</h2>
+    <p>Adding sinusoids point-by-point is painful. The fix: represent each sinusoid by a <b>phasor</b> — a frozen
+    snapshot of its rotating vector — written as a complex number. Then AC circuit maths becomes algebra.</p>
+
+    <div class="figrow">
+      <figure class="fig">
+        <img src="assets/img/complex-rectangular.png" alt="Complex number in rectangular form">
+        <figcaption><b>Rectangular form:</b> <span class="m">C</span> = X + jY (j = √−1; the j-axis is vertical). <span class="src-note">— Lecture 5</span></figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="assets/img/complex-polar.png" alt="Complex number in polar form">
+        <figcaption><b>Polar form:</b> <span class="m">C</span> = Z ∠θ — a length and an angle. <span class="src-note">— Lecture 5</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="fbox">
+      <div class="fml">R→P:&nbsp; <span class="m">Z</span> = <span class="sq"><span class="rad">√</span><span class="vinc"><span class="m">X</span><sup>2</sup> + <span class="m">Y</span><sup>2</sup></span></span>&nbsp;,&nbsp;<span class="m">θ</span> = tan<sup>−1</sup><span class="fr"><span class="nu"><span class="m">Y</span></span><span class="de"><span class="m">X</span></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;P→R:&nbsp; <span class="m">X</span> = <span class="m">Z</span> cos <span class="m">θ</span>&nbsp;,&nbsp;<span class="m">Y</span> = <span class="m">Z</span> sin <span class="m">θ</span></div>
+      <ul class="vars">
+        <li><b>Add/subtract</b> in rectangular form (combine real parts, combine j-parts)</li>
+        <li><b>Multiply/divide</b> in polar form (multiply magnitudes, add angles ÷ divide magnitudes, subtract angles)</li>
+        <li>Watch the quadrant when X &lt; 0 — adjust θ by 180° (lecture example: −6 + j3 = 6.71 ∠153.43°)</li>
+      </ul>
+    </div>
+
+    <h3>From time domain to phasor domain</h3>
+    <p>A sinusoid <span class="m">v</span> = <span class="m">V<sub>m</sub></span> sin(<span class="m">ωt</span> + θ)
+    becomes the phasor <b>V</b> = <span class="m">V</span> ∠θ, where <span class="m">V</span> = 0.707 <span class="m">V<sub>m</sub></span>
+    (RMS). All phasors in one problem share the same ω, so the diagram captures only magnitudes and phase differences:</p>
+
+    <figure class="fig">
+      <img src="assets/img/phasor-diagram.png" alt="Phasor diagram corresponding to two sinusoidal waveforms">
+      <figcaption><b>Phasor snapshot</b> of two waveforms: lengths = magnitudes, angle between them = phase difference. <span class="src-note">— Lecture 5</span></figcaption>
+    </figure>
+    <p class="ref">Reference: Boylestad, Ch. 14.5–14.9.</p>
+  </section>
+
+  <!-- ============ 8. IMPEDANCE ============ -->
+  <section class="topic" id="impedance">
+    <h2><span class="nr">8</span> Impedance — Series &amp; Parallel AC Circuits</h2>
+    <p><b>Impedance Z</b> is the AC generalization of resistance: a complex number whose magnitude opposes current and
+    whose angle sets the v–i phase shift. The three elements as impedances:</p>
+
+    <div class="fbox">
+      <div class="fml"><b>Z</b><sub>R</sub> = <span class="m">R</span> ∠0°&nbsp;&nbsp;,&nbsp;&nbsp;<b>Z</b><sub>L</sub> = <span class="m">X<sub>L</sub></span> ∠90° = j<span class="m">X<sub>L</sub></span>&nbsp;&nbsp;,&nbsp;&nbsp;<b>Z</b><sub>C</sub> = <span class="m">X<sub>C</sub></span> ∠−90° = −j<span class="m">X<sub>C</sub></span></div>
+      <ul class="vars">
+        <li>+90° (up the j-axis) for L, −90° (down) for C, 0° for R — exactly the phase shifts from section 5</li>
+      </ul>
+    </div>
+
+    <h3>Series AC circuits</h3>
+    <p>Impedances in series add, exactly like resistors — but as complex numbers:</p>
+    <div class="fbox">
+      <div class="fml"><b>Z</b><sub>T</sub> = <b>Z</b><sub>1</sub> + <b>Z</b><sub>2</sub> + … + <b>Z</b><sub>N</sub>&nbsp;&nbsp;;&nbsp;&nbsp;series RLC: <b>Z</b><sub>T</sub> = <span class="m">R</span> + j(<span class="m">X<sub>L</sub></span> − <span class="m">X<sub>C</sub></span>)</div>
+      <ul class="vars"><li>X<sub>L</sub> and X<sub>C</sub> fight each other on the j-axis — they partially cancel</li></ul>
+    </div>
+
+    <div class="figrow">
+      <figure class="fig">
+        <img src="assets/img/impedance-series.png" alt="Impedances in series">
+        <figcaption><b>Series impedances</b> simply add (as complex numbers). <span class="src-note">— Lecture 6</span></figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="assets/img/series-rlc-example.png" alt="Series RLC circuit example">
+        <figcaption><b>Series R-L-C example</b> from the lecture: R = 6 Ω, X<sub>L</sub> = 10 Ω, X<sub>C</sub> = 12 Ω → <b>Z</b><sub>T</sub> = 6 − j2 Ω = 6.32 ∠−18.43° (slightly capacitive). <span class="src-note">— Lecture 6</span></figcaption>
+      </figure>
+    </div>
+
+    <figure class="fig">
+      <img src="assets/img/impedance-diagram.png" alt="Impedance diagram with R, XL and XC vectors">
+      <figcaption><b>Impedance diagram:</b> R along the real axis, X<sub>L</sub> up, X<sub>C</sub> down; <b>Z</b><sub>T</sub> is the vector sum. <span class="src-note">— Lecture 6</span></figcaption>
+    </figure>
+
+    <h3>Parallel AC circuits</h3>
+    <div class="fbox">
+      <div class="fml"><span class="fr"><span class="nu">1</span><span class="de"><b>Z</b><sub>T</sub></span></span> = <span class="fr"><span class="nu">1</span><span class="de"><b>Z</b><sub>1</sub></span></span> + <span class="fr"><span class="nu">1</span><span class="de"><b>Z</b><sub>2</sub></span></span> + …&nbsp;&nbsp;;&nbsp;&nbsp;two branches: <b>Z</b><sub>T</sub> = <span class="fr"><span class="nu"><b>Z</b><sub>1</sub><b>Z</b><sub>2</sub></span><span class="de"><b>Z</b><sub>1</sub> + <b>Z</b><sub>2</sub></span></span></div>
+      <ul class="vars"><li>same patterns as DC, evaluated with complex arithmetic</li></ul>
+    </div>
+
+    <h3>The DC toolbox carries over</h3>
+    <p>Replace R with <b>Z</b> and every DC technique works unchanged — this is the lecture's central message:</p>
+    <div class="fbox">
+      <div class="fml">VDR:&nbsp; <b>V</b><sub>x</sub> = <span class="fr"><span class="nu"><b>Z</b><sub>x</sub><b>E</b></span><span class="de"><b>Z</b><sub>T</sub></span></span>&nbsp;&nbsp;|&nbsp;&nbsp;CDR:&nbsp; <b>I</b><sub>1</sub> = <span class="fr"><span class="nu"><b>Z</b><sub>2</sub><b>I</b><sub>T</sub></span><span class="de"><b>Z</b><sub>1</sub> + <b>Z</b><sub>2</sub></span></span></div>
+      <ul class="vars"><li>KVL, KCL, mesh, nodal, Y–Δ, superposition, Thévenin, Norton: all valid with impedances and phasor sources</li></ul>
+    </div>
+
+    <div class="callout idea"><b class="tag">Maximum power transfer (AC)</b>
+    A load receives maximum power when its impedance is the <b>complex conjugate</b> of the source's Thévenin
+    impedance: <span class="m">Z<sub>L</sub></span> = <span class="m">Z<sub>Th</sub></span>* (same R, opposite X).
+    Then P<sub>max</sub> = E<sub>Th</sub>²/(4R).</div>
+    <p class="ref">Reference: Boylestad, Ch. 15.</p>
+  </section>
+
+  <!-- ============ 9. AC POWER ============ -->
+  <section class="topic" id="acpower">
+    <h2><span class="nr">9</span> AC Power &amp; the Power Factor</h2>
+    <p>Instantaneous power <span class="m">p</span> = <span class="m">v i</span> pulses at twice the supply frequency.
+    What matters is its average — and how much of the circulating power actually does work:</p>
+
+    <figure class="fig">
+      <img src="assets/img/power-waveform.png" alt="Instantaneous power waveform for a resistive load">
+      <figcaption><b>p = vi for a resistor:</b> always ≥ 0 — energy flows one way only, averaging V<sub>rms</sub>I<sub>rms</sub>. For L or C alone, the +/− halves cancel: average power zero. <span class="src-note">— Lecture 5</span></figcaption>
+    </figure>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">P</span> = <span class="fr"><span class="nu"><span class="m">V<sub>m</sub>I<sub>m</sub></span></span><span class="de">2</span></span> cos <span class="m">θ</span> = <span class="m">V</span><sub>rms</sub><span class="m">I</span><sub>rms</sub> cos <span class="m">θ</span></div>
+      <ul class="vars">
+        <li><b>P</b> – real (average, active) power (watts, W) — does actual work / heating</li>
+        <li><b>θ</b> – phase angle between v and i</li>
+      </ul>
+    </div>
+
+    <h3>The power triangle</h3>
+    <p>Three power quantities, one right triangle:</p>
+
+    <div class="figrow">
+      <figure class="fig">
+        <img src="assets/img/power-triangle.png" alt="Power triangle for an inductive load">
+        <figcaption><b>Inductive load:</b> Q<sub>L</sub> points up; current lags → <i>lagging</i> power factor. <span class="src-note">— Lecture 6</span></figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="assets/img/power-triangle-capacitive.png" alt="Power triangle for a capacitive load">
+        <figcaption><b>Capacitive load:</b> Q<sub>C</sub> points down; current leads → <i>leading</i> power factor. <span class="src-note">— Lecture 6</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">S</span> = <span class="m">V I</span>&nbsp;(VA)&nbsp;,&nbsp;&nbsp;<span class="m">P</span> = <span class="m">S</span> cos <span class="m">θ</span>&nbsp;(W)&nbsp;,&nbsp;&nbsp;<span class="m">Q</span> = <span class="m">S</span> sin <span class="m">θ</span>&nbsp;(VAR)&nbsp;,&nbsp;&nbsp;<span class="m">S</span><sup>2</sup> = <span class="m">P</span><sup>2</sup> + <span class="m">Q</span><sup>2</sup></div>
+      <ul class="vars">
+        <li><b>S</b> – apparent power (volt-amperes, VA): what the source must supply, V<sub>rms</sub>·I<sub>rms</sub></li>
+        <li><b>P</b> – real power (W): consumed by the resistive part</li>
+        <li><b>Q</b> – reactive power (volt-ampere reactive, VAR): swapped back and forth with L/C fields, never consumed</li>
+      </ul>
+    </div>
+
+    <div class="fbox">
+      <div class="fml"><span class="m">F<sub>p</sub></span> = cos <span class="m">θ</span> = <span class="fr"><span class="nu"><span class="m">P</span></span><span class="de"><span class="m">S</span></span></span></div>
+      <ul class="vars">
+        <li><b>F<sub>p</sub></b> – power factor, 0…1: the fraction of apparent power doing real work</li>
+        <li>resistive load: F<sub>p</sub> = 1; pure L or C: F<sub>p</sub> = 0</li>
+        <li><b>lagging</b> = inductive (current lags), <b>leading</b> = capacitive</li>
+      </ul>
+    </div>
+
+    <h3>Power-factor correction</h3>
+    <p>Motors and other inductive loads draw large reactive power → large current for the same real work → losses.
+    Adding a <b>parallel capacitor</b> supplies that reactive power locally: Q<sub>C</sub> cancels Q<sub>L</sub>,
+    the triangle flattens (θ → 0, F<sub>p</sub> → 1) and the supply current drops, while P is unchanged.</p>
+
+    <figure class="fig">
+      <img src="assets/img/pf-correction.png" alt="Power factor correction by adding a parallel capacitor">
+      <figcaption><b>PF correction:</b> the capacitor trades reactive power with the inductive load; the source now feeds (almost) only real power. <span class="src-note">— Lecture 6</span></figcaption>
+    </figure>
+    <p class="ref">Reference: Boylestad, Ch. 19.</p>
+  </section>
+
+  <div class="next-prev">
+    <a href="capacitors-inductors.html"><span class="sub">← Previous</span> Capacitors &amp; Inductors</a>
+    <a href="resonance-transformers.html"><span class="sub">Next →</span> Resonance &amp; Transformers</a>
+  </div>
+</main>
+</div>
+
+<footer class="site">
+  Built from the Electronics lecture slides (Lectures 1–7) · Explanations cross-checked with Boylestad,
+  <i>Introductory Circuit Analysis</i> · Figures © their original sources, reproduced from the lecture PDF for personal study.
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
