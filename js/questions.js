@@ -1286,22 +1286,6 @@ window.QUIZ_QUESTIONS = [
   "id": "dc-081",
   "cat": "dc",
   "topic": "Superposition",
-  "diff": "medium",
-  "src": "guide",
-  "t": "To 'turn off' an ideal CURRENT source for superposition, you:",
-  "o": [
-   "short it",
-   "open it",
-   "double it",
-   "replace it with a battery"
-  ],
-  "a": 1,
-  "e": "An ideal current source set to zero passes no current → open circuit."
- },
- {
-  "id": "dc-082",
-  "cat": "dc",
-  "topic": "Superposition",
   "diff": "hard",
   "src": "guide",
   "t": "Superposition may be used to find currents and voltages but NOT directly for:",
@@ -1315,7 +1299,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Power depends on I² (or V²); squares don't superpose, so power must be found after combining."
  },
  {
-  "id": "dc-083",
+  "id": "dc-082",
   "cat": "dc",
   "topic": "Thévenin's Theorem",
   "diff": "easy",
@@ -1331,7 +1315,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Thévenin: one voltage source E_Th in series with one resistor R_Th."
  },
  {
-  "id": "dc-084",
+  "id": "dc-083",
   "cat": "dc",
   "topic": "Thévenin's Theorem",
   "diff": "medium",
@@ -1347,7 +1331,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Remove the load and measure/compute the open-circuit voltage across the terminals."
  },
  {
-  "id": "dc-085",
+  "id": "dc-084",
   "cat": "dc",
   "topic": "Thévenin's Theorem",
   "diff": "medium",
@@ -1363,7 +1347,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Zero the sources (E → short, I → open), then compute the resistance seen from the open terminals."
  },
  {
-  "id": "dc-086",
+  "id": "dc-085",
   "cat": "dc",
   "topic": "Norton's Theorem",
   "diff": "easy",
@@ -1379,7 +1363,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Norton: a current source I_N in parallel with R_N."
  },
  {
-  "id": "dc-087",
+  "id": "dc-086",
   "cat": "dc",
   "topic": "Norton's Theorem",
   "diff": "medium",
@@ -1395,7 +1379,7 @@ window.QUIZ_QUESTIONS = [
   "e": "I_N is the current that flows when the output terminals are shorted."
  },
  {
-  "id": "dc-088",
+  "id": "dc-087",
   "cat": "dc",
   "topic": "Norton's Theorem",
   "diff": "medium",
@@ -1411,7 +1395,7 @@ window.QUIZ_QUESTIONS = [
   "e": "R_N = R_Th — Thévenin and Norton differ only by a source conversion."
  },
  {
-  "id": "dc-089",
+  "id": "dc-088",
   "cat": "dc",
   "topic": "Maximum Power Transfer",
   "diff": "hard",
@@ -1461,38 +1445,6 @@ window.QUIZ_QUESTIONS = [
  {
   "id": "cap-003",
   "cat": "cap",
-  "topic": "Electric Field",
-  "diff": "medium",
-  "src": "guide",
-  "t": "Electric field strength E is defined as:",
-  "o": [
-   "flux times area",
-   "force per unit charge (F/Q)",
-   "charge per unit area",
-   "voltage times distance"
-  ],
-  "a": 1,
-  "e": "E = F/Q (N/C). Flux density D = Ψ/A is a separate quantity."
- },
- {
-  "id": "cap-004",
-  "cat": "cap",
-  "topic": "Capacitance",
-  "diff": "easy",
-  "src": "guide",
-  "t": "Capacitance is defined as:",
-  "o": [
-   "charge times voltage",
-   "charge stored per unit voltage (Q/V)",
-   "voltage per unit charge",
-   "energy per second"
-  ],
-  "a": 1,
-  "e": "C = Q/V, in farads (1 F = 1 C/V)."
- },
- {
-  "id": "cap-005",
-  "cat": "cap",
   "topic": "Capacitance",
   "diff": "medium",
   "src": "guide",
@@ -1507,7 +1459,7 @@ window.QUIZ_QUESTIONS = [
   "e": "C = Q/V = 20 µC / 10 V = 2 µF."
  },
  {
-  "id": "cap-006",
+  "id": "cap-004",
   "cat": "cap",
   "topic": "Capacitance",
   "diff": "medium",
@@ -1523,7 +1475,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Q = C·V = 5 µF × 12 V = 60 µC."
  },
  {
-  "id": "cap-007",
+  "id": "cap-005",
   "cat": "cap",
   "topic": "Capacitance",
   "diff": "medium",
@@ -1539,7 +1491,7 @@ window.QUIZ_QUESTIONS = [
   "e": "C ∝ 1/d. Moving the plates apart lowers the capacitance."
  },
  {
-  "id": "cap-008",
+  "id": "cap-006",
   "cat": "cap",
   "topic": "Capacitance",
   "diff": "medium",
@@ -1555,7 +1507,7 @@ window.QUIZ_QUESTIONS = [
   "e": "C = εA/d, so C ∝ A: larger plates store more charge per volt."
  },
  {
-  "id": "cap-009",
+  "id": "cap-007",
   "cat": "cap",
   "topic": "Dielectrics",
   "diff": "medium",
@@ -1571,7 +1523,7 @@ window.QUIZ_QUESTIONS = [
   "e": "The dielectric polarizes and partly cancels the internal field, so more charge is stored per volt → higher C."
  },
  {
-  "id": "cap-010",
+  "id": "cap-008",
   "cat": "cap",
   "topic": "Dielectrics",
   "diff": "easy",
@@ -1587,7 +1539,7 @@ window.QUIZ_QUESTIONS = [
   "e": "ε₀ ≈ 8.85×10⁻¹² F/m. (4π×10⁻⁷ is µ₀.)"
  },
  {
-  "id": "cap-011",
+  "id": "cap-009",
   "cat": "cap",
   "topic": "Dielectrics",
   "diff": "medium",
@@ -1603,7 +1555,7 @@ window.QUIZ_QUESTIONS = [
   "e": "εr ≈ 1 for air/vacuum; other dielectrics are higher (mica ≈ 5, some ceramics in the thousands)."
  },
  {
-  "id": "cap-012",
+  "id": "cap-010",
   "cat": "cap",
   "topic": "Dielectrics",
   "diff": "medium",
@@ -1619,7 +1571,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Above V_max the dielectric breaks down and conducts, often destroying the capacitor."
  },
  {
-  "id": "cap-013",
+  "id": "cap-011",
   "cat": "cap",
   "topic": "RC Charging",
   "diff": "easy",
@@ -1635,7 +1587,7 @@ window.QUIZ_QUESTIONS = [
   "e": "τ = RC (seconds), with R in ohms and C in farads."
  },
  {
-  "id": "cap-014",
+  "id": "cap-012",
   "cat": "cap",
   "topic": "RC Charging",
   "diff": "medium",
@@ -1651,7 +1603,7 @@ window.QUIZ_QUESTIONS = [
   "e": "τ = RC = 10×10³ × 100×10⁻⁶ = 1 s."
  },
  {
-  "id": "cap-015",
+  "id": "cap-013",
   "cat": "cap",
   "topic": "RC Charging",
   "diff": "medium",
@@ -1667,7 +1619,7 @@ window.QUIZ_QUESTIONS = [
   "e": "After ~5τ the response is >99 % complete, so the transient is treated as finished."
  },
  {
-  "id": "cap-016",
+  "id": "cap-014",
   "cat": "cap",
   "topic": "RC Charging",
   "diff": "medium",
@@ -1683,7 +1635,7 @@ window.QUIZ_QUESTIONS = [
   "e": "v_C = E(1 − e⁻¹) ≈ 0.632 E, i.e. 63.2 % after 1τ."
  },
  {
-  "id": "cap-017",
+  "id": "cap-015",
   "cat": "cap",
   "topic": "RC Charging",
   "diff": "medium",
@@ -1699,23 +1651,7 @@ window.QUIZ_QUESTIONS = [
   "e": "τ = RC = 2000 × 5×10⁻⁶ = 0.01 s; full charge ≈ 5τ = 0.05 s = 50 ms."
  },
  {
-  "id": "cap-018",
-  "cat": "cap",
-  "topic": "RC Charging",
-  "diff": "hard",
-  "src": "guide",
-  "t": "At the FIRST instant a discharged capacitor is connected through R to a battery E, the capacitor acts like a:",
-  "o": [
-   "open circuit (no current)",
-   "short circuit (current = E/R)",
-   "battery of voltage E",
-   "fixed resistor"
-  ],
-  "a": 1,
-  "e": "With no charge yet, v_C = 0, so the cap looks like a short and current jumps to E/R."
- },
- {
-  "id": "cap-019",
+  "id": "cap-016",
   "cat": "cap",
   "topic": "Capacitor Current",
   "diff": "medium",
@@ -1731,7 +1667,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Steady DC ⇒ dv/dt = 0 ⇒ i_C = 0: a capacitor blocks steady DC (open circuit)."
  },
  {
-  "id": "cap-020",
+  "id": "cap-017",
   "cat": "cap",
   "topic": "Capacitor Current",
   "diff": "medium",
@@ -1747,7 +1683,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Because i_C = C dv/dt, a jump in v_C would need infinite current — capacitor voltage cannot change instantly."
  },
  {
-  "id": "cap-021",
+  "id": "cap-018",
   "cat": "cap",
   "topic": "Capacitors in Series",
   "diff": "medium",
@@ -1763,7 +1699,7 @@ window.QUIZ_QUESTIONS = [
   "e": "The same charging current for the same time puts the SAME charge on each: Q_T = Q₁ = Q₂ = Q₃."
  },
  {
-  "id": "cap-022",
+  "id": "cap-019",
   "cat": "cap",
   "topic": "Capacitors in Series",
   "diff": "medium",
@@ -1779,7 +1715,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Series caps combine like parallel resistors: C_T = (6×3)/(6+3) = 2 µF."
  },
  {
-  "id": "cap-023",
+  "id": "cap-020",
   "cat": "cap",
   "topic": "Capacitors in Parallel",
   "diff": "medium",
@@ -1795,7 +1731,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Parallel capacitances add: C_T = 6 + 3 = 9 µF."
  },
  {
-  "id": "cap-024",
+  "id": "cap-021",
   "cat": "cap",
   "topic": "Capacitor Combinations",
   "diff": "easy",
@@ -1811,7 +1747,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Capacitors are the mirror image of resistors: parallel adds, series uses reciprocals."
  },
  {
-  "id": "cap-025",
+  "id": "cap-022",
   "cat": "cap",
   "topic": "Capacitor Energy",
   "diff": "medium",
@@ -1827,7 +1763,7 @@ window.QUIZ_QUESTIONS = [
   "e": "W_C = ½CV², stored in the electric field between the plates."
  },
  {
-  "id": "cap-026",
+  "id": "cap-023",
   "cat": "cap",
   "topic": "Capacitor Energy",
   "diff": "hard",
@@ -1843,7 +1779,7 @@ window.QUIZ_QUESTIONS = [
   "e": "W = ½CV² = ½ × 100×10⁻⁶ × 50² = ½ × 1×10⁻⁴ × 2500 = 0.125 J."
  },
  {
-  "id": "cap-027",
+  "id": "cap-024",
   "cat": "cap",
   "topic": "Magnetic Field",
   "diff": "easy",
@@ -1859,7 +1795,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Magnetic flux lines are continuous closed loops (N to S outside the magnet, S to N inside)."
  },
  {
-  "id": "cap-028",
+  "id": "cap-025",
   "cat": "cap",
   "topic": "Magnetic Field",
   "diff": "medium",
@@ -1875,7 +1811,7 @@ window.QUIZ_QUESTIONS = [
   "e": "B = Φ/A (teslas); 1 T = 1 Wb/m²."
  },
  {
-  "id": "cap-029",
+  "id": "cap-026",
   "cat": "cap",
   "topic": "Magnetic Field",
   "diff": "easy",
@@ -1891,7 +1827,7 @@ window.QUIZ_QUESTIONS = [
   "e": "µ₀ = 4π×10⁻⁷ Wb/(A·m)."
  },
  {
-  "id": "cap-030",
+  "id": "cap-027",
   "cat": "cap",
   "topic": "Magnetic Field",
   "diff": "medium",
@@ -1907,7 +1843,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Ferromagnetics have µr ≫ 1, hugely concentrating flux — but they saturate at high flux."
  },
  {
-  "id": "cap-031",
+  "id": "cap-028",
   "cat": "cap",
   "topic": "Magnetic Field",
   "diff": "medium",
@@ -1923,7 +1859,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Once saturated, the core's domains are aligned, so more current barely increases the flux."
  },
  {
-  "id": "cap-032",
+  "id": "cap-029",
   "cat": "cap",
   "topic": "Inductance",
   "diff": "medium",
@@ -1939,7 +1875,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Inductance grows with the SQUARE of the number of turns (note the N²)."
  },
  {
-  "id": "cap-033",
+  "id": "cap-030",
   "cat": "cap",
   "topic": "Faraday's Law",
   "diff": "easy",
@@ -1955,7 +1891,7 @@ window.QUIZ_QUESTIONS = [
   "e": "e = N dΦ/dt — the induced voltage is proportional to turns and the RATE of flux change."
  },
  {
-  "id": "cap-034",
+  "id": "cap-031",
   "cat": "cap",
   "topic": "Faraday's Law",
   "diff": "medium",
@@ -1971,7 +1907,7 @@ window.QUIZ_QUESTIONS = [
   "e": "No change in flux (dΦ/dt = 0) ⇒ no induced voltage."
  },
  {
-  "id": "cap-035",
+  "id": "cap-032",
   "cat": "cap",
   "topic": "Lenz's Law",
   "diff": "medium",
@@ -1987,7 +1923,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Lenz's law: the induced effect opposes the change in flux that caused it ('nature dislikes change')."
  },
  {
-  "id": "cap-036",
+  "id": "cap-033",
   "cat": "cap",
   "topic": "Inductor Voltage",
   "diff": "medium",
@@ -2003,7 +1939,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Steady DC ⇒ di/dt = 0 ⇒ v_L = 0: an inductor looks like a short circuit to steady DC."
  },
  {
-  "id": "cap-037",
+  "id": "cap-034",
   "cat": "cap",
   "topic": "Inductor Current",
   "diff": "easy",
@@ -2019,23 +1955,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Because v_L = L di/dt, inductor current cannot change instantly."
  },
  {
-  "id": "cap-038",
-  "cat": "cap",
-  "topic": "RL Transients",
-  "diff": "easy",
-  "src": "guide",
-  "t": "The time constant of an RL circuit is:",
-  "o": [
-   "τ = RC",
-   "τ = L/R",
-   "τ = R/L",
-   "τ = LR"
-  ],
-  "a": 1,
-  "e": "τ = L/R for an RL circuit — note R is in the denominator (opposite of τ = RC)."
- },
- {
-  "id": "cap-039",
+  "id": "cap-035",
   "cat": "cap",
   "topic": "RL Transients",
   "diff": "medium",
@@ -2051,7 +1971,7 @@ window.QUIZ_QUESTIONS = [
   "e": "τ = L/R = 2 / 100 = 0.02 s = 20 ms."
  },
  {
-  "id": "cap-040",
+  "id": "cap-036",
   "cat": "cap",
   "topic": "RL Transients",
   "diff": "hard",
@@ -2067,7 +1987,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Current cannot jump, so i_L starts at 0 (open) and the full supply voltage appears across L."
  },
  {
-  "id": "cap-041",
+  "id": "cap-037",
   "cat": "cap",
   "topic": "RL Transients",
   "diff": "hard",
@@ -2083,7 +2003,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Inductor current insists on continuing; forced through a high resistance it generates a large reverse voltage spike (sparks)."
  },
  {
-  "id": "cap-042",
+  "id": "cap-038",
   "cat": "cap",
   "topic": "Inductors in Series",
   "diff": "medium",
@@ -2099,7 +2019,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Inductors combine exactly like resistors: series adds (L_T = L₁ + L₂ + …)."
  },
  {
-  "id": "cap-043",
+  "id": "cap-039",
   "cat": "cap",
   "topic": "Inductors in Parallel",
   "diff": "medium",
@@ -2115,7 +2035,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Like parallel resistors: L_T = (6×3)/(6+3) = 2 H."
  },
  {
-  "id": "cap-044",
+  "id": "cap-040",
   "cat": "cap",
   "topic": "Steady-State DC",
   "diff": "medium",
@@ -2131,23 +2051,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Steady state: inductor → short (v_L = 0), capacitor → open (i_C = 0)."
  },
  {
-  "id": "cap-045",
-  "cat": "cap",
-  "topic": "Inductor Energy",
-  "diff": "medium",
-  "src": "guide",
-  "t": "The energy stored in an inductor is:",
-  "o": [
-   "W = ½CV²",
-   "W = ½LI²",
-   "W = LI",
-   "W = ½LI"
-  ],
-  "a": 1,
-  "e": "W_L = ½LI², stored in the magnetic field."
- },
- {
-  "id": "cap-046",
+  "id": "cap-041",
   "cat": "cap",
   "topic": "Inductor Energy",
   "diff": "hard",
@@ -2163,7 +2067,7 @@ window.QUIZ_QUESTIONS = [
   "e": "W = ½LI² = ½ × 0.5 × 4² = ½ × 0.5 × 16 = 4 J."
  },
  {
-  "id": "cap-047",
+  "id": "cap-042",
   "cat": "cap",
   "topic": "Element Symmetry",
   "diff": "medium",
@@ -2568,22 +2472,6 @@ window.QUIZ_QUESTIONS = [
   "topic": "R-L-C Phase",
   "diff": "medium",
   "src": "guide",
-  "t": "In a purely INDUCTIVE AC circuit, the voltage:",
-  "o": [
-   "lags the current by 90°",
-   "is in phase with the current",
-   "leads the current by 90°",
-   "leads the current by 45°"
-  ],
-  "a": 2,
-  "e": "v_L = L di/dt peaks where the current changes fastest → v_L leads i_L by 90° (ELI)."
- },
- {
-  "id": "ac-026",
-  "cat": "ac",
-  "topic": "R-L-C Phase",
-  "diff": "medium",
-  "src": "guide",
   "t": "In a purely CAPACITIVE AC circuit:",
   "o": [
    "voltage leads current by 90°",
@@ -2595,7 +2483,7 @@ window.QUIZ_QUESTIONS = [
   "e": "i_C = C dv/dt → current leads voltage by 90° (ICE)."
  },
  {
-  "id": "ac-027",
+  "id": "ac-026",
   "cat": "ac",
   "topic": "R-L-C Phase",
   "diff": "easy",
@@ -2611,7 +2499,7 @@ window.QUIZ_QUESTIONS = [
   "e": "ELI: in an inductor E leads I. ICE: in a capacitor I leads E."
  },
  {
-  "id": "ac-028",
+  "id": "ac-027",
   "cat": "ac",
   "topic": "Inductive Reactance",
   "diff": "easy",
@@ -2627,7 +2515,7 @@ window.QUIZ_QUESTIONS = [
   "e": "X_L = ωL = 2πfL (ohms)."
  },
  {
-  "id": "ac-029",
+  "id": "ac-028",
   "cat": "ac",
   "topic": "Inductive Reactance",
   "diff": "medium",
@@ -2643,7 +2531,7 @@ window.QUIZ_QUESTIONS = [
   "e": "X_L = 2πfL = 2π×60×0.1 ≈ 37.7 Ω."
  },
  {
-  "id": "ac-030",
+  "id": "ac-029",
   "cat": "ac",
   "topic": "Inductive Reactance",
   "diff": "medium",
@@ -2659,7 +2547,7 @@ window.QUIZ_QUESTIONS = [
   "e": "X_L = 2πfL grows in direct proportion to frequency (a straight line from the origin)."
  },
  {
-  "id": "ac-031",
+  "id": "ac-030",
   "cat": "ac",
   "topic": "Capacitive Reactance",
   "diff": "easy",
@@ -2675,7 +2563,7 @@ window.QUIZ_QUESTIONS = [
   "e": "X_C = 1/(ωC) = 1/(2πfC) (ohms)."
  },
  {
-  "id": "ac-032",
+  "id": "ac-031",
   "cat": "ac",
   "topic": "Capacitive Reactance",
   "diff": "medium",
@@ -2691,7 +2579,7 @@ window.QUIZ_QUESTIONS = [
   "e": "X_C = 1/(2πfC) is a hyperbola: higher f → smaller X_C (the cap approaches a short)."
  },
  {
-  "id": "ac-033",
+  "id": "ac-032",
   "cat": "ac",
   "topic": "Capacitive Reactance",
   "diff": "hard",
@@ -2707,7 +2595,7 @@ window.QUIZ_QUESTIONS = [
   "e": "X_C = 1/(2πfC) = 1/(2π×60×10×10⁻⁶) = 1/(3.77×10⁻³) ≈ 265 Ω."
  },
  {
-  "id": "ac-034",
+  "id": "ac-033",
   "cat": "ac",
   "topic": "Frequency Response",
   "diff": "medium",
@@ -2723,7 +2611,7 @@ window.QUIZ_QUESTIONS = [
   "e": "X_L = 0 at DC (short); X_C → ∞ at DC (open)."
  },
  {
-  "id": "ac-035",
+  "id": "ac-034",
   "cat": "ac",
   "topic": "Frequency Response",
   "diff": "medium",
@@ -2739,7 +2627,7 @@ window.QUIZ_QUESTIONS = [
   "e": "X_C = 1/(2πfC) → 0 as f → ∞, so the cap approaches a short circuit."
  },
  {
-  "id": "ac-036",
+  "id": "ac-035",
   "cat": "ac",
   "topic": "Complex Numbers",
   "diff": "easy",
@@ -2755,7 +2643,7 @@ window.QUIZ_QUESTIONS = [
   "e": "X + jY is rectangular form; Z∠θ is polar form."
  },
  {
-  "id": "ac-037",
+  "id": "ac-036",
   "cat": "ac",
   "topic": "Complex Numbers",
   "diff": "medium",
@@ -2771,7 +2659,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Z = √(X² + Y²) = √(9 + 16) = √25 = 5."
  },
  {
-  "id": "ac-038",
+  "id": "ac-037",
   "cat": "ac",
   "topic": "Complex Numbers",
   "diff": "hard",
@@ -2787,7 +2675,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Z = 5, θ = tan⁻¹(4/3) ≈ 53.13°, so 5 ∠53.13°."
  },
  {
-  "id": "ac-039",
+  "id": "ac-038",
   "cat": "ac",
   "topic": "Complex Numbers",
   "diff": "medium",
@@ -2803,7 +2691,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Add/subtract in rectangular form (combine real parts, combine j-parts)."
  },
  {
-  "id": "ac-040",
+  "id": "ac-039",
   "cat": "ac",
   "topic": "Complex Numbers",
   "diff": "medium",
@@ -2819,7 +2707,7 @@ window.QUIZ_QUESTIONS = [
   "e": "In polar form: multiply magnitudes & add angles; divide magnitudes & subtract angles."
  },
  {
-  "id": "ac-041",
+  "id": "ac-040",
   "cat": "ac",
   "topic": "Phasors",
   "diff": "medium",
@@ -2835,7 +2723,7 @@ window.QUIZ_QUESTIONS = [
   "e": "A phasor is a frozen rotating vector — a complex number capturing magnitude and phase."
  },
  {
-  "id": "ac-042",
+  "id": "ac-041",
   "cat": "ac",
   "topic": "Phasors",
   "diff": "medium",
@@ -2851,7 +2739,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Phasors normally use RMS magnitudes: V = 0.707 V_m ∠θ."
  },
  {
-  "id": "ac-043",
+  "id": "ac-042",
   "cat": "ac",
   "topic": "Impedance",
   "diff": "easy",
@@ -2867,7 +2755,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Z is a complex 'resistance' — its magnitude opposes current and its angle sets the v–i phase shift."
  },
  {
-  "id": "ac-044",
+  "id": "ac-043",
   "cat": "ac",
   "topic": "Impedance",
   "diff": "medium",
@@ -2883,7 +2771,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Z_L = jX_L = X_L∠90°: voltage leads current by 90°."
  },
  {
-  "id": "ac-045",
+  "id": "ac-044",
   "cat": "ac",
   "topic": "Impedance",
   "diff": "medium",
@@ -2899,7 +2787,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Z_C = −jX_C = X_C∠−90°: current leads voltage by 90°."
  },
  {
-  "id": "ac-046",
+  "id": "ac-045",
   "cat": "ac",
   "topic": "Impedance",
   "diff": "medium",
@@ -2915,7 +2803,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Z_T = Z₁ + Z₂ + … , just like resistors but with complex arithmetic."
  },
  {
-  "id": "ac-047",
+  "id": "ac-046",
   "cat": "ac",
   "topic": "Impedance",
   "diff": "medium",
@@ -2931,7 +2819,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Z_T = R + j(X_L − X_C): the reactances oppose each other on the j-axis."
  },
  {
-  "id": "ac-048",
+  "id": "ac-047",
   "cat": "ac",
   "topic": "Impedance",
   "diff": "hard",
@@ -2947,7 +2835,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Z_T = R + j(X_L − X_C) = 6 + j(10−12) = 6 − j2 Ω. Negative j-part ⇒ capacitive."
  },
  {
-  "id": "ac-049",
+  "id": "ac-048",
   "cat": "ac",
   "topic": "Impedance",
   "diff": "hard",
@@ -2963,7 +2851,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Z_T = 3 + j(8−4) = 3 + j4 ⇒ |Z_T| = √(3²+4²) = 5 Ω."
  },
  {
-  "id": "ac-050",
+  "id": "ac-049",
   "cat": "ac",
   "topic": "Impedance",
   "diff": "hard",
@@ -2979,7 +2867,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Current leading voltage is the capacitive signature (ICE). Voltage leading ⇒ inductive."
  },
  {
-  "id": "ac-051",
+  "id": "ac-050",
   "cat": "ac",
   "topic": "AC Network Analysis",
   "diff": "medium",
@@ -2995,23 +2883,7 @@ window.QUIZ_QUESTIONS = [
   "e": "The lecture's central message: every DC method works in AC using complex impedances and phasors."
  },
  {
-  "id": "ac-052",
-  "cat": "ac",
-  "topic": "Maximum Power Transfer",
-  "diff": "hard",
-  "src": "guide",
-  "t": "For maximum power transfer in an AC circuit, the load impedance should equal:",
-  "o": [
-   "the same as Z_Th",
-   "the complex conjugate of Z_Th (Z_Th*)",
-   "zero",
-   "twice Z_Th"
-  ],
-  "a": 1,
-  "e": "Z_L = Z_Th* (same R, opposite reactance) cancels the reactance; then P_max = E_Th²/(4R)."
- },
- {
-  "id": "ac-053",
+  "id": "ac-051",
   "cat": "ac",
   "topic": "AC Power",
   "diff": "medium",
@@ -3027,7 +2899,7 @@ window.QUIZ_QUESTIONS = [
   "e": "P = V_rms I_rms cos θ — only the in-phase component does real work."
  },
  {
-  "id": "ac-054",
+  "id": "ac-052",
   "cat": "ac",
   "topic": "AC Power",
   "diff": "medium",
@@ -3043,7 +2915,7 @@ window.QUIZ_QUESTIONS = [
   "e": "A pure reactance returns all energy it stores each cycle, so its average (real) power is zero."
  },
  {
-  "id": "ac-055",
+  "id": "ac-053",
   "cat": "ac",
   "topic": "AC Power",
   "diff": "hard",
@@ -3059,7 +2931,7 @@ window.QUIZ_QUESTIONS = [
   "e": "P = V_rms I_rms cos θ = 120 × 5 × 0.8 = 480 W."
  },
  {
-  "id": "ac-056",
+  "id": "ac-054",
   "cat": "ac",
   "topic": "Apparent Power",
   "diff": "medium",
@@ -3075,7 +2947,7 @@ window.QUIZ_QUESTIONS = [
   "e": "S = V_rms I_rms, in volt-amperes (VA) — what the source must supply."
  },
  {
-  "id": "ac-057",
+  "id": "ac-055",
   "cat": "ac",
   "topic": "Power Triangle",
   "diff": "medium",
@@ -3091,7 +2963,7 @@ window.QUIZ_QUESTIONS = [
   "e": "S² = P² + Q²: apparent power is the hypotenuse of the right triangle."
  },
  {
-  "id": "ac-058",
+  "id": "ac-056",
   "cat": "ac",
   "topic": "Power Triangle",
   "diff": "hard",
@@ -3107,7 +2979,7 @@ window.QUIZ_QUESTIONS = [
   "e": "S = √(P² + Q²) = √(80² + 60²) = √(6400+3600) = √10000 = 100 VA."
  },
  {
-  "id": "ac-059",
+  "id": "ac-057",
   "cat": "ac",
   "topic": "Reactive Power",
   "diff": "easy",
@@ -3123,7 +2995,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Q is in VAR — power swapped back and forth with L/C fields, never consumed."
  },
  {
-  "id": "ac-060",
+  "id": "ac-058",
   "cat": "ac",
   "topic": "Power Factor",
   "diff": "medium",
@@ -3139,7 +3011,7 @@ window.QUIZ_QUESTIONS = [
   "e": "F_p = cos θ = P/S — the fraction of apparent power doing real work."
  },
  {
-  "id": "ac-061",
+  "id": "ac-059",
   "cat": "ac",
   "topic": "Power Factor",
   "diff": "medium",
@@ -3155,7 +3027,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Resistive ⇒ θ = 0 ⇒ cos θ = 1. A pure L or C has F_p = 0."
  },
  {
-  "id": "ac-062",
+  "id": "ac-060",
   "cat": "ac",
   "topic": "Power Factor",
   "diff": "medium",
@@ -3171,7 +3043,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Lagging = current lags voltage = inductive. Leading = capacitive."
  },
  {
-  "id": "ac-063",
+  "id": "ac-061",
   "cat": "ac",
   "topic": "Power Factor",
   "diff": "hard",
@@ -3187,7 +3059,7 @@ window.QUIZ_QUESTIONS = [
   "e": "F_p = P/S = 80/100 = 0.8."
  },
  {
-  "id": "ac-064",
+  "id": "ac-062",
   "cat": "ac",
   "topic": "Power-Factor Correction",
   "diff": "medium",
@@ -3203,7 +3075,7 @@ window.QUIZ_QUESTIONS = [
   "e": "A parallel capacitor supplies the reactive power locally (Q_C cancels Q_L), raising F_p toward 1."
  },
  {
-  "id": "ac-065",
+  "id": "ac-063",
   "cat": "ac",
   "topic": "Instantaneous Power",
   "diff": "medium",
@@ -3222,22 +3094,6 @@ window.QUIZ_QUESTIONS = [
   "id": "res-001",
   "cat": "res",
   "topic": "Series Resonance",
-  "diff": "easy",
-  "src": "guide",
-  "t": "A series RLC circuit is at resonance when:",
-  "o": [
-   "X_L is maximum",
-   "X_L = X_C",
-   "R = X_L",
-   "the current is zero"
-  ],
-  "a": 1,
-  "e": "At resonance X_L = X_C, so the reactive parts cancel and Z_T = R."
- },
- {
-  "id": "res-002",
-  "cat": "res",
-  "topic": "Series Resonance",
   "diff": "medium",
   "src": "guide",
   "t": "At series resonance, the total impedance is:",
@@ -3251,7 +3107,7 @@ window.QUIZ_QUESTIONS = [
   "e": "With X_L − X_C = 0, Z_T = R — its minimum value — so the circuit looks purely resistive."
  },
  {
-  "id": "res-003",
+  "id": "res-002",
   "cat": "res",
   "topic": "Series Resonance",
   "diff": "medium",
@@ -3267,7 +3123,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Minimum impedance (= R) ⇒ maximum current I = E/R."
  },
  {
-  "id": "res-004",
+  "id": "res-003",
   "cat": "res",
   "topic": "Series Resonance",
   "diff": "medium",
@@ -3283,7 +3139,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Purely resistive at resonance ⇒ v and i in phase ⇒ F_p = 1."
  },
  {
-  "id": "res-005",
+  "id": "res-004",
   "cat": "res",
   "topic": "Resonant Frequency",
   "diff": "easy",
@@ -3299,7 +3155,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Setting X_L = X_C gives ω_s = 1/√(LC), so f_s = 1/(2π√(LC))."
  },
  {
-  "id": "res-006",
+  "id": "res-005",
   "cat": "res",
   "topic": "Resonant Frequency",
   "diff": "hard",
@@ -3315,7 +3171,7 @@ window.QUIZ_QUESTIONS = [
   "e": "f_s = 1/(2π√(LC)). Doubling both makes LC ×4, √(LC) ×2, so f_s halves."
  },
  {
-  "id": "res-007",
+  "id": "res-006",
   "cat": "res",
   "topic": "Series Resonance",
   "diff": "medium",
@@ -3331,23 +3187,7 @@ window.QUIZ_QUESTIONS = [
   "e": "V_L and V_C are equal in magnitude but 180° apart, so they cancel — leaving E = V_R."
  },
  {
-  "id": "res-008",
-  "cat": "res",
-  "topic": "Quality Factor",
-  "diff": "easy",
-  "src": "guide",
-  "t": "For a series resonant circuit, the quality factor is:",
-  "o": [
-   "Q_s = R/X_L",
-   "Q_s = X_L/R",
-   "Q_s = X_L·R",
-   "Q_s = R·X_C"
-  ],
-  "a": 1,
-  "e": "Q_s = X_L/R = (1/R)√(L/C). Smaller R ⇒ higher Q ⇒ sharper resonance."
- },
- {
-  "id": "res-009",
+  "id": "res-007",
   "cat": "res",
   "topic": "Quality Factor",
   "diff": "medium",
@@ -3363,7 +3203,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Q_s = X_L/R = 480/6 = 80."
  },
  {
-  "id": "res-010",
+  "id": "res-008",
   "cat": "res",
   "topic": "Quality Factor",
   "diff": "medium",
@@ -3379,7 +3219,7 @@ window.QUIZ_QUESTIONS = [
   "e": "High Q ⇒ narrow bandwidth ⇒ very selective (good for picking one station)."
  },
  {
-  "id": "res-011",
+  "id": "res-009",
   "cat": "res",
   "topic": "Resonant Voltage Rise",
   "diff": "hard",
@@ -3395,7 +3235,7 @@ window.QUIZ_QUESTIONS = [
   "e": "V_C = Q_s·E = 80 × 10 = 800 V — the famous resonant voltage rise."
  },
  {
-  "id": "res-012",
+  "id": "res-010",
   "cat": "res",
   "topic": "Resonant Voltage Rise",
   "diff": "medium",
@@ -3411,7 +3251,7 @@ window.QUIZ_QUESTIONS = [
   "e": "V_L = V_C = Q·E. With high Q these element voltages can be many times the supply voltage."
  },
  {
-  "id": "res-013",
+  "id": "res-011",
   "cat": "res",
   "topic": "Bandwidth",
   "diff": "medium",
@@ -3427,7 +3267,7 @@ window.QUIZ_QUESTIONS = [
   "e": "The half-power points are at 0.707 I_max (since P ∝ I², 0.707² = ½)."
  },
  {
-  "id": "res-014",
+  "id": "res-012",
   "cat": "res",
   "topic": "Bandwidth",
   "diff": "medium",
@@ -3443,7 +3283,7 @@ window.QUIZ_QUESTIONS = [
   "e": "BW = f_s/Q_s = R/(2πL). High Q ⇒ narrow band."
  },
  {
-  "id": "res-015",
+  "id": "res-013",
   "cat": "res",
   "topic": "Bandwidth",
   "diff": "hard",
@@ -3459,7 +3299,7 @@ window.QUIZ_QUESTIONS = [
   "e": "BW = f_s/Q_s = 10 000/50 = 200 Hz."
  },
  {
-  "id": "res-016",
+  "id": "res-014",
   "cat": "res",
   "topic": "Bandwidth",
   "diff": "hard",
@@ -3475,7 +3315,7 @@ window.QUIZ_QUESTIONS = [
   "e": "f_s = √(f₁f₂) = √(90×110) ≈ √9900 ≈ 99.5 kHz."
  },
  {
-  "id": "res-017",
+  "id": "res-015",
   "cat": "res",
   "topic": "Bandwidth",
   "diff": "medium",
@@ -3491,7 +3331,7 @@ window.QUIZ_QUESTIONS = [
   "e": "At 0.707 I_max, P = I²R falls to (0.707)² = 0.5 of the peak power."
  },
  {
-  "id": "res-018",
+  "id": "res-016",
   "cat": "res",
   "topic": "Parallel Resonance",
   "diff": "medium",
@@ -3507,7 +3347,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Parallel resonance is the dual of series: impedance is MAXIMUM (current from source is minimum)."
  },
  {
-  "id": "res-019",
+  "id": "res-017",
   "cat": "res",
   "topic": "Parallel Resonance",
   "diff": "medium",
@@ -3523,7 +3363,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Maximum impedance ⇒ minimum source current. Energy circulates inside the L–C loop."
  },
  {
-  "id": "res-020",
+  "id": "res-018",
   "cat": "res",
   "topic": "Parallel Resonance",
   "diff": "hard",
@@ -3539,7 +3379,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Parallel resonance flips every series behaviour: Z max ↔ min, I min ↔ max."
  },
  {
-  "id": "res-021",
+  "id": "res-019",
   "cat": "res",
   "topic": "Parallel Resonance",
   "diff": "medium",
@@ -3555,7 +3395,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Energy sloshes back and forth between L and C; the source only replaces the losses."
  },
  {
-  "id": "res-022",
+  "id": "res-020",
   "cat": "res",
   "topic": "Transformers",
   "diff": "easy",
@@ -3571,7 +3411,7 @@ window.QUIZ_QUESTIONS = [
   "e": "AC in the primary makes changing flux; by Faraday's law that induces voltage in the secondary — no electrical contact."
  },
  {
-  "id": "res-023",
+  "id": "res-021",
   "cat": "res",
   "topic": "Mutual Inductance",
   "diff": "medium",
@@ -3587,7 +3427,7 @@ window.QUIZ_QUESTIONS = [
   "e": "M = k√(L_p L_s), where k is the coupling coefficient (0…1)."
  },
  {
-  "id": "res-024",
+  "id": "res-022",
   "cat": "res",
   "topic": "Coupling Coefficient",
   "diff": "medium",
@@ -3603,7 +3443,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Iron cores give k ≈ 1 (nearly all primary flux links the secondary); air cores are much lower."
  },
  {
-  "id": "res-025",
+  "id": "res-023",
   "cat": "res",
   "topic": "Mutual Inductance",
   "diff": "hard",
@@ -3619,7 +3459,7 @@ window.QUIZ_QUESTIONS = [
   "e": "M = k√(L_pL_s) = 0.5 × √(2×2) = 0.5 × 2 = 1 H."
  },
  {
-  "id": "res-026",
+  "id": "res-024",
   "cat": "res",
   "topic": "Coupled Coils",
   "diff": "hard",
@@ -3635,7 +3475,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Use +2M when the mutual fluxes aid, −2M when they oppose."
  },
  {
-  "id": "res-027",
+  "id": "res-025",
   "cat": "res",
   "topic": "Coupled Coils",
   "diff": "hard",
@@ -3651,7 +3491,7 @@ window.QUIZ_QUESTIONS = [
   "e": "L_T = L₁ + L₂ + 2M = 4 + 4 + 2(1) = 10 H."
  },
  {
-  "id": "res-028",
+  "id": "res-026",
   "cat": "res",
   "topic": "Turns Ratio",
   "diff": "easy",
@@ -3667,7 +3507,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Voltages scale WITH turns: E_p/E_s = N_p/N_s = a."
  },
  {
-  "id": "res-029",
+  "id": "res-027",
   "cat": "res",
   "topic": "Turns Ratio",
   "diff": "medium",
@@ -3683,7 +3523,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Currents scale INVERSELY with turns (energy is conserved): I_p/I_s = N_s/N_p."
  },
  {
-  "id": "res-030",
+  "id": "res-028",
   "cat": "res",
   "topic": "Turns Ratio",
   "diff": "medium",
@@ -3699,7 +3539,7 @@ window.QUIZ_QUESTIONS = [
   "e": "a = N_p/N_s = 200/50 = 4 (a step-down transformer for voltage)."
  },
  {
-  "id": "res-031",
+  "id": "res-029",
   "cat": "res",
   "topic": "Turns Ratio",
   "diff": "hard",
@@ -3715,7 +3555,7 @@ window.QUIZ_QUESTIONS = [
   "e": "E_s = E_p/a = 120/4 = 30 V."
  },
  {
-  "id": "res-032",
+  "id": "res-030",
   "cat": "res",
   "topic": "Turns Ratio",
   "diff": "medium",
@@ -3731,7 +3571,7 @@ window.QUIZ_QUESTIONS = [
   "e": "a = N_p/N_s < 1 means N_s > N_p, so the secondary voltage is higher → step-up."
  },
  {
-  "id": "res-033",
+  "id": "res-031",
   "cat": "res",
   "topic": "Reflected Impedance",
   "diff": "medium",
@@ -3747,7 +3587,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Reflected (primary) impedance Z_p = a²·Z_L."
  },
  {
-  "id": "res-034",
+  "id": "res-032",
   "cat": "res",
   "topic": "Reflected Impedance",
   "diff": "hard",
@@ -3763,7 +3603,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Z_p = a²·Z_L = 8² × 8 = 64 × 8 = 512 Ω."
  },
  {
-  "id": "res-035",
+  "id": "res-033",
   "cat": "res",
   "topic": "Reflected Impedance",
   "diff": "hard",
@@ -3779,7 +3619,7 @@ window.QUIZ_QUESTIONS = [
   "e": "Z_p = a²Z_L = 10² × 4 = 100 × 4 = 400 Ω."
  },
  {
-  "id": "res-036",
+  "id": "res-034",
   "cat": "res",
   "topic": "Transformer Uses",
   "diff": "easy",
@@ -4065,5 +3905,165 @@ window.QUIZ_QUESTIONS = [
   ],
   "a": 0,
   "e": "Voltages scale WITH turns (E_p/E_s = N_p/N_s); currents scale INVERSELY (I_p/I_s = N_s/N_p)."
+ },
+ {
+  "id": "dc-exam-09",
+  "cat": "dc",
+  "topic": "Superposition",
+  "diff": "medium",
+  "src": "exam",
+  "t": "In the network theorems, an independent current source is replaced by ___ when it is deactivated:",
+  "o": [
+   "a short circuit",
+   "an open circuit",
+   "its rated current",
+   "a voltage source"
+  ],
+  "a": 1,
+  "e": "A deactivated (zero) current source passes no current -> it becomes an open circuit. (A voltage source becomes a short.)"
+ },
+ {
+  "id": "cap-exam-05",
+  "cat": "cap",
+  "topic": "Electric Field",
+  "diff": "easy",
+  "src": "exam",
+  "t": "According to the definition, the electric field strength is described by which formula?",
+  "o": [
+   "E = Q/V",
+   "E = F/Q",
+   "E = Ψ/A",
+   "E = Q/t"
+  ],
+  "a": 1,
+  "e": "Electric field strength E = F/Q - force per unit charge (N/C)."
+ },
+ {
+  "id": "cap-exam-06",
+  "cat": "cap",
+  "topic": "Capacitance",
+  "diff": "easy",
+  "src": "exam",
+  "t": "According to the definition, a capacitance is described by which formula?",
+  "o": [
+   "C = V/Q",
+   "C = Q/V",
+   "C = Q·V",
+   "C = εA·d"
+  ],
+  "a": 1,
+  "e": "Capacitance C = Q/V - charge stored per volt (farads)."
+ },
+ {
+  "id": "cap-exam-07",
+  "cat": "cap",
+  "topic": "Inductor Energy",
+  "diff": "easy",
+  "src": "exam",
+  "t": "The energy stored by an inductor can be described as:",
+  "o": [
+   "W = ½CV²",
+   "W = ½LI²",
+   "W = LI",
+   "W = I²R"
+  ],
+  "a": 1,
+  "e": "An inductor stores W = ½LI² in its magnetic field."
+ },
+ {
+  "id": "cap-exam-08",
+  "cat": "cap",
+  "topic": "RL Transients",
+  "diff": "easy",
+  "src": "exam",
+  "t": "The time constant of an R-L circuit is described as:",
+  "o": [
+   "τ = RC",
+   "τ = L/R",
+   "τ = R/L",
+   "τ = LR"
+  ],
+  "a": 1,
+  "e": "For an R-L circuit, τ = L/R seconds."
+ },
+ {
+  "id": "cap-exam-09",
+  "cat": "cap",
+  "topic": "RC Charging",
+  "diff": "medium",
+  "src": "exam",
+  "t": "When an initially uncharged capacitor begins to charge, its equivalent behaviour at the very first instant is that of a:",
+  "o": [
+   "open circuit",
+   "short circuit",
+   "constant voltage source",
+   "fixed resistor"
+  ],
+  "a": 1,
+  "e": "With no charge yet, v_C = 0, so the capacitor momentarily acts as a short circuit (current = E/R)."
+ },
+ {
+  "id": "res-exam-03",
+  "cat": "res",
+  "topic": "Series Resonance",
+  "diff": "easy",
+  "src": "exam",
+  "t": "The resonant condition of an RLC circuit is described as:",
+  "o": [
+   "R = X_L",
+   "X_C = X_L",
+   "X_C = R",
+   "X_L = 0"
+  ],
+  "a": 1,
+  "e": "At resonance the reactances are equal: X_L = X_C, so they cancel and the circuit is purely resistive."
+ },
+ {
+  "id": "res-exam-04",
+  "cat": "res",
+  "topic": "Quality Factor",
+  "diff": "medium",
+  "src": "exam",
+  "t": "The quality factor Q of a series resonant circuit is given by the general formula:",
+  "o": [
+   "Q = R/X_L",
+   "Q = X_L/R",
+   "Q = R·X_L",
+   "Q = X_C·X_L"
+  ],
+  "a": 1,
+  "e": "Q_s = X_L/R = (reactive power)/(average power) at resonance."
+ },
+ {
+  "id": "ac-exam-04",
+  "cat": "ac",
+  "topic": "R-L-C Phase",
+  "diff": "medium",
+  "src": "exam",
+  "t": "The phase relationship between voltage and current for an inductor is:",
+  "o": [
+   "voltage and current are in phase",
+   "voltage leads current by 90° (current lags by 90°)",
+   "current leads voltage by 90°",
+   "voltage leads current by 45°"
+  ],
+  "a": 1,
+  "e": "For an inductor, v_L leads i_L by 90° (ELI)."
+ },
+ {
+  "id": "ac-exam-05",
+  "cat": "ac",
+  "topic": "Maximum Power Transfer",
+  "diff": "hard",
+  "src": "exam",
+  "t": "According to the maximum power transfer theorem (AC), maximum power is delivered to the load when the load impedance is:",
+  "o": [
+   "equal to the Thévenin impedance",
+   "the complex conjugate of the Thévenin impedance",
+   "zero",
+   "purely reactive"
+  ],
+  "a": 1,
+  "e": "For AC, Z_L = Z_Th* (the complex conjugate) - same resistance, opposite reactance - so the reactances cancel."
  }
 ];
