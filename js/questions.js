@@ -712,7 +712,7 @@ window.QUIZ_QUESTIONS = [
   "topic": "Ohm's Law",
   "diff": "medium",
   "src": "guide",
-  "t": "On the I–V plot of a resistor, a STEEPER slope indicates:",
+  "t": "On the I–V plot (current I on the vertical axis, voltage V on the horizontal) of a resistor, a steeper slope indicates:",
   "o": [
    "a larger resistance",
    "a smaller resistance",
@@ -720,7 +720,7 @@ window.QUIZ_QUESTIONS = [
    "a nonlinear device"
   ],
   "a": 1,
-  "e": "Slope = I/V = 1/R. A steeper line means smaller R."
+  "e": "With I on the vertical axis and V on the horizontal, slope = ΔI/ΔV = 1/R, so a steeper line means a SMALLER resistance (the convention Boylestad and the DC Circuits page use). Plot it the other way (V vs I) and the slope equals R, so steeper would mean larger R."
  },
  {
   "id": "dc-046",
