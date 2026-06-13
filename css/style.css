@@ -312,6 +312,10 @@ details.example .body { padding: 2px 18px 14px; border-top: 1px solid var(--line
 .qdiff.easy { background: var(--green-soft); color: var(--green); }
 .qdiff.medium { background: var(--amber-soft); color: #92400e; }
 .qdiff.hard { background: var(--red-soft); color: var(--red); }
+.qbadges { display: flex; align-items: center; gap: 6px; flex: none; }
+.qsrc, .qsrc-inline { font-size: .68rem; font-weight: 800; text-transform: uppercase; letter-spacing: .5px; border-radius: 99px; padding: 2px 9px; background: #ede9fe; color: #6d28d9; border: 1px solid #ddd6fe; white-space: nowrap; }
+.qsrc-inline { font-size: .76rem; padding: 1px 8px; }
+.qc-exam-chip.on { background: #6d28d9; border-color: #6d28d9; color: #fff; }
 
 /* ---------- footer ---------- */
 footer.site {
@@ -462,6 +466,8 @@ html[data-theme="dark"] .qc-btn { background: #1d4ed8; }
 html[data-theme="dark"] .qtopic { color: #60a5fa; }
 html[data-theme="dark"] .qdiff.medium { color: #fbd380; }
 html[data-theme="dark"] .qc-empty { background: #33270c; border-color: #4a3a10; color: #fbd380; }
+html[data-theme="dark"] .qsrc, html[data-theme="dark"] .qsrc-inline { background: #2a1e4d; color: #c4b5fd; border-color: #4c3a86; }
+html[data-theme="dark"] .qc-exam-chip.on { background: #7c3aed; border-color: #7c3aed; color: #fff; }
 html[data-theme="dark"] .hero { background: linear-gradient(120deg, #0e1f4b 0%, #13327e 70%, #1648b5 100%); }
 html[data-theme="dark"] .navcard .tags span { color: #9ec4ff; }
 html[data-theme="dark"] .backtotop { background: #1d4ed8; }

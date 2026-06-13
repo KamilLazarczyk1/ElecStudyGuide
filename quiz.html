@@ -31,9 +31,9 @@
   <div class="page-head">
     <span class="crumb">Check yourself</span>
     <h1>Self-Test Quiz</h1>
-    <p class="lead">A bank of <b id="bankcount">200+</b> exam-style questions spanning Lectures 1–7. Pick a
+    <p class="lead">A bank of <b id="bankcount">200+</b> exam-style questions (including <b id="examcount">0</b> flagged ★ Past exam) spanning Lectures 1–7. Pick a
     topic and a set size, then click an answer to check it instantly — every question includes a short
-    explanation. Shuffle on for a fresh set each time.</p>
+    explanation. Shuffle on for a fresh set each time, or pick ★ Past exam to drill only the past-paper questions.</p>
   </div>
 
   <div class="quiz-controls">
@@ -43,6 +43,7 @@
       <button class="fchip" data-cat="cap">Capacitors &amp; Inductors</button>
       <button class="fchip" data-cat="ac">AC Circuits</button>
       <button class="fchip" data-cat="res">Resonance &amp; Transformers</button>
+      <button class="fchip qc-exam-chip" data-cat="exam">★ Past exam</button>
     </div>
     <div class="qc-row">
       <label class="qc-field">Difficulty
@@ -110,6 +111,8 @@
   var state = { cat: "all", set: [], answered: 0, correct: 0 };
 
   document.getElementById("bankcount").textContent = ALL.length;
+  var examEl = document.getElementById("examcount");
+  if (examEl) examEl.textContent = ALL.filter(function (q) { return q.src === "exam"; }).length;
 
   function loadPrefs() {
     try { return JSON.parse(localStorage.getItem(PREFS_KEY)) || {}; } catch (e) { return {}; }
@@ -145,8 +148,10 @@
   function buildSet() {
     var diff = diffSel.value;
     var pool = ALL.filter(function (q) {
-      return (state.cat === "all" || q.cat === state.cat) &&
-             (diff === "all" || q.diff === diff);
+      var catOk = state.cat === "all" ? true
+                : state.cat === "exam" ? (q.src === "exam")
+                : (q.cat === state.cat);
+      return catOk && (diff === "all" || q.diff === diff);
     });
 
     poolCount.textContent = pool.length + " available";
@@ -180,8 +185,10 @@
       var q = inst.q;
       var card = document.createElement("div");
       card.className = "qcard";
+      var srcBadge = q.src === "exam" ? "<span class='qsrc' title='From a past exam paper'>★ Past exam</span>" : "";
       var h = "<div class='qmeta'><span class='qtopic'>" + esc(CAT_NAMES[q.cat] || "") +
-              " · " + esc(q.topic) + "</span><span class='qdiff " + q.diff + "'>" + q.diff + "</span></div>";
+              " · " + esc(q.topic) + "</span><span class='qbadges'>" + srcBadge +
+              "<span class='qdiff " + q.diff + "'>" + q.diff + "</span></span></div>";
       h += "<h3><span class='qno'>Q" + (qi + 1) + ".</span>" + esc(q.t) + "</h3><div class='opts'>";
       inst.opts.forEach(function (opt, oi) {
         h += "<button class='opt' data-q='" + qi + "' data-o='" + oi + "'>" +

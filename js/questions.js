@@ -7,6 +7,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Units & Notation",
   "diff": "easy",
+  "src": "guide",
   "t": "Convert 20 kHz to megahertz.",
   "o": [
    "20 MHz",
@@ -22,6 +23,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Units & Notation",
   "diff": "easy",
+  "src": "guide",
   "t": "The SI prefix 'micro' (µ) represents a multiplier of:",
   "o": [
    "10⁻³",
@@ -37,6 +39,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Units & Notation",
   "diff": "easy",
+  "src": "guide",
   "t": "Which prefix means 10⁹?",
   "o": [
    "mega (M)",
@@ -52,6 +55,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Units & Notation",
   "diff": "easy",
+  "src": "guide",
   "t": "47 000 Ω expressed with an engineering prefix is:",
   "o": [
    "47 mΩ",
@@ -67,6 +71,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Units & Notation",
   "diff": "easy",
+  "src": "guide",
   "t": "Which value equals 2 200 000 Ω?",
   "o": [
    "2.2 kΩ",
@@ -82,6 +87,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Units & Notation",
   "diff": "medium",
+  "src": "guide",
   "t": "Write 0.0063 in proper scientific notation.",
   "o": [
    "63 × 10⁻⁴",
@@ -97,6 +103,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Units & Notation",
   "diff": "easy",
+  "src": "guide",
   "t": "Convert 0.05 A to milliamperes.",
   "o": [
    "5 mA",
@@ -112,6 +119,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Units & Notation",
   "diff": "medium",
+  "src": "guide",
   "t": "When a prefix is made larger (e.g. kilo → mega), the numerical coefficient must:",
   "o": [
    "get larger",
@@ -127,6 +135,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Units & Notation",
   "diff": "easy",
+  "src": "guide",
   "t": "The prefix 'pico' corresponds to:",
   "o": [
    "10⁻⁶",
@@ -142,6 +151,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Charge & Coulomb's Law",
   "diff": "easy",
+  "src": "guide",
   "t": "Coulomb's law says the force between two point charges is:",
   "o": [
    "directly proportional to the distance",
@@ -157,6 +167,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Charge & Coulomb's Law",
   "diff": "medium",
+  "src": "guide",
   "t": "If the distance between two fixed charges is doubled, the Coulomb force becomes:",
   "o": [
    "twice as large",
@@ -172,6 +183,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Charge & Coulomb's Law",
   "diff": "easy",
+  "src": "guide",
   "t": "In Coulomb's law F = kQ₁Q₂/r², the constant k is approximately:",
   "o": [
    "8.85 × 10⁻¹²",
@@ -187,6 +199,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Charge & Coulomb's Law",
   "diff": "easy",
+  "src": "guide",
   "t": "Two charges with the SAME sign will:",
   "o": [
    "attract each other",
@@ -202,6 +215,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Voltage",
   "diff": "easy",
+  "src": "guide",
   "t": "Voltage between two points is best defined as:",
   "o": [
    "the flow of charge per second",
@@ -217,6 +231,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Voltage",
   "diff": "medium",
+  "src": "guide",
   "t": "If 24 J of work moves 3 C of charge between two points, the voltage is:",
   "o": [
    "8 V",
@@ -232,6 +247,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Voltage",
   "diff": "medium",
+  "src": "guide",
   "t": "Moving 2 C of charge through a 9 V potential difference requires how much energy?",
   "o": [
    "4.5 J",
@@ -247,6 +263,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Voltage",
   "diff": "medium",
+  "src": "guide",
   "t": "Point A is at +6 V and point B is at +2 V. The voltage across A–B is:",
   "o": [
    "8 V",
@@ -262,6 +279,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Charge & Coulomb's Law",
   "diff": "medium",
+  "src": "guide",
   "t": "One coulomb is the combined charge of about how many electrons?",
   "o": [
    "1.6 × 10⁻¹⁹",
@@ -277,6 +295,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Charge & Coulomb's Law",
   "diff": "easy",
+  "src": "guide",
   "t": "Copper conducts so well mainly because:",
   "o": [
    "it has no protons",
@@ -292,6 +311,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Current",
   "diff": "easy",
+  "src": "guide",
   "t": "Electric current is defined as:",
   "o": [
    "energy per unit charge",
@@ -307,6 +327,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Current",
   "diff": "medium",
+  "src": "guide",
   "t": "If 10 C of charge pass a point in 2 s, the current is:",
   "o": [
    "20 A",
@@ -322,6 +343,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Current",
   "diff": "medium",
+  "src": "guide",
   "t": "A steady current of 3 A flows for 4 s. How much charge passes?",
   "o": [
    "0.75 C",
@@ -337,6 +359,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Current",
   "diff": "medium",
+  "src": "guide",
   "t": "How long does it take to move 6 C through a wire carrying 2 A?",
   "o": [
    "3 s",
@@ -352,6 +375,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Measurement",
   "diff": "easy",
+  "src": "guide",
   "t": "How are an ammeter and a voltmeter correctly connected?",
   "o": [
    "Ammeter in parallel, voltmeter in series",
@@ -367,6 +391,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Measurement",
   "diff": "medium",
+  "src": "guide",
   "t": "An ideal voltmeter should have:",
   "o": [
    "zero resistance",
@@ -382,6 +407,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Current",
   "diff": "easy",
+  "src": "guide",
   "t": "1 ampere is equal to:",
   "o": [
    "1 joule per coulomb",
@@ -397,6 +423,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Resistance",
   "diff": "easy",
+  "src": "guide",
   "t": "For a uniform wire, R = ρl/A. Increasing the LENGTH of the wire:",
   "o": [
    "decreases the resistance",
@@ -412,6 +439,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Resistance",
   "diff": "medium",
+  "src": "guide",
   "t": "Doubling the cross-sectional area of a wire (length unchanged) makes its resistance:",
   "o": [
    "double",
@@ -427,6 +455,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Resistance",
   "diff": "medium",
+  "src": "guide",
   "t": "If a wire's length is doubled and area kept the same, its resistance:",
   "o": [
    "halves",
@@ -442,6 +471,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Resistance",
   "diff": "easy",
+  "src": "guide",
   "t": "In the formula R = ρl/A, the symbol ρ (rho) is the:",
   "o": [
    "conductance",
@@ -457,6 +487,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Resistance",
   "diff": "easy",
+  "src": "guide",
   "t": "For a good conductor, as temperature rises the resistance generally:",
   "o": [
    "decreases",
@@ -472,6 +503,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Resistance",
   "diff": "hard",
+  "src": "guide",
   "t": "A copper wire is 100 Ω at 20 °C (α₂₀ = 0.00393 /°C). Its resistance at 120 °C is about:",
   "o": [
    "100 Ω",
@@ -487,6 +519,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Resistance",
   "diff": "hard",
+  "src": "guide",
   "t": "A 1000 Ω resistor is rated 5000 PPM/°C. Roughly how much does it change per °C?",
   "o": [
    "0.5 Ω/°C",
@@ -502,6 +535,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Resistor Colour Code",
   "diff": "medium",
+  "src": "guide",
   "t": "A resistor with bands yellow–violet–orange–gold has the value:",
   "o": [
    "47 kΩ ± 5 %",
@@ -517,6 +551,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Resistor Colour Code",
   "diff": "medium",
+  "src": "guide",
   "t": "Bands brown–black–red–gold correspond to:",
   "o": [
    "100 Ω ± 5 %",
@@ -532,6 +567,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Resistor Colour Code",
   "diff": "easy",
+  "src": "guide",
   "t": "On a 4-band resistor, a GOLD tolerance band means:",
   "o": [
    "± 1 %",
@@ -547,6 +583,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Resistance",
   "diff": "easy",
+  "src": "guide",
   "t": "A three-terminal variable resistor is called a:",
   "o": [
    "rheostat diode",
@@ -562,6 +599,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Conductance",
   "diff": "easy",
+  "src": "guide",
   "t": "Conductance G is:",
   "o": [
    "the same as resistance",
@@ -577,6 +615,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Conductance",
   "diff": "medium",
+  "src": "guide",
   "t": "A 5 Ω resistor has a conductance of:",
   "o": [
    "5 S",
@@ -592,6 +631,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Ohm's Law",
   "diff": "easy",
+  "src": "guide",
   "t": "A 12 V battery is connected across a 4 Ω resistor. The current is:",
   "o": [
    "48 A",
@@ -607,6 +647,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Ohm's Law",
   "diff": "easy",
+  "src": "guide",
   "t": "A 24 V source drives a 6 Ω resistor. The current is:",
   "o": [
    "3 A",
@@ -622,6 +663,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Ohm's Law",
   "diff": "medium",
+  "src": "guide",
   "t": "What voltage appears across a 10 Ω resistor carrying 2 A?",
   "o": [
    "5 V",
@@ -637,6 +679,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Ohm's Law",
   "diff": "medium",
+  "src": "guide",
   "t": "A resistor drops 20 V while carrying 5 A. Its resistance is:",
   "o": [
    "100 Ω",
@@ -652,6 +695,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Ohm's Law",
   "diff": "easy",
+  "src": "guide",
   "t": "On an I–V graph, an ordinary resistor produces:",
   "o": [
    "a curve that flattens at high voltage",
@@ -667,6 +711,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Ohm's Law",
   "diff": "medium",
+  "src": "guide",
   "t": "On the I–V plot of a resistor, a STEEPER slope indicates:",
   "o": [
    "a larger resistance",
@@ -682,6 +727,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Ohm's Law",
   "diff": "medium",
+  "src": "guide",
   "t": "Which device has a NON-linear (curved) I–V characteristic?",
   "o": [
    "a carbon resistor",
@@ -697,6 +743,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Power",
   "diff": "easy",
+  "src": "guide",
   "t": "A device carries 2 A at 12 V. The power delivered is:",
   "o": [
    "6 W",
@@ -712,6 +759,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Power",
   "diff": "medium",
+  "src": "guide",
   "t": "A 2 A current flows through a 10 Ω resistor. The power dissipated is:",
   "o": [
    "20 W",
@@ -727,6 +775,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Power",
   "diff": "medium",
+  "src": "guide",
   "t": "How much power does a 12 V supply deliver to a 6 Ω resistor?",
   "o": [
    "2 W",
@@ -742,6 +791,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Power",
   "diff": "medium",
+  "src": "guide",
   "t": "You know only the current I and resistance R of an element. The best power formula is:",
   "o": [
    "P = V²/R",
@@ -757,6 +807,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Power",
   "diff": "easy",
+  "src": "guide",
   "t": "One watt is equivalent to:",
   "o": [
    "1 joule",
@@ -772,6 +823,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Energy",
   "diff": "medium",
+  "src": "guide",
   "t": "A 100 W lamp runs for 2 hours. Energy used (in kWh) is:",
   "o": [
    "0.2 kWh",
@@ -787,6 +839,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Energy",
   "diff": "easy",
+  "src": "guide",
   "t": "One kilowatt-hour equals how many megajoules?",
   "o": [
    "1 MJ",
@@ -802,6 +855,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Energy",
   "diff": "medium",
+  "src": "guide",
   "t": "Energy and power are related by:",
   "o": [
    "W = P/t",
@@ -817,6 +871,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Series Circuits",
   "diff": "easy",
+  "src": "guide",
   "t": "Elements connected in series all share the same:",
   "o": [
    "voltage",
@@ -832,6 +887,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Series Circuits",
   "diff": "easy",
+  "src": "guide",
   "t": "Three resistors 2 Ω, 3 Ω and 5 Ω in series give a total resistance of:",
   "o": [
    "0.97 Ω",
@@ -847,6 +903,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Kirchhoff's Voltage Law",
   "diff": "easy",
+  "src": "guide",
   "t": "Kirchhoff's Voltage Law states that:",
   "o": [
    "voltage divides equally among series resistors",
@@ -862,6 +919,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Kirchhoff's Voltage Law",
   "diff": "medium",
+  "src": "guide",
   "t": "In a series loop E = 12 V drives two resistors. If V₁ = 5 V, then V₂ is:",
   "o": [
    "17 V",
@@ -877,6 +935,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Voltage Divider Rule",
   "diff": "medium",
+  "src": "guide",
   "t": "Two series resistors R₁ = 2 Ω and R₂ = 4 Ω across E = 12 V. The voltage across R₂ is:",
   "o": [
    "4 V",
@@ -892,6 +951,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Voltage Divider Rule",
   "diff": "medium",
+  "src": "guide",
   "t": "In a series circuit, the LARGEST voltage drop appears across:",
   "o": [
    "the smallest resistor",
@@ -907,6 +967,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Series Circuits",
   "diff": "medium",
+  "src": "guide",
   "t": "10 Ω and 20 Ω in series across 30 V. The voltage across the 20 Ω resistor is:",
   "o": [
    "10 V",
@@ -922,6 +983,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Internal Resistance",
   "diff": "medium",
+  "src": "guide",
   "t": "A real battery has internal resistance. Under load, its terminal voltage is:",
   "o": [
    "higher than the emf",
@@ -937,6 +999,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Parallel Circuits",
   "diff": "easy",
+  "src": "guide",
   "t": "Elements connected in parallel all share the same:",
   "o": [
    "current",
@@ -952,6 +1015,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Parallel Circuits",
   "diff": "medium",
+  "src": "guide",
   "t": "Two resistors 6 Ω and 3 Ω in parallel give a total resistance of:",
   "o": [
    "9 Ω",
@@ -967,6 +1031,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Parallel Circuits",
   "diff": "medium",
+  "src": "guide",
   "t": "The total resistance of a parallel combination is always:",
   "o": [
    "larger than the largest branch",
@@ -982,6 +1047,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Parallel Circuits",
   "diff": "medium",
+  "src": "guide",
   "t": "Two equal 100 Ω resistors in parallel have a combined resistance of:",
   "o": [
    "200 Ω",
@@ -997,6 +1063,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Kirchhoff's Current Law",
   "diff": "easy",
+  "src": "guide",
   "t": "Kirchhoff's Current Law is based on the principle that:",
   "o": [
    "voltage cannot change",
@@ -1012,6 +1079,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Current Divider Rule",
   "diff": "medium",
+  "src": "guide",
   "t": "Two parallel resistors, 1 kΩ and 100 Ω. Which carries the larger current?",
   "o": [
    "the 1 kΩ resistor",
@@ -1027,6 +1095,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Current Divider Rule",
   "diff": "hard",
+  "src": "guide",
   "t": "12 A enters two parallel branches R₁ = 2 Ω and R₂ = 4 Ω. The current in R₁ is:",
   "o": [
    "4 A",
@@ -1042,6 +1111,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Parallel Circuits",
   "diff": "medium",
+  "src": "guide",
   "t": "When resistors are placed in parallel, what quantity adds directly?",
   "o": [
    "resistance",
@@ -1057,6 +1127,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Y–Δ Conversion",
   "diff": "medium",
+  "src": "guide",
   "t": "A Y-to-Δ (or Δ-to-Y) conversion is used when resistors are:",
   "o": [
    "in simple series",
@@ -1072,6 +1143,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Source Conversion",
   "diff": "medium",
+  "src": "guide",
   "t": "Converting a voltage source E with series Rs into an equivalent current source gives I =:",
   "o": [
    "E·Rs",
@@ -1087,6 +1159,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Source Conversion",
   "diff": "medium",
+  "src": "guide",
   "t": "When converting between a real voltage source and a real current source, the internal resistance Rs:",
   "o": [
    "doubles",
@@ -1102,6 +1175,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Source Conversion",
   "diff": "easy",
+  "src": "guide",
   "t": "An ideal voltage source has an internal resistance of:",
   "o": [
    "infinite",
@@ -1117,6 +1191,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Mesh Analysis",
   "diff": "medium",
+  "src": "guide",
   "t": "In mesh (loop) analysis, assigning loop currents automatically satisfies:",
   "o": [
    "Ohm's law",
@@ -1132,6 +1207,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Nodal Analysis",
   "diff": "medium",
+  "src": "guide",
   "t": "For a network with N nodes, nodal analysis requires solving for how many unknown node voltages?",
   "o": [
    "N",
@@ -1147,6 +1223,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Nodal Analysis",
   "diff": "easy",
+  "src": "guide",
   "t": "The first step in nodal analysis is to:",
   "o": [
    "short every source",
@@ -1162,6 +1239,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Mesh Analysis",
   "diff": "hard",
+  "src": "guide",
   "t": "An element shared by two adjacent meshes carries a current equal to:",
   "o": [
    "the sum of the two loop currents",
@@ -1177,6 +1255,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Analysis Methods",
   "diff": "easy",
+  "src": "guide",
   "t": "Branch-current, mesh, and nodal analysis all ultimately produce:",
   "o": [
    "a single Ohm's-law calculation",
@@ -1192,6 +1271,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Superposition",
   "diff": "medium",
+  "src": "guide",
   "t": "To apply superposition, an ideal VOLTAGE source that is temporarily 'turned off' is replaced by:",
   "o": [
    "an open circuit",
@@ -1207,6 +1287,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Superposition",
   "diff": "medium",
+  "src": "guide",
   "t": "To 'turn off' an ideal CURRENT source for superposition, you:",
   "o": [
    "short it",
@@ -1222,6 +1303,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Superposition",
   "diff": "hard",
+  "src": "guide",
   "t": "Superposition may be used to find currents and voltages but NOT directly for:",
   "o": [
    "resistance",
@@ -1237,6 +1319,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Thévenin's Theorem",
   "diff": "easy",
+  "src": "guide",
   "t": "A Thévenin equivalent circuit consists of:",
   "o": [
    "a current source in parallel with a resistor",
@@ -1252,6 +1335,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Thévenin's Theorem",
   "diff": "medium",
+  "src": "guide",
   "t": "E_Th (the Thévenin voltage) is found as:",
   "o": [
    "the short-circuit current",
@@ -1267,6 +1351,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Thévenin's Theorem",
   "diff": "medium",
+  "src": "guide",
   "t": "To find R_Th, you:",
   "o": [
    "leave all sources active",
@@ -1282,6 +1367,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Norton's Theorem",
   "diff": "easy",
+  "src": "guide",
   "t": "A Norton equivalent circuit is:",
   "o": [
    "a voltage source in series with a resistor",
@@ -1297,6 +1383,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Norton's Theorem",
   "diff": "medium",
+  "src": "guide",
   "t": "The Norton current I_N is the:",
   "o": [
    "open-circuit voltage",
@@ -1312,6 +1399,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Norton's Theorem",
   "diff": "medium",
+  "src": "guide",
   "t": "How do R_N (Norton) and R_Th (Thévenin) compare for the same network?",
   "o": [
    "R_N = 2·R_Th",
@@ -1327,6 +1415,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "dc",
   "topic": "Maximum Power Transfer",
   "diff": "hard",
+  "src": "guide",
   "t": "A DC source delivers maximum power to a load when the load resistance equals:",
   "o": [
    "zero",
@@ -1342,6 +1431,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Electric Field",
   "diff": "easy",
+  "src": "guide",
   "t": "Electric flux lines around a charged body always:",
   "o": [
    "form closed loops with no ends",
@@ -1357,6 +1447,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Electric Field",
   "diff": "medium",
+  "src": "guide",
   "t": "The total electric flux Ψ produced by a charge is:",
   "o": [
    "independent of the charge",
@@ -1372,6 +1463,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Electric Field",
   "diff": "medium",
+  "src": "guide",
   "t": "Electric field strength E is defined as:",
   "o": [
    "flux times area",
@@ -1387,6 +1479,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Capacitance",
   "diff": "easy",
+  "src": "guide",
   "t": "Capacitance is defined as:",
   "o": [
    "charge times voltage",
@@ -1402,6 +1495,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Capacitance",
   "diff": "medium",
+  "src": "guide",
   "t": "A capacitor stores 20 µC at 10 V. Its capacitance is:",
   "o": [
    "2 µF",
@@ -1417,6 +1511,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Capacitance",
   "diff": "medium",
+  "src": "guide",
   "t": "How much charge does a 5 µF capacitor hold at 12 V?",
   "o": [
    "0.42 µC",
@@ -1432,6 +1527,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Capacitance",
   "diff": "medium",
+  "src": "guide",
   "t": "For a parallel-plate capacitor C = εA/d. Increasing the plate SEPARATION d:",
   "o": [
    "increases C",
@@ -1447,6 +1543,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Capacitance",
   "diff": "medium",
+  "src": "guide",
   "t": "Increasing the plate AREA of a parallel-plate capacitor:",
   "o": [
    "decreases the capacitance",
@@ -1462,6 +1559,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Dielectrics",
   "diff": "medium",
+  "src": "guide",
   "t": "Inserting a dielectric (instead of air) between a capacitor's plates:",
   "o": [
    "decreases the capacitance",
@@ -1477,6 +1575,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Dielectrics",
   "diff": "easy",
+  "src": "guide",
   "t": "The permittivity of free space ε₀ is approximately:",
   "o": [
    "4π × 10⁻⁷",
@@ -1492,6 +1591,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Dielectrics",
   "diff": "medium",
+  "src": "guide",
   "t": "The relative permittivity (dielectric constant) of air is approximately:",
   "o": [
    "0",
@@ -1507,6 +1607,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Dielectrics",
   "diff": "medium",
+  "src": "guide",
   "t": "Exceeding a capacitor's maximum (breakdown) voltage causes the dielectric to:",
   "o": [
    "store more charge safely",
@@ -1522,6 +1623,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "RC Charging",
   "diff": "easy",
+  "src": "guide",
   "t": "The time constant of an RC circuit is:",
   "o": [
    "τ = R/C",
@@ -1537,6 +1639,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "RC Charging",
   "diff": "medium",
+  "src": "guide",
   "t": "An RC circuit has R = 10 kΩ and C = 100 µF. The time constant is:",
   "o": [
    "0.1 s",
@@ -1552,6 +1655,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "RC Charging",
   "diff": "medium",
+  "src": "guide",
   "t": "About how long until an RC transient is considered complete?",
   "o": [
    "1 τ",
@@ -1567,6 +1671,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "RC Charging",
   "diff": "medium",
+  "src": "guide",
   "t": "After one time constant (1τ), a charging capacitor reaches what fraction of its final voltage?",
   "o": [
    "36.8 %",
@@ -1582,6 +1687,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "RC Charging",
   "diff": "medium",
+  "src": "guide",
   "t": "An RC circuit has R = 2 kΩ, C = 5 µF, E = 10 V. About how long until it is fully charged?",
   "o": [
    "10 ms",
@@ -1597,6 +1703,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "RC Charging",
   "diff": "hard",
+  "src": "guide",
   "t": "At the FIRST instant a discharged capacitor is connected through R to a battery E, the capacitor acts like a:",
   "o": [
    "open circuit (no current)",
@@ -1612,6 +1719,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Capacitor Current",
   "diff": "medium",
+  "src": "guide",
   "t": "The capacitor's defining equation is i_C = C·dv_C/dt. In steady DC this means:",
   "o": [
    "i_C is maximum",
@@ -1627,6 +1735,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Capacitor Current",
   "diff": "medium",
+  "src": "guide",
   "t": "A capacitor opposes sudden changes in:",
   "o": [
    "current",
@@ -1642,6 +1751,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Capacitors in Series",
   "diff": "medium",
+  "src": "guide",
   "t": "Capacitors connected in SERIES all share the same:",
   "o": [
    "voltage",
@@ -1657,6 +1767,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Capacitors in Series",
   "diff": "medium",
+  "src": "guide",
   "t": "Two capacitors 6 µF and 3 µF in series give a total capacitance of:",
   "o": [
    "9 µF",
@@ -1672,6 +1783,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Capacitors in Parallel",
   "diff": "medium",
+  "src": "guide",
   "t": "Two capacitors 6 µF and 3 µF in PARALLEL give a total of:",
   "o": [
    "2 µF",
@@ -1687,6 +1799,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Capacitor Combinations",
   "diff": "easy",
+  "src": "guide",
   "t": "Compared with resistors, capacitors combine:",
   "o": [
    "the same way (series adds)",
@@ -1702,6 +1815,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Capacitor Energy",
   "diff": "medium",
+  "src": "guide",
   "t": "The energy stored in a capacitor is:",
   "o": [
    "W = CV",
@@ -1717,6 +1831,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Capacitor Energy",
   "diff": "hard",
+  "src": "guide",
   "t": "Energy stored in a 100 µF capacitor charged to 50 V is:",
   "o": [
    "0.125 J",
@@ -1732,6 +1847,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Magnetic Field",
   "diff": "easy",
+  "src": "guide",
   "t": "Magnetic flux lines:",
   "o": [
    "start and stop on charges",
@@ -1747,6 +1863,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Magnetic Field",
   "diff": "medium",
+  "src": "guide",
   "t": "Flux density B is given by:",
   "o": [
    "B = Φ·A",
@@ -1762,6 +1879,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Magnetic Field",
   "diff": "easy",
+  "src": "guide",
   "t": "The permeability of free space µ₀ is:",
   "o": [
    "8.85 × 10⁻¹² F/m",
@@ -1777,6 +1895,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Magnetic Field",
   "diff": "medium",
+  "src": "guide",
   "t": "Ferromagnetic materials (iron, nickel, steel) have a relative permeability µr that is:",
   "o": [
    "less than 1",
@@ -1792,6 +1911,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Magnetic Field",
   "diff": "medium",
+  "src": "guide",
   "t": "Magnetic 'core saturation' means that beyond some point:",
   "o": [
    "the core resistance drops to zero",
@@ -1807,6 +1927,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Inductance",
   "diff": "medium",
+  "src": "guide",
   "t": "In L = N²µA/l, the inductance depends on the number of turns as:",
   "o": [
    "N",
@@ -1822,6 +1943,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Faraday's Law",
   "diff": "easy",
+  "src": "guide",
   "t": "Faraday's law states the induced voltage in a coil is:",
   "o": [
    "e = N·Φ",
@@ -1837,6 +1959,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Faraday's Law",
   "diff": "medium",
+  "src": "guide",
   "t": "According to Faraday's law, a steady (unchanging) magnetic flux through a coil induces:",
   "o": [
    "a large voltage",
@@ -1852,6 +1975,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Lenz's Law",
   "diff": "medium",
+  "src": "guide",
   "t": "Lenz's law states that an induced voltage/current always acts to:",
   "o": [
    "aid the change that produced it",
@@ -1867,6 +1991,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Inductor Voltage",
   "diff": "medium",
+  "src": "guide",
   "t": "The inductor's defining equation v_L = L·di_L/dt means that in steady DC:",
   "o": [
    "v_L = E",
@@ -1882,6 +2007,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Inductor Current",
   "diff": "easy",
+  "src": "guide",
   "t": "An inductor opposes sudden changes in:",
   "o": [
    "voltage",
@@ -1897,6 +2023,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "RL Transients",
   "diff": "easy",
+  "src": "guide",
   "t": "The time constant of an RL circuit is:",
   "o": [
    "τ = RC",
@@ -1912,6 +2039,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "RL Transients",
   "diff": "medium",
+  "src": "guide",
   "t": "An RL circuit has L = 2 H and R = 100 Ω. The time constant is:",
   "o": [
    "200 s",
@@ -1927,6 +2055,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "RL Transients",
   "diff": "hard",
+  "src": "guide",
   "t": "At the instant a switch closes on an RL circuit, the inductor initially behaves like a(n):",
   "o": [
    "short circuit",
@@ -1942,6 +2071,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "RL Transients",
   "diff": "hard",
+  "src": "guide",
   "t": "When the switch OPENS on an inductive circuit, the collapsing field can produce:",
   "o": [
    "zero voltage",
@@ -1957,6 +2087,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Inductors in Series",
   "diff": "medium",
+  "src": "guide",
   "t": "Inductors in series (no coupling) combine:",
   "o": [
    "by reciprocals like parallel resistors",
@@ -1972,6 +2103,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Inductors in Parallel",
   "diff": "medium",
+  "src": "guide",
   "t": "Two inductors 6 H and 3 H in parallel (no coupling) give:",
   "o": [
    "9 H",
@@ -1987,6 +2119,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Steady-State DC",
   "diff": "medium",
+  "src": "guide",
   "t": "In steady-state DC (after transients settle), replace each element as follows:",
   "o": [
    "L → open, C → short",
@@ -2002,6 +2135,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Inductor Energy",
   "diff": "medium",
+  "src": "guide",
   "t": "The energy stored in an inductor is:",
   "o": [
    "W = ½CV²",
@@ -2017,6 +2151,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Inductor Energy",
   "diff": "hard",
+  "src": "guide",
   "t": "Energy stored in a 0.5 H inductor carrying 4 A is:",
   "o": [
    "1 J",
@@ -2032,6 +2167,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "cap",
   "topic": "Element Symmetry",
   "diff": "medium",
+  "src": "guide",
   "t": "Which statement correctly pairs the energy formulas?",
   "o": [
    "Capacitor ½LI², inductor ½CV²",
@@ -2047,6 +2183,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Sine Waveform",
   "diff": "easy",
+  "src": "guide",
   "t": "The 'period' (T) of a sinusoidal waveform is:",
   "o": [
    "its maximum value",
@@ -2062,6 +2199,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Sine Waveform",
   "diff": "easy",
+  "src": "guide",
   "t": "The peak-to-peak value of a pure sine wave equals:",
   "o": [
    "the peak amplitude",
@@ -2077,6 +2215,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Sine Waveform",
   "diff": "easy",
+  "src": "guide",
   "t": "A lowercase symbol such as v or i denotes the waveform's:",
   "o": [
    "peak value",
@@ -2092,6 +2231,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Frequency & Period",
   "diff": "easy",
+  "src": "guide",
   "t": "Frequency and period are related by:",
   "o": [
    "f = T",
@@ -2107,6 +2247,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Frequency & Period",
   "diff": "medium",
+  "src": "guide",
   "t": "A waveform has a period of 20 ms. Its frequency is:",
   "o": [
    "20 Hz",
@@ -2122,6 +2263,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Frequency & Period",
   "diff": "medium",
+  "src": "guide",
   "t": "The period of a 60 Hz waveform is about:",
   "o": [
    "60 ms",
@@ -2137,6 +2279,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Radians",
   "diff": "easy",
+  "src": "guide",
   "t": "How many radians are there in 360°?",
   "o": [
    "π",
@@ -2152,6 +2295,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Radians",
   "diff": "medium",
+  "src": "guide",
   "t": "90° expressed in radians is:",
   "o": [
    "π",
@@ -2167,6 +2311,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Radians",
   "diff": "medium",
+  "src": "guide",
   "t": "One radian is approximately:",
   "o": [
    "3.14°",
@@ -2182,6 +2327,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Angular Velocity",
   "diff": "medium",
+  "src": "guide",
   "t": "Angular velocity ω is related to frequency by:",
   "o": [
    "ω = f",
@@ -2197,6 +2343,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Angular Velocity",
   "diff": "medium",
+  "src": "guide",
   "t": "The angular velocity of a 50 Hz waveform is approximately:",
   "o": [
    "50 rad/s",
@@ -2212,6 +2359,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Angular Velocity",
   "diff": "medium",
+  "src": "guide",
   "t": "At 60 Hz, the angular velocity ω is about:",
   "o": [
    "60 rad/s",
@@ -2227,6 +2375,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Phase",
   "diff": "medium",
+  "src": "guide",
   "t": "In v = V_m sin(ωt + θ), a POSITIVE angle θ means the wave:",
   "o": [
    "lags (shifted right)",
@@ -2242,6 +2391,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Phase",
   "diff": "medium",
+  "src": "guide",
   "t": "Given v = 10 sin(ωt + 30°) and i = 5 sin(ωt − 30°), the voltage:",
   "o": [
    "lags the current by 60°",
@@ -2257,6 +2407,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Phase",
   "diff": "easy",
+  "src": "guide",
   "t": "Two waveforms compared for phase must have the same:",
   "o": [
    "amplitude",
@@ -2272,6 +2423,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Phase",
   "diff": "medium",
+  "src": "guide",
   "t": "The useful identity relating cosine and sine is:",
   "o": [
    "cos x = sin(x − 90°)",
@@ -2287,6 +2439,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Average Value",
   "diff": "medium",
+  "src": "guide",
   "t": "The average value of a complete sine cycle is:",
   "o": [
    "0.707 V_m",
@@ -2302,6 +2455,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "RMS Value",
   "diff": "easy",
+  "src": "guide",
   "t": "For a sine wave, the RMS (effective) value equals:",
   "o": [
    "V_m",
@@ -2317,6 +2471,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "RMS Value",
   "diff": "medium",
+  "src": "guide",
   "t": "A sinusoidal voltage has a peak of 311 V. A voltmeter (RMS) reads about:",
   "o": [
    "311 V",
@@ -2332,6 +2487,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "RMS Value",
   "diff": "medium",
+  "src": "guide",
   "t": "If a sine current has an RMS value of 10 A, its peak value is about:",
   "o": [
    "7.07 A",
@@ -2347,6 +2503,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "RMS Value",
   "diff": "hard",
+  "src": "guide",
   "t": "European mains is quoted as 230 V (RMS). Its peak voltage is about:",
   "o": [
    "163 V",
@@ -2362,6 +2519,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "RMS Value",
   "diff": "easy",
+  "src": "guide",
   "t": "Unless stated otherwise, an AC voltage or current value is assumed to be the:",
   "o": [
    "peak value",
@@ -2377,6 +2535,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "RMS Value",
   "diff": "medium",
+  "src": "guide",
   "t": "The RMS value is defined by matching the AC waveform's:",
   "o": [
    "peak voltage to a DC source",
@@ -2392,6 +2551,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "R-L-C Phase",
   "diff": "easy",
+  "src": "guide",
   "t": "In a purely RESISTIVE AC circuit, voltage and current are:",
   "o": [
    "90° out of phase",
@@ -2407,6 +2567,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "R-L-C Phase",
   "diff": "medium",
+  "src": "guide",
   "t": "In a purely INDUCTIVE AC circuit, the voltage:",
   "o": [
    "lags the current by 90°",
@@ -2422,6 +2583,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "R-L-C Phase",
   "diff": "medium",
+  "src": "guide",
   "t": "In a purely CAPACITIVE AC circuit:",
   "o": [
    "voltage leads current by 90°",
@@ -2437,6 +2599,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "R-L-C Phase",
   "diff": "easy",
+  "src": "guide",
   "t": "The memory aid 'ELI the ICE man' tells you that:",
   "o": [
    "in L, current leads voltage; in C, voltage leads current",
@@ -2452,6 +2615,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Inductive Reactance",
   "diff": "easy",
+  "src": "guide",
   "t": "Inductive reactance is given by:",
   "o": [
    "X_L = 1/(2πfL)",
@@ -2467,6 +2631,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Inductive Reactance",
   "diff": "medium",
+  "src": "guide",
   "t": "X_L of a 0.1 H inductor at 60 Hz is about:",
   "o": [
    "6 Ω",
@@ -2482,6 +2647,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Inductive Reactance",
   "diff": "medium",
+  "src": "guide",
   "t": "As frequency increases, inductive reactance X_L:",
   "o": [
    "decreases",
@@ -2497,6 +2663,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Capacitive Reactance",
   "diff": "easy",
+  "src": "guide",
   "t": "Capacitive reactance is given by:",
   "o": [
    "X_C = 2πfC",
@@ -2512,6 +2679,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Capacitive Reactance",
   "diff": "medium",
+  "src": "guide",
   "t": "As frequency increases, capacitive reactance X_C:",
   "o": [
    "increases linearly",
@@ -2527,6 +2695,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Capacitive Reactance",
   "diff": "hard",
+  "src": "guide",
   "t": "X_C of a 10 µF capacitor at 60 Hz is about:",
   "o": [
    "27 Ω",
@@ -2542,6 +2711,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Frequency Response",
   "diff": "medium",
+  "src": "guide",
   "t": "At DC (f = 0), an ideal inductor behaves like a ___ and an ideal capacitor like a ___:",
   "o": [
    "open; short",
@@ -2557,6 +2727,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Frequency Response",
   "diff": "medium",
+  "src": "guide",
   "t": "At very HIGH frequency, an ideal capacitor approaches a:",
   "o": [
    "open circuit",
@@ -2572,6 +2743,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Complex Numbers",
   "diff": "easy",
+  "src": "guide",
   "t": "A complex number written as X + jY is in:",
   "o": [
    "polar form",
@@ -2587,6 +2759,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Complex Numbers",
   "diff": "medium",
+  "src": "guide",
   "t": "The magnitude of the complex number 3 + j4 is:",
   "o": [
    "7",
@@ -2602,6 +2775,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Complex Numbers",
   "diff": "hard",
+  "src": "guide",
   "t": "Convert 3 + j4 to polar form:",
   "o": [
    "5 ∠36.87°",
@@ -2617,6 +2791,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Complex Numbers",
   "diff": "medium",
+  "src": "guide",
   "t": "Complex numbers are easiest to ADD or SUBTRACT in:",
   "o": [
    "polar form",
@@ -2632,6 +2807,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Complex Numbers",
   "diff": "medium",
+  "src": "guide",
   "t": "Complex numbers are easiest to MULTIPLY or DIVIDE in:",
   "o": [
    "rectangular form",
@@ -2647,6 +2823,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Phasors",
   "diff": "medium",
+  "src": "guide",
   "t": "A phasor represents a sinusoid by a:",
   "o": [
    "frequency only",
@@ -2662,6 +2839,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Phasors",
   "diff": "medium",
+  "src": "guide",
   "t": "When a time-domain sinusoid is converted to a phasor, the phasor magnitude is usually taken as the:",
   "o": [
    "peak value V_m",
@@ -2677,6 +2855,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Impedance",
   "diff": "easy",
+  "src": "guide",
   "t": "Impedance Z is best described as the AC generalization of:",
   "o": [
    "capacitance",
@@ -2692,6 +2871,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Impedance",
   "diff": "medium",
+  "src": "guide",
   "t": "The impedance of an ideal inductor is written as:",
   "o": [
    "X_L ∠−90° = −jX_L",
@@ -2707,6 +2887,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Impedance",
   "diff": "medium",
+  "src": "guide",
   "t": "The impedance of an ideal capacitor is:",
   "o": [
    "+jX_C",
@@ -2722,6 +2903,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Impedance",
   "diff": "medium",
+  "src": "guide",
   "t": "Impedances connected in series:",
   "o": [
    "combine by reciprocals",
@@ -2737,6 +2919,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Impedance",
   "diff": "medium",
+  "src": "guide",
   "t": "For a series R-L-C circuit, the total impedance is:",
   "o": [
    "R + j(X_L + X_C)",
@@ -2752,6 +2935,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Impedance",
   "diff": "hard",
+  "src": "guide",
   "t": "A series circuit has R = 6 Ω, X_L = 10 Ω, X_C = 12 Ω. The total impedance is:",
   "o": [
    "6 + j22 Ω",
@@ -2767,6 +2951,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Impedance",
   "diff": "hard",
+  "src": "guide",
   "t": "A series circuit has R = 3 Ω, X_L = 8 Ω, X_C = 4 Ω. The magnitude of Z_T is:",
   "o": [
    "15 Ω",
@@ -2782,6 +2967,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Impedance",
   "diff": "hard",
+  "src": "guide",
   "t": "If the source CURRENT leads the applied voltage, the network is predominantly:",
   "o": [
    "resistive",
@@ -2797,6 +2983,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "AC Network Analysis",
   "diff": "medium",
+  "src": "guide",
   "t": "Which DC techniques carry over to AC by simply replacing R with Z?",
   "o": [
    "only Ohm's law",
@@ -2812,6 +2999,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Maximum Power Transfer",
   "diff": "hard",
+  "src": "guide",
   "t": "For maximum power transfer in an AC circuit, the load impedance should equal:",
   "o": [
    "the same as Z_Th",
@@ -2827,6 +3015,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "AC Power",
   "diff": "medium",
+  "src": "guide",
   "t": "Real (average) power in an AC circuit is:",
   "o": [
    "P = V_rms·I_rms",
@@ -2842,6 +3031,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "AC Power",
   "diff": "medium",
+  "src": "guide",
   "t": "The average power consumed by an IDEAL inductor or capacitor over a full cycle is:",
   "o": [
    "maximum",
@@ -2857,6 +3047,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "AC Power",
   "diff": "hard",
+  "src": "guide",
   "t": "A load draws 5 A (RMS) at 120 V (RMS) with a power factor of 0.8. The real power is:",
   "o": [
    "600 W",
@@ -2872,6 +3063,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Apparent Power",
   "diff": "medium",
+  "src": "guide",
   "t": "Apparent power S is given by S = V·I and is measured in:",
   "o": [
    "watts (W)",
@@ -2887,6 +3079,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Power Triangle",
   "diff": "medium",
+  "src": "guide",
   "t": "The power triangle relates S, P and Q by:",
   "o": [
    "S = P + Q",
@@ -2902,6 +3095,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Power Triangle",
   "diff": "hard",
+  "src": "guide",
   "t": "A load has P = 80 W and Q = 60 VAR. The apparent power S is:",
   "o": [
    "140 VA",
@@ -2917,6 +3111,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Reactive Power",
   "diff": "easy",
+  "src": "guide",
   "t": "Reactive power Q is measured in:",
   "o": [
    "watts (W)",
@@ -2932,6 +3127,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Power Factor",
   "diff": "medium",
+  "src": "guide",
   "t": "Power factor is defined as:",
   "o": [
    "P/Q",
@@ -2947,6 +3143,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Power Factor",
   "diff": "medium",
+  "src": "guide",
   "t": "The power factor of a purely resistive load is:",
   "o": [
    "0",
@@ -2962,6 +3159,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Power Factor",
   "diff": "medium",
+  "src": "guide",
   "t": "A 'lagging' power factor indicates a predominantly ___ load:",
   "o": [
    "resistive",
@@ -2977,6 +3175,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Power Factor",
   "diff": "hard",
+  "src": "guide",
   "t": "If P = 80 W and S = 100 VA, the power factor is:",
   "o": [
    "0.6",
@@ -2992,6 +3191,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Power-Factor Correction",
   "diff": "medium",
+  "src": "guide",
   "t": "To correct the lagging power factor of a motor, you typically add a:",
   "o": [
    "series resistor",
@@ -3007,6 +3207,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "ac",
   "topic": "Instantaneous Power",
   "diff": "medium",
+  "src": "guide",
   "t": "The instantaneous power p = vi in a resistive AC circuit pulses at:",
   "o": [
    "the supply frequency",
@@ -3022,6 +3223,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Series Resonance",
   "diff": "easy",
+  "src": "guide",
   "t": "A series RLC circuit is at resonance when:",
   "o": [
    "X_L is maximum",
@@ -3037,6 +3239,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Series Resonance",
   "diff": "medium",
+  "src": "guide",
   "t": "At series resonance, the total impedance is:",
   "o": [
    "maximum",
@@ -3052,6 +3255,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Series Resonance",
   "diff": "medium",
+  "src": "guide",
   "t": "At series resonance, the current drawn from the source is:",
   "o": [
    "zero",
@@ -3067,6 +3271,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Series Resonance",
   "diff": "medium",
+  "src": "guide",
   "t": "At resonance the circuit's power factor is:",
   "o": [
    "zero",
@@ -3082,6 +3287,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Resonant Frequency",
   "diff": "easy",
+  "src": "guide",
   "t": "The series resonant frequency is given by:",
   "o": [
    "f_s = 2π√(LC)",
@@ -3097,6 +3303,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Resonant Frequency",
   "diff": "hard",
+  "src": "guide",
   "t": "If both L and C are doubled, the resonant frequency f_s:",
   "o": [
    "doubles",
@@ -3112,6 +3319,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Series Resonance",
   "diff": "medium",
+  "src": "guide",
   "t": "At series resonance, V_L and V_C individually are:",
   "o": [
    "both zero",
@@ -3127,6 +3335,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Quality Factor",
   "diff": "easy",
+  "src": "guide",
   "t": "For a series resonant circuit, the quality factor is:",
   "o": [
    "Q_s = R/X_L",
@@ -3142,6 +3351,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Quality Factor",
   "diff": "medium",
+  "src": "guide",
   "t": "A series resonant circuit has X_L = 480 Ω and R = 6 Ω. Its Q_s is:",
   "o": [
    "8",
@@ -3157,6 +3367,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Quality Factor",
   "diff": "medium",
+  "src": "guide",
   "t": "A high quality factor Q means the resonant circuit is:",
   "o": [
    "broadly tuned (wide bandwidth)",
@@ -3172,6 +3383,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Resonant Voltage Rise",
   "diff": "hard",
+  "src": "guide",
   "t": "A series resonant circuit with Q_s = 80 is fed 10 V. The capacitor voltage at resonance is about:",
   "o": [
    "10 V",
@@ -3187,6 +3399,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Resonant Voltage Rise",
   "diff": "medium",
+  "src": "guide",
   "t": "At series resonance, the voltage across L (or C) compared with the source voltage is:",
   "o": [
    "always smaller",
@@ -3202,6 +3415,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Bandwidth",
   "diff": "medium",
+  "src": "guide",
   "t": "The bandwidth of a resonant circuit is the band between the frequencies where the current falls to:",
   "o": [
    "0.5 I_max",
@@ -3217,6 +3431,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Bandwidth",
   "diff": "medium",
+  "src": "guide",
   "t": "Bandwidth relates to resonant frequency and Q by:",
   "o": [
    "BW = f_s·Q_s",
@@ -3232,6 +3447,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Bandwidth",
   "diff": "hard",
+  "src": "guide",
   "t": "A circuit resonant at 10 kHz has Q_s = 50. Its bandwidth is:",
   "o": [
    "50 Hz",
@@ -3247,6 +3463,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Bandwidth",
   "diff": "hard",
+  "src": "guide",
   "t": "The half-power frequencies of a resonant circuit are 90 kHz and 110 kHz. The resonant frequency f_s (geometric mean) is about:",
   "o": [
    "100 kHz",
@@ -3262,6 +3479,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Bandwidth",
   "diff": "medium",
+  "src": "guide",
   "t": "Half-power points are so named because at those frequencies the power delivered is:",
   "o": [
    "the maximum",
@@ -3277,6 +3495,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Parallel Resonance",
   "diff": "medium",
+  "src": "guide",
   "t": "At parallel (tank circuit) resonance, the impedance seen by the source is:",
   "o": [
    "minimum",
@@ -3292,6 +3511,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Parallel Resonance",
   "diff": "medium",
+  "src": "guide",
   "t": "At parallel resonance, the current drawn from the source is:",
   "o": [
    "maximum",
@@ -3307,6 +3527,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Parallel Resonance",
   "diff": "hard",
+  "src": "guide",
   "t": "Compared with a series resonant circuit, a parallel resonant circuit has:",
   "o": [
    "the same impedance behaviour",
@@ -3322,6 +3543,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Parallel Resonance",
   "diff": "medium",
+  "src": "guide",
   "t": "In an ideal parallel resonant 'tank' circuit, at resonance there is a large:",
   "o": [
    "voltage across R",
@@ -3337,6 +3559,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Transformers",
   "diff": "easy",
+  "src": "guide",
   "t": "A transformer transfers energy from primary to secondary by means of:",
   "o": [
    "a direct wire connection",
@@ -3352,6 +3575,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Mutual Inductance",
   "diff": "medium",
+  "src": "guide",
   "t": "Mutual inductance between two coils is given by:",
   "o": [
    "M = k(L_p + L_s)",
@@ -3367,6 +3591,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Coupling Coefficient",
   "diff": "medium",
+  "src": "guide",
   "t": "The coefficient of coupling k for a tightly-coupled iron-core transformer is close to:",
   "o": [
    "0",
@@ -3382,6 +3607,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Mutual Inductance",
   "diff": "hard",
+  "src": "guide",
   "t": "Two coils with L_p = L_s = 2 H have a coupling coefficient k = 0.5. The mutual inductance M is:",
   "o": [
    "0.5 H",
@@ -3397,6 +3623,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Coupled Coils",
   "diff": "hard",
+  "src": "guide",
   "t": "Two coupled coils in series combine as L_T = L₁ + L₂ ± 2M. The +2M (aiding) case occurs when:",
   "o": [
    "their fluxes oppose",
@@ -3412,6 +3639,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Coupled Coils",
   "diff": "hard",
+  "src": "guide",
   "t": "L₁ = 4 H, L₂ = 4 H, M = 1 H, connected series-aiding. The total inductance is:",
   "o": [
    "6 H",
@@ -3427,6 +3655,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Turns Ratio",
   "diff": "easy",
+  "src": "guide",
   "t": "For an ideal transformer, the voltage ratio equals:",
   "o": [
    "E_p/E_s = N_s/N_p",
@@ -3442,6 +3671,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Turns Ratio",
   "diff": "medium",
+  "src": "guide",
   "t": "In a transformer, the current ratio is:",
   "o": [
    "I_p/I_s = N_p/N_s",
@@ -3457,6 +3687,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Turns Ratio",
   "diff": "medium",
+  "src": "guide",
   "t": "A transformer has N_p = 200, N_s = 50 turns. Its turns ratio a is:",
   "o": [
    "0.25",
@@ -3472,6 +3703,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Turns Ratio",
   "diff": "hard",
+  "src": "guide",
   "t": "A 4:1 step-down transformer has 120 V on the primary. The secondary voltage is:",
   "o": [
    "480 V",
@@ -3487,6 +3719,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Turns Ratio",
   "diff": "medium",
+  "src": "guide",
   "t": "A turns ratio a < 1 (more secondary turns than primary) gives a transformer that:",
   "o": [
    "steps voltage down",
@@ -3502,6 +3735,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Reflected Impedance",
   "diff": "medium",
+  "src": "guide",
   "t": "A load Z_L on the secondary appears at the primary terminals as:",
   "o": [
    "Z_L",
@@ -3517,6 +3751,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Reflected Impedance",
   "diff": "hard",
+  "src": "guide",
   "t": "An 8:1 transformer (a = 8) drives an 8 Ω speaker. The amplifier 'sees':",
   "o": [
    "1 Ω",
@@ -3532,6 +3767,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Reflected Impedance",
   "diff": "hard",
+  "src": "guide",
   "t": "A transformer with a = 10 has a 4 Ω load on its secondary. The primary sees:",
   "o": [
    "40 Ω",
@@ -3547,6 +3783,7 @@ window.QUIZ_QUESTIONS = [
   "cat": "res",
   "topic": "Transformer Uses",
   "diff": "easy",
+  "src": "guide",
   "t": "Which is NOT one of a transformer's three main uses?",
   "o": [
    "changing AC voltage levels",
@@ -3556,5 +3793,277 @@ window.QUIZ_QUESTIONS = [
   ],
   "a": 3,
   "e": "Transformers change voltage, isolate, and match impedance — but they do nothing with steady DC (no changing flux)."
+ },
+ {
+  "id": "dc-exam-01",
+  "cat": "dc",
+  "topic": "Kirchhoff's Current Law",
+  "diff": "easy",
+  "src": "exam",
+  "t": "“The algebraic sum of the currents entering and leaving a junction of the network is zero.” This is:",
+  "o": [
+   "Ohm's law",
+   "Kirchhoff's Voltage Law",
+   "Kirchhoff's Current Law",
+   "the superposition theorem"
+  ],
+  "a": 2,
+  "e": "This is the statement of Kirchhoff's Current Law (KCL)."
+ },
+ {
+  "id": "dc-exam-02",
+  "cat": "dc",
+  "topic": "Superposition",
+  "diff": "medium",
+  "src": "exam",
+  "t": "“The current through, or voltage across, any element of a network equals the algebraic sum of the currents or voltages produced independently by each source.” This is the:",
+  "o": [
+   "Thévenin theorem",
+   "superposition theorem",
+   "maximum power transfer theorem",
+   "reciprocity theorem"
+  ],
+  "a": 1,
+  "e": "This is the definition of the superposition theorem."
+ },
+ {
+  "id": "dc-exam-03",
+  "cat": "dc",
+  "topic": "Voltage",
+  "diff": "easy",
+  "src": "exam",
+  "t": "The definition of 1 volt is properly described by which equation?",
+  "o": [
+   "V = Q/t",
+   "V = I·R only",
+   "V = J/C (one joule per coulomb)",
+   "V = W·Q"
+  ],
+  "a": 2,
+  "e": "1 volt = 1 joule of energy per 1 coulomb of charge: V = W/Q = J/C."
+ },
+ {
+  "id": "dc-exam-04",
+  "cat": "dc",
+  "topic": "Charge & Coulomb's Law",
+  "diff": "easy",
+  "src": "exam",
+  "t": "Coulomb's law for the force between charges Q₁ and Q₂ separated by a distance r is:",
+  "o": [
+   "F = kQ₁Q₂/r",
+   "F = kQ₁Q₂/r²",
+   "F = kQ₁Q₂·r²",
+   "F = k(Q₁+Q₂)/r²"
+  ],
+  "a": 1,
+  "e": "Coulomb's law: F = kQ₁Q₂/r² — the force varies inversely with the square of the distance."
+ },
+ {
+  "id": "dc-exam-05",
+  "cat": "dc",
+  "topic": "Current",
+  "diff": "medium",
+  "src": "exam",
+  "t": "How many electrons must pass through a copper wire in 1 second to produce a current of 1 ampere?",
+  "o": [
+   "1.6 × 10⁻¹⁹",
+   "6.242 × 10¹⁸",
+   "9 × 10⁹",
+   "1.4 × 10²⁴"
+  ],
+  "a": 1,
+  "e": "1 A = 1 C/s and 1 C = 6.242 × 10¹⁸ electron charges, so 6.242 × 10¹⁸ electrons per second."
+ },
+ {
+  "id": "dc-exam-06",
+  "cat": "dc",
+  "topic": "Current",
+  "diff": "easy",
+  "src": "exam",
+  "t": "What is the starting mechanism of current flow in a circuit?",
+  "o": [
+   "the resistance of the wire",
+   "the applied voltage (potential difference)",
+   "the magnetic field of the Earth",
+   "the capacitance of the conductor"
+  ],
+  "a": 1,
+  "e": "An applied voltage (potential difference) is what sets the free electrons into orderly motion."
+ },
+ {
+  "id": "dc-exam-07",
+  "cat": "dc",
+  "topic": "Resistance",
+  "diff": "medium",
+  "src": "exam",
+  "t": "A higher value of a resistor's temperature sensitivity [ppm/°C] means:",
+  "o": [
+   "the resistor is more accurate",
+   "the resistance changes more for a given change in temperature",
+   "the resistance is independent of temperature",
+   "the resistor has a lower power rating"
+  ],
+  "a": 1,
+  "e": "ppm/°C is the temperature coefficient: a higher value ⇒ a larger change in resistance per degree of temperature change."
+ },
+ {
+  "id": "dc-exam-08",
+  "cat": "dc",
+  "topic": "Units & Notation",
+  "diff": "medium",
+  "src": "exam",
+  "t": "Convert 0.0047 mF to picofarads (pF).",
+  "o": [
+   "4.7 pF",
+   "4 700 pF",
+   "4 700 000 pF",
+   "47 pF"
+  ],
+  "a": 2,
+  "e": "0.0047 mF = 0.0047 × 10⁻³ F = 4.7 × 10⁻⁶ F = 4.7 × 10⁶ pF = 4 700 000 pF."
+ },
+ {
+  "id": "cap-exam-01",
+  "cat": "cap",
+  "topic": "Capacitor Energy",
+  "diff": "hard",
+  "src": "exam",
+  "t": "For an IDEAL capacitor, what is the value of the energy DISSIPATED when a voltage is applied to it?",
+  "o": [
+   "½CV²",
+   "CV²",
+   "zero",
+   "QV"
+  ],
+  "a": 2,
+  "e": "An ideal capacitor STORES energy (½CV²) in its field but DISSIPATES none, so the dissipated energy is 0."
+ },
+ {
+  "id": "cap-exam-02",
+  "cat": "cap",
+  "topic": "RC Charging",
+  "diff": "medium",
+  "src": "exam",
+  "t": "For the charging phase of an R-C network, the capacitor current i_C is given by:",
+  "o": [
+   "i_C = (E/R)(1 − e^(−t/τ))",
+   "i_C = (E/R)·e^(−t/τ)",
+   "i_C = E·e^(−t/τ)",
+   "i_C = E/R (constant)"
+  ],
+  "a": 1,
+  "e": "During charging the current starts at E/R and decays: i_C = (E/R)·e^(−t/τ)."
+ },
+ {
+  "id": "cap-exam-03",
+  "cat": "cap",
+  "topic": "Magnetic Field",
+  "diff": "medium",
+  "src": "exam",
+  "t": "The relative permeability (µ_r) of diamagnetic materials is:",
+  "o": [
+   "much greater than 1",
+   "slightly greater than 1",
+   "less than 1",
+   "exactly zero"
+  ],
+  "a": 2,
+  "e": "Diamagnetic materials have µ_r slightly less than 1 (they weakly oppose the field)."
+ },
+ {
+  "id": "cap-exam-04",
+  "cat": "cap",
+  "topic": "Faraday's Law",
+  "diff": "medium",
+  "src": "exam",
+  "t": "If you move a conductor through a magnetic field at right angles to the flux, you generate a(n):",
+  "o": [
+   "magnetic monopole",
+   "induced voltage (emf)",
+   "steady DC resistance",
+   "electric charge"
+  ],
+  "a": 1,
+  "e": "Motion of a conductor through magnetic flux induces a voltage (Faraday's law of electromagnetic induction)."
+ },
+ {
+  "id": "ac-exam-01",
+  "cat": "ac",
+  "topic": "Reactive Power",
+  "diff": "medium",
+  "src": "exam",
+  "t": "The reactive power Q can best be described as:",
+  "o": [
+   "the power dissipated as heat in resistors",
+   "power alternately absorbed and returned by the reactive (L/C) elements, not consumed",
+   "the total power supplied by the source",
+   "the product of RMS voltage and current"
+  ],
+  "a": 1,
+  "e": "Reactive power is exchanged with the magnetic/electric fields of L and C each cycle — stored and returned, never net-consumed (units VAR)."
+ },
+ {
+  "id": "ac-exam-02",
+  "cat": "ac",
+  "topic": "Sine Waveform",
+  "diff": "easy",
+  "src": "exam",
+  "t": "The maximum value of a waveform measured from its average (mean) value is called the:",
+  "o": [
+   "peak-to-peak value",
+   "RMS value",
+   "peak amplitude",
+   "instantaneous value"
+  ],
+  "a": 2,
+  "e": "Measured from the average level to the maximum is the peak amplitude (V_m)."
+ },
+ {
+  "id": "ac-exam-03",
+  "cat": "ac",
+  "topic": "AC Power",
+  "diff": "hard",
+  "src": "exam",
+  "t": "Which expression does NOT describe the (average) real power of a sinusoidal waveform?",
+  "o": [
+   "P = V_rms·I_rms·cos θ",
+   "P = (V_m·I_m / 2)·cos θ",
+   "P = V_rms·I_rms·sin θ",
+   "P = I_rms²·R"
+  ],
+  "a": 2,
+  "e": "Average power uses cos θ. V_rms·I_rms·sin θ is the REACTIVE power Q, not the real power."
+ },
+ {
+  "id": "res-exam-01",
+  "cat": "res",
+  "topic": "Reflected Impedance",
+  "diff": "hard",
+  "src": "exam",
+  "t": "A transformer with turns ratio a = 2 drives a 4 Ω load. The impedance seen at the primary (reflected impedance) is:",
+  "o": [
+   "2 Ω",
+   "8 Ω",
+   "16 Ω",
+   "4 Ω"
+  ],
+  "a": 2,
+  "e": "Z_p = a²·Z_L = 2² × 4 = 4 × 4 = 16 Ω."
+ },
+ {
+  "id": "res-exam-02",
+  "cat": "res",
+  "topic": "Turns Ratio",
+  "diff": "medium",
+  "src": "exam",
+  "t": "An ideal transformer with turns ratio a = N_p/N_s is correctly described by:",
+  "o": [
+   "E_p/E_s = N_p/N_s and I_p/I_s = N_s/N_p",
+   "E_p/E_s = N_s/N_p and I_p/I_s = N_p/N_s",
+   "E_p/E_s = I_p/I_s",
+   "E_p·E_s = N_p·N_s"
+  ],
+  "a": 0,
+  "e": "Voltages scale WITH turns (E_p/E_s = N_p/N_s); currents scale INVERSELY (I_p/I_s = N_s/N_p)."
  }
 ];
