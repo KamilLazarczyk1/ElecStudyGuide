@@ -33,7 +33,7 @@
 <div class="page-head">
 <span class="crumb">Quick Reference</span>
 <h1>Formula Cheat Sheet</h1>
-<p class="lead">Every formula from Lectures 1–7 with its variables defined. Search by name or symbol,
+<p class="lead">Every formula from Lectures 1–9 with its variables defined. Search by name or symbol,
     filter by topic, or print the whole sheet for offline revision.</p>
 </div>
 <div class="toolbar">
@@ -48,6 +48,8 @@
 <button class="fchip" data-tag="pow">AC Power</button>
 <button class="fchip" data-tag="res">Resonance</button>
 <button class="fchip" data-tag="trf">Transformers</button>
+<button class="fchip" data-tag="pulse">Pulse</button>
+<button class="fchip" data-tag="bode">Filters &amp; Bode</button>
 <button class="printbtn" onclick="window.print()">🖨 Print</button>
 </div>
 <p class="count-note" id="fcount"></p>
@@ -649,6 +651,108 @@
 </article>
 </div>
 </div>
+<!-- ====================== PULSE WAVEFORMS ====================== -->
+<div class="fgroup">
+<h2 class="fgroup-title">Pulse Waveforms &amp; R-C Response <span class="lecture-tag">Lecture 8</span></h2>
+<div class="fgrid">
+<article class="fcard" data-tags="pulse">
+<h4>Pulse repetition frequency</h4>
+<div class="fml ktx">\text{prf} = \frac{1}{T}</div>
+<ul class="vars"><li><b>T</b> – period of the pulse train (s); prf in Hz</li></ul>
+</article>
+<article class="fcard" data-tags="pulse">
+<h4>Duty cycle</h4>
+<div class="fml ktx">\text{duty cycle} = \frac{t_p}{T}\times 100\%</div>
+<ul class="vars"><li><b>t<sub>p</sub></b> – pulse width (measured at the 50% level)</li></ul>
+</article>
+<article class="fcard" data-tags="pulse">
+<h4>Tilt (droop / sag)</h4>
+<div class="fml ktx">\%\,\text{tilt} = \frac{V_1 - V_2}{V}\times 100\%</div>
+<ul class="vars"><li><b>V</b> = (V₁ + V₂)/2</li><li>from poor low-frequency response</li></ul>
+</article>
+<article class="fcard" data-tags="pulse">
+<h4>Average value (pulse)</h4>
+<div class="fml ktx">V_{av} = (\text{duty})\,V_{\text{peak}} + (1-\text{duty})\,V_{\text{base}}</div>
+<ul class="vars"><li>general: V<sub>av</sub> = (1/T) × area under one period</li></ul>
+</article>
+<article class="fcard" data-tags="pulse">
+<h4>General R-C transient</h4>
+<div class="fml ktx">v_C(t) = V_f + (V_i - V_f)\,e^{-t/\tau}</div>
+<ul class="vars"><li><b>V<sub>i</sub></b> – initial, <b>V<sub>f</sub></b> – final voltage</li><li><b>τ = RC</b>; settled after ≈ 5τ</li></ul>
+</article>
+<article class="fcard" data-tags="pulse">
+<h4>R-C transient current</h4>
+<div class="fml ktx">i_C(t) = \frac{V_f - V_i}{R}\,e^{-t/\tau}</div>
+<ul class="vars"><li>I<sub>max</sub> = (V<sub>f</sub> − V<sub>i</sub>)/R at the switching instant</li></ul>
+</article>
+<article class="fcard" data-tags="pulse">
+<h4>Rise / fall time</h4>
+<div class="fml ktx">t_r,\ t_f:\ \text{the } 10\%\text{ to } 90\% \text{ transition}</div>
+<ul class="vars"><li>generally t<sub>r</sub> ≈ t<sub>f</sub></li></ul>
+</article>
+<article class="fcard" data-tags="pulse">
+<h4>×10 scope probe &amp; compensation</h4>
+<div class="fml ktx">V_{\text{scope}} = \frac{R_s}{R_s + R_p}\,V_i,\qquad R_p C_p = R_s C_s</div>
+<ul class="vars"><li>9 MΩ + 1 MΩ → ÷10; matched R-C ⇒ frequency-independent</li></ul>
+</article>
+</div>
+</div>
+<!-- ====================== FILTERS & BODE ====================== -->
+<div class="fgroup">
+<h2 class="fgroup-title">Transfer Functions, Filters &amp; Bode <span class="lecture-tag">Lecture 9</span></h2>
+<div class="fgrid">
+<article class="fcard" data-tags="bode">
+<h4>Transfer function</h4>
+<div class="fml ktx">\mathbf{H}(\omega) = \frac{\mathbf{V}_o}{\mathbf{V}_i} = \frac{\mathbf{Z}_2}{\mathbf{Z}_1 + \mathbf{Z}_2}</div>
+<ul class="vars"><li>complex gain |H| ∠θ versus frequency</li></ul>
+</article>
+<article class="fcard" data-tags="bode">
+<h4>Decibels — power</h4>
+<div class="fml ktx">R_{dB} = 10\log_{10}\frac{P_2}{P_1}</div>
+<ul class="vars"><li>+3 dB = double the power</li></ul>
+</article>
+<article class="fcard" data-tags="bode">
+<h4>Decibels — voltage</h4>
+<div class="fml ktx">A_{dB} = 20\log_{10}\frac{V_2}{V_1}</div>
+<ul class="vars"><li>+6 dB = double the voltage; dBm is referenced to 1 mW</li></ul>
+</article>
+<article class="fcard" data-tags="bode">
+<h4>Logarithm product rule</h4>
+<div class="fml ktx">\log(ab) = \log a + \log b</div>
+<ul class="vars"><li>cascaded-stage gains add in dB</li></ul>
+</article>
+<article class="fcard" data-tags="bode">
+<h4>Cut-off frequency (R-C)</h4>
+<div class="fml ktx">f_c = \frac{1}{2\pi RC}</div>
+<ul class="vars"><li>at f<sub>c</sub>: |A<sub>V</sub>| = 0.707 (−3 dB), R = X<sub>C</sub></li></ul>
+</article>
+<article class="fcard" data-tags="bode">
+<h4>Low-pass magnitude</h4>
+<div class="fml ktx">|A_V| = \frac{1}{\sqrt{1 + (\omega RC)^2}}</div>
+<ul class="vars"><li>output lags the input by 45° at f<sub>c</sub></li></ul>
+</article>
+<article class="fcard" data-tags="bode">
+<h4>High-pass magnitude</h4>
+<div class="fml ktx">|A_V| = \frac{R}{\sqrt{R^2 + X_C^2}}</div>
+<ul class="vars"><li>output leads the input by 45° at f<sub>c</sub></li></ul>
+</article>
+<article class="fcard" data-tags="bode">
+<h4>R-L cut-off frequency</h4>
+<div class="fml ktx">f_c = \frac{R}{2\pi L}</div>
+<ul class="vars"><li>low-pass realised with an R-L network</li></ul>
+</article>
+<article class="fcard" data-tags="bode">
+<h4>Bode roll-off slope</h4>
+<div class="fml ktx">\pm 20\ \text{dB/decade} = \pm 6\ \text{dB/octave}</div>
+<ul class="vars"><li>decade = 10:1, octave = 2:1; actual curve −3 dB at f<sub>c</sub></li></ul>
+</article>
+<article class="fcard" data-tags="bode">
+<h4>Resonant band-pass</h4>
+<div class="fml ktx">f_s = \frac{1}{2\pi\sqrt{LC}},\qquad \text{BW} = \frac{f_s}{Q_s}</div>
+<ul class="vars"><li>sharpest band-pass; high Q → narrow band</li></ul>
+</article>
+</div>
+</div>
 <div class="next-prev">
 <a href="resonance-transformers.html"><span class="sub">← Previous</span> Resonance &amp; Transformers</a>
 <a href="quiz.html"><span class="sub">Test yourself →</span> Quiz</a>
@@ -656,7 +760,7 @@
 </main>
 </div>
 <footer class="site">
-  Built from the Electronics lecture slides (Lectures 1–7) · Explanations cross-checked with Boylestad,
+  Built from the Electronics lecture slides (Lectures 1–9) · Explanations cross-checked with Boylestad,
   <i>Introductory Circuit Analysis</i> · Figures © their original sources, reproduced from the lecture PDF for personal study.
 </footer>
 <script src="vendor/katex/katex.min.js"></script>
