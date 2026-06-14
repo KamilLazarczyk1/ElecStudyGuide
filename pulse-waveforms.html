@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Pulse Waveforms &amp; RC Response — Electronics Study Guide</title>
+<link href="css/style.css" rel="stylesheet"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<meta content="#1e3a8a" name="theme-color"/>
+<script>(function(){try{var t=localStorage.getItem("eguide-theme");if(!t&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){t="dark"}if(t==="dark"){document.documentElement.setAttribute("data-theme","dark")}}catch(e){}})();</script>
+</head>
+<body data-page="pulse">
+<nav class="topnav"><div class="wrap">
+<a class="brand" href="index.html"><span class="bolt">⚡</span> Electronics Study Guide</a>
+<div class="navlinks" id="navlinks">
+<a class="navlink" data-nav="home" href="index.html">Home</a>
+<a class="navlink" data-nav="dc" href="dc-circuits.html">DC Circuits</a>
+<a class="navlink" data-nav="cap" href="capacitors-inductors.html">Capacitors</a>
+<a class="navlink" data-nav="ac" href="ac-circuits.html">AC Circuits</a>
+<a class="navlink" data-nav="res" href="resonance-transformers.html">Resonance</a>
+<a class="navlink" data-nav="pulse" href="pulse-waveforms.html">Pulse Waveforms</a>
+<a class="navlink" data-nav="bode" href="transfer-functions.html">Transfer Functions</a>
+<a class="navlink" data-nav="formulas" href="formulas.html">Formulas</a>
+<a class="navlink" data-nav="quiz" href="quiz.html">Quiz</a>
+</div>
+<button aria-label="Toggle dark mode" class="themetoggle" id="themetoggle" title="Toggle dark mode" type="button">🌙</button>
+<button aria-expanded="false" aria-label="Menu" class="navtoggle" id="navtoggle" type="button">☰</button>
+</div></nav>
+<div class="layout">
+<aside class="sidebar">
+<h3>On this page</h3>
+<ul class="toc">
+<li><input data-sec="anatomy" title="Mark as studied" type="checkbox"/><a href="#anatomy">1. Ideal vs Actual Pulse</a></li>
+<li><input data-sec="params" title="Mark as studied" type="checkbox"/><a href="#params">2. Pulse Parameters</a></li>
+<li><input data-sec="timing" title="Mark as studied" type="checkbox"/><a href="#timing">3. Rise/Fall Time &amp; Tilt</a></li>
+<li><input data-sec="train" title="Mark as studied" type="checkbox"/><a href="#train">4. Repetition Rate &amp; Duty Cycle</a></li>
+<li><input data-sec="average" title="Mark as studied" type="checkbox"/><a href="#average">5. Average Value</a></li>
+<li><input data-sec="transient" title="Mark as studied" type="checkbox"/><a href="#transient">6. General R-C Transient</a></li>
+<li><input data-sec="square" title="Mark as studied" type="checkbox"/><a href="#square">7. Square-Wave Response</a></li>
+<li><input data-sec="probe" title="Mark as studied" type="checkbox"/><a href="#probe">8. Scope Probe Compensation</a></li>
+</ul>
+<div class="progress-wrap">
+<div class="progress-label">Studied: <b>0 / 8</b></div>
+<div class="pbar"><span></span></div>
+</div>
+</aside>
+<main>
+<div class="page-head">
+<span class="crumb">Part 5 of 6</span>
+<h1>Pulse Waveforms &amp; RC Response <span class="lecture-tag">Lecture 8</span></h1>
+<p class="lead">Digital systems, communications, radar and computers all run on <b>pulses</b>. This page defines the
+    vocabulary of a real pulse, shows how to measure its width, duty cycle and average value, and works out how an
+    <b>R-C network</b> reshapes a square wave — the same exponential charging you met with capacitors, now applied
+    over and over.</p>
+</div>
+
+<!-- 1 -->
+<section class="topic" id="anatomy">
+<h2><span class="nr">1</span> The Ideal vs the Actual Pulse</h2>
+<p>An <b>ideal pulse</b> jumps instantly between two levels. A real circuit can't do that: the reactive elements
+    resist instantaneous change — a <b>capacitor</b> opposes a jump in voltage, an <b>inductor</b> a jump in current —
+    so every edge acquires a <i>slope</i>.</p>
+<div class="callout idea"><b class="tag">Edges</b>
+    The <b>rising (leading) edge</b> climbs from a lower to a higher level and is the edge closest to t = 0.
+    The <b>falling (trailing) edge</b> drops back down and always follows the leading edge.</div>
+<p>Because of these slopes (plus rounding at the corners), a practical pulse is described by a handful of timing and
+    amplitude parameters rather than two perfect vertical lines.</p>
+<p class="ref">Reference: Boylestad, <i>Introductory Circuit Analysis</i>, Ch. 24 (Pulse Waveforms and the R-C Response).</p>
+</section>
+
+<!-- 2 -->
+<section class="topic" id="params">
+<h2><span class="nr">2</span> Pulse Parameters: Amplitude, Width &amp; Baseline</h2>
+<figure class="fig">
+<img alt="Trapezoidal pulse labelled with amplitude, pulse width at 50%, rise and fall times, leading and trailing edges" src="assets/img/pulse-parameters.png"/>
+<figcaption><b>Anatomy of a practical pulse.</b> Width is measured at the 50&nbsp;% level; rise/fall times between the 10&nbsp;% and 90&nbsp;% points. <span class="src-note">— Lecture 8</span></figcaption>
+</figure>
+<p><b>Amplitude.</b> For most pulses the amplitude is taken as the <b>peak-to-peak</b> value. If the waveform starts
+    and returns to 0&nbsp;V, the peak and peak-to-peak values are the same.</p>
+<p><b>Base-line voltage.</b> The level <i>from which</i> the pulse is initiated. A <b>positive-going</b> pulse rises
+    above the base line; a <b>negative-going</b> pulse drops below it.</p>
+<div class="fbox">
+<div class="fml ktx">t_p \;\equiv\; \text{pulse width, measured at } 50\% \text{ of the peak value}</div>
+<ul class="vars">
+<li><b>t<sub>p</sub></b> – pulse width / duration (s)</li>
+<li>defined at the 50&nbsp;% level so the sloped edges don't make it ambiguous</li>
+</ul>
+</div>
+<p class="ref">Reference: Boylestad, Ch. 24.2.</p>
+</section>
+
+<!-- 3 -->
+<section class="topic" id="timing">
+<h2><span class="nr">3</span> Rise/Fall Time, Tilt &amp; Distortions</h2>
+<p><b>Rise time (t<sub>r</sub>)</b> and <b>fall time (t<sub>f</sub>)</b> measure how quickly the pulse changes level.
+    Because the corners round off, they are defined between the <b>10&nbsp;% and 90&nbsp;%</b> points of the amplitude
+    (generally t<sub>r</sub> ≈ t<sub>f</sub>).</p>
+<div class="fbox">
+<div class="fml ktx">\%\,\text{tilt} = \frac{V_1 - V_2}{V}\times 100\%,\qquad V = \frac{V_1 + V_2}{2}</div>
+<ul class="vars">
+<li><b>tilt</b> (also <b>droop</b> or <b>sag</b>) – the drop in the flat top, caused by poor low-frequency response</li>
+<li><b>V₁, V₂</b> – top level at the start and end of the pulse</li>
+</ul>
+</div>
+<div class="callout warn"><b class="tag">High-frequency distortions</b>
+    <b>Preshoot</b> and <b>overshoot</b> are overshoots before/after an edge; <b>ringing</b> is the damped oscillation
+    from the L–C elements ringing at their natural (resonant) frequency.</div>
+<p class="ref">Reference: Boylestad, Ch. 24.2.</p>
+</section>
+
+<!-- 4 -->
+<section class="topic" id="train">
+<h2><span class="nr">4</span> Pulse Trains, Repetition Rate &amp; Duty Cycle</h2>
+<p>A <b>pulse train</b> is a series of pulses; a <b>periodic</b> pulse train repeats every period <span class="m">T</span>
+    (the time between any two corresponding points). Two numbers summarise it:</p>
+<div class="fbox">
+<div class="fml ktx">\text{prf} = \frac{1}{T}\quad[\text{Hz or pulses/s}],\qquad \text{duty cycle} = \frac{t_p}{T}\times 100\%</div>
+<ul class="vars">
+<li><b>prf</b> – pulse repetition frequency (or prr, repetition rate); depends only on T, not pulse shape</li>
+<li><b>duty cycle</b> – the % of the period the pulse is "on"</li>
+</ul>
+</div>
+<details class="example"><summary>Worked example — repetition rate &amp; duty cycle (from the lecture)</summary>
+<div class="body">
+<p>A trigger waveform reads <b>2.6 div</b> per period and a pulse of <b>0.2 div</b> at 10 µs/div:</p>
+<p class="fml ktx">T = 2.6\times 10\,\mu s = 26\,\mu s \;\Rightarrow\; \text{prf} = \tfrac{1}{26\,\mu s} \approx 38\,\text{kHz}</p>
+<p class="fml ktx">t_p = 0.2\times 10\,\mu s = 2\,\mu s \;\Rightarrow\; \text{duty cycle} = \tfrac{2}{26}\times 100\% \approx 7.7\%</p>
+</div>
+</details>
+<p class="ref">Reference: Boylestad, Ch. 24.3.</p>
+</section>
+
+<!-- 5 -->
+<section class="topic" id="average">
+<h2><span class="nr">5</span> Average Value of a Pulse Waveform</h2>
+<p>The average can always be found from the definition (area ÷ length), but for a pulse there's a quick shortcut using
+    the duty cycle in decimal form:</p>
+<div class="fbox">
+<div class="fml ktx">V_{av} = \frac{1}{T}\int_0^{T} v(t)\,dt \;=\; (\text{duty cycle})\,V_{\text{peak}} + (1-\text{duty cycle})\,V_{\text{base}}</div>
+<ul class="vars">
+<li>first form is valid for <i>any</i> waveform; second is the pulse-specific shortcut</li>
+</ul>
+</div>
+<details class="example"><summary>Worked example — average value</summary>
+<div class="body">
+<p>A pulse sits at <b>8 mV</b> for 4 µs of a 10 µs period and at a <b>2 mV</b> base line for the rest (duty cycle 0.4):</p>
+<p class="fml ktx">V_{av} = (0.4)(8\,\text{mV}) + (0.6)(2\,\text{mV}) = 3.2 + 1.2 = 4.4\,\text{mV}</p>
+</div>
+</details>
+<div class="callout tip"><b class="tag">Measuring V<sub>av</sub> on a scope</b>
+    With no "average" function, read the peak with <b>DC coupling</b>, then with <b>AC coupling</b> (which blocks the
+    DC) and subtract: <span class="m">V<sub>av</sub> = </span> peak<sub>DC</sub> − peak<sub>AC</sub>.</div>
+<p class="ref">Reference: Boylestad, Ch. 24.3.</p>
+</section>
+
+<!-- 6 -->
+<section class="topic" id="transient">
+<h2><span class="nr">6</span> The General R-C Transient Response</h2>
+<p>Every charging or discharging segment of an R-C circuit follows one master equation — it glides exponentially from
+    its <b>initial</b> value to its <b>final</b> value:</p>
+<div class="fbox">
+<div class="fml ktx">v_C(t) = V_f + (V_i - V_f)\,e^{-t/\tau},\qquad \tau = RC</div>
+<ul class="vars">
+<li><b>V<sub>i</sub></b> – initial capacitor voltage (start of the segment)</li>
+<li><b>V<sub>f</sub></b> – final/steady-state voltage the segment is heading toward</li>
+<li><b>τ = RC</b> – time constant; the transient is essentially over after ≈ 5τ</li>
+</ul>
+</div>
+<div class="fbox">
+<div class="fml ktx">i_C(t) = \frac{V_f - V_i}{R}\,e^{-t/\tau},\qquad I_{\max} = \frac{V_f - V_i}{R}</div>
+<ul class="vars"><li>current is a pure decay; it is largest at the instant the level changes</li></ul>
+</div>
+<div class="callout idea"><b class="tag">How good is "5τ"?</b>
+    The leftover at t = 5τ is <span class="m">e<sup>−5</sup> ≈ 0.0068</span>, i.e. about <b>0.68 %</b> — that's why
+    5τ is taken as "fully settled." (At 3τ you're still ~5 % away.)</div>
+<p class="ref">Reference: Boylestad, Ch. 24.4.</p>
+</section>
+
+<!-- 7 -->
+<section class="topic" id="square">
+<h2><span class="nr">7</span> R-C Response to a Square Wave</h2>
+<p>A square wave is just a pulse train with a 50&nbsp;% duty cycle. Feed it to an R-C circuit and the capacitor voltage
+    is set entirely by how the half-period <span class="m">½T</span> compares with the time constant:</p>
+<table class="data">
+<tr><th>Case</th><th>What v<sub>C</sub> looks like</th></tr>
+<tr><td><b>½T ≫ 5τ</b> (low frequency)</td><td>v<sub>C</sub> fully charges and discharges — it nearly copies the input square wave (with rounded edges).</td></tr>
+<tr><td><b>½T ≈ 5τ</b></td><td>v<sub>C</sub> just reaches its final value before reversing.</td></tr>
+<tr><td><b>½T ≪ 5τ</b> (high frequency)</td><td>v<sub>C</sub> never finishes charging — the output looks almost <b>triangular</b> and is much smaller than the input.</td></tr>
+</table>
+<figure class="fig">
+<img alt="Capacitor voltage responding to a square wave, charging and discharging exponentially toward a steady state" src="assets/img/rc-square-response.png"/>
+<figcaption><b>High-frequency case:</b> each half-cycle is one exponential segment; after ~5 cycles the waveform settles, and <b>the average of v<sub>C</sub> equals the average of the applied square wave</b>. <span class="src-note">— Lecture 8</span></figcaption>
+</figure>
+<details class="example"><summary>Worked example — 10 kHz square wave (from the lecture)</summary>
+<div class="body">
+<p>R = 5 kΩ, C = 10 nF, so <span class="m">τ = RC = 50 µs</span>. A 10 kHz square wave has
+    <span class="m">T = 100 µs</span>, hence <span class="m">½T = 50 µs = τ</span> — the half-period equals one
+    time constant, so v<sub>C</sub> reaches only 63.2&nbsp;% before the input flips:</p>
+<p class="fml ktx">v_C(\tau) = 10\,\text{mV}\,(1 - e^{-1}) = 10\,\text{mV}\,(0.632) = 6.32\,\text{mV}</p>
+<p class="muted">Steady state is reached within about five cycles; the current i<sub>C</sub> becomes symmetric so its
+    average over a cycle is zero — exactly what a series capacitor (an open circuit to DC) demands.</p>
+</div>
+</details>
+<p class="ref">Reference: Boylestad, Ch. 24.5–24.6.</p>
+</section>
+
+<!-- 8 -->
+<section class="topic" id="probe">
+<h2><span class="nr">8</span> Oscilloscope Probe Compensation</h2>
+<p>A <b>×10 attenuator probe</b> deliberately divides the input by 10 so the scope loads the circuit less. With a
+    1&nbsp;MΩ scope input, the probe adds <b>9&nbsp;MΩ</b> (not 10) so the divider gives:</p>
+<div class="fbox">
+<div class="fml ktx">V_{\text{scope}} = \frac{1\,\text{M}\Omega}{1\,\text{M}\Omega + 9\,\text{M}\Omega}\,V_i = \tfrac{1}{10}V_i</div>
+<ul class="vars"><li>the 9 MΩ : 1 MΩ split makes the ÷10 attenuation</li></ul>
+</div>
+<p>But the scope and cable also have <b>capacitance</b>. Left alone, that capacitance plus the 9 MΩ forms an R-C
+    network that rounds off square waves. The fix is a small <b>variable capacitor</b> across the 9 MΩ resistor,
+    giving a <b>compensated probe</b>. It is frequency-independent only when the two R-C products match:</p>
+<div class="fbox">
+<div class="fml ktx">R_p C_p = R_s C_s \;\Rightarrow\; V_{\text{scope}} \text{ becomes independent of frequency}</div>
+<ul class="vars">
+<li><b>R<sub>p</sub>, C<sub>p</sub></b> – probe resistance &amp; capacitance; <b>R<sub>s</sub>, C<sub>s</sub></b> – scope side</li>
+</ul>
+</div>
+<div class="callout tip"><b class="tag">Adjusting the probe</b>
+    Feed a known square wave and turn the trimmer until the corners are square:
+    <b>under-compensated</b> rounds the corners, <b>over-compensated</b> overshoots them, <b>correct</b> gives clean
+    square corners. The same R-C ideas drive real circuits like <b>monostable (one-shot) timers</b> and
+    <b>PWM</b> (pulse-width modulation).</div>
+<p class="ref">Reference: Boylestad, Ch. 24.7.</p>
+</section>
+
+<div class="next-prev">
+<a href="resonance-transformers.html"><span class="sub">← Previous</span> Resonance &amp; Transformers</a>
+<a href="transfer-functions.html"><span class="sub">Next →</span> Transfer Functions &amp; Bode Plots</a>
+</div>
+</main>
+</div>
+<footer class="site">
+  Built from the Electronics lecture slides · Explanations cross-checked with Boylestad,
+  <i>Introductory Circuit Analysis</i> · Figures reproduced/redrawn for personal study.
+</footer>
+<script src="vendor/katex/katex.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

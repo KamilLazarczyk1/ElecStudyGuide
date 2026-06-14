@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Transfer Functions, Filters &amp; Bode Plots — Electronics Study Guide</title>
+<link href="css/style.css" rel="stylesheet"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<meta content="#1e3a8a" name="theme-color"/>
+<script>(function(){try{var t=localStorage.getItem("eguide-theme");if(!t&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){t="dark"}if(t==="dark"){document.documentElement.setAttribute("data-theme","dark")}}catch(e){}})();</script>
+</head>
+<body data-page="bode">
+<nav class="topnav"><div class="wrap">
+<a class="brand" href="index.html"><span class="bolt">⚡</span> Electronics Study Guide</a>
+<div class="navlinks" id="navlinks">
+<a class="navlink" data-nav="home" href="index.html">Home</a>
+<a class="navlink" data-nav="dc" href="dc-circuits.html">DC Circuits</a>
+<a class="navlink" data-nav="cap" href="capacitors-inductors.html">Capacitors</a>
+<a class="navlink" data-nav="ac" href="ac-circuits.html">AC Circuits</a>
+<a class="navlink" data-nav="res" href="resonance-transformers.html">Resonance</a>
+<a class="navlink" data-nav="pulse" href="pulse-waveforms.html">Pulse Waveforms</a>
+<a class="navlink" data-nav="bode" href="transfer-functions.html">Transfer Functions</a>
+<a class="navlink" data-nav="formulas" href="formulas.html">Formulas</a>
+<a class="navlink" data-nav="quiz" href="quiz.html">Quiz</a>
+</div>
+<button aria-label="Toggle dark mode" class="themetoggle" id="themetoggle" title="Toggle dark mode" type="button">🌙</button>
+<button aria-expanded="false" aria-label="Menu" class="navtoggle" id="navtoggle" type="button">☰</button>
+</div></nav>
+<div class="layout">
+<aside class="sidebar">
+<h3>On this page</h3>
+<ul class="toc">
+<li><input data-sec="tf" title="Mark as studied" type="checkbox"/><a href="#tf">1. The Transfer Function</a></li>
+<li><input data-sec="logs" title="Mark as studied" type="checkbox"/><a href="#logs">2. Logarithms</a></li>
+<li><input data-sec="db" title="Mark as studied" type="checkbox"/><a href="#db">3. Decibels</a></li>
+<li><input data-sec="lowpass" title="Mark as studied" type="checkbox"/><a href="#lowpass">4. Low-Pass Filter</a></li>
+<li><input data-sec="highpass" title="Mark as studied" type="checkbox"/><a href="#highpass">5. High-Pass Filter</a></li>
+<li><input data-sec="bandstop" title="Mark as studied" type="checkbox"/><a href="#bandstop">6. Band-Pass &amp; Stop-Band</a></li>
+<li><input data-sec="bode" title="Mark as studied" type="checkbox"/><a href="#bode">7. Bode Plots</a></li>
+</ul>
+<div class="progress-wrap">
+<div class="progress-label">Studied: <b>0 / 7</b></div>
+<div class="pbar"><span></span></div>
+</div>
+</aside>
+<main>
+<div class="page-head">
+<span class="crumb">Part 6 of 6</span>
+<h1>Transfer Functions, Filters &amp; Bode Plots <span class="lecture-tag">Lecture 9</span></h1>
+<p class="lead">How does a circuit treat one frequency versus another? The answer is the <b>transfer function</b>
+    <span class="m">H = V<sub>o</sub>/V<sub>i</sub></span>. Expressed in <b>decibels</b> and sketched as a
+    <b>Bode plot</b>, it explains every <b>filter</b> — low-pass, high-pass, band-pass and stop-band — with just a
+    cut-off frequency and a couple of straight lines.</p>
+</div>
+
+<!-- 1 -->
+<section class="topic" id="tf">
+<h2><span class="nr">1</span> The Transfer Function <span class="m">H = V<sub>o</sub>/V<sub>i</sub></span></h2>
+<p>A two-terminal network driven at one frequency produces an output that is a scaled, phase-shifted copy of the
+    input. The <b>transfer function</b> captures both effects as one complex number — and for a simple R-C/R-L divider
+    it is just the AC voltage-divider rule (Part 3) with impedances:</p>
+<div class="fbox">
+<div class="fml ktx">\mathbf{H}(\omega) = \frac{\mathbf{V}_o}{\mathbf{V}_i} = \frac{\mathbf{Z}_2}{\mathbf{Z}_1 + \mathbf{Z}_2} = |H|\angle\theta</div>
+<ul class="vars">
+<li><b>|H|</b> – magnitude (gain): how much the amplitude is scaled</li>
+<li><b>θ</b> – phase: how much the output leads (+) or lags (−) the input</li>
+<li>both vary with frequency because Z<sub>L</sub> = jωL and Z<sub>C</sub> = 1/(jωC) do</li>
+</ul>
+</div>
+<div class="callout idea"><b class="tag">Why it matters</b>
+    Plot |H| against frequency and you have the circuit's <b>frequency response</b> — the foundation of every filter,
+    amplifier bandwidth and Bode plot on this page.</div>
+<p class="ref">Reference: Boylestad, Ch. 21–23 (Decibels, Filters, and Bode Plots).</p>
+</section>
+
+<!-- 2 -->
+<section class="topic" id="logs">
+<h2><span class="nr">2</span> Logarithms — the Tool</h2>
+<p>Frequency responses span huge ranges, so we plot them on <b>logarithmic</b> axes. A logarithm answers "to what power
+    must the base be raised?":</p>
+<div class="fbox">
+<div class="fml ktx">N = b^{x} \;\Longleftrightarrow\; x = \log_b N,\qquad \log_b x = \frac{\log_a x}{\log_a b}</div>
+<ul class="vars">
+<li>base 10 → <b>common</b> log; base e = 2.718 → <b>natural</b> log (ln x ≈ 2.3 log₁₀ x)</li>
+</ul>
+</div>
+<div class="fbox">
+<div class="fml ktx">\log(ab) = \log a + \log b,\quad \log\tfrac{a}{b} = \log a - \log b,\quad \log a^{n} = n\log a</div>
+<ul class="vars"><li>log 1 = 0; the log of a number &lt; 1 is negative</li></ul>
+</div>
+<p class="muted">Property 3 (a product becomes a sum) is the reason cascaded stages simply <i>add</i> their gains in dB.</p>
+<p class="ref">Reference: Boylestad, Ch. 21.2.</p>
+</section>
+
+<!-- 3 -->
+<section class="topic" id="db">
+<h2><span class="nr">3</span> Decibels: Power, Voltage &amp; dBm</h2>
+<p>The <b>bel</b> compares two power levels logarithmically; the <b>decibel</b> (1 B = 10 dB) is the practical unit:</p>
+<div class="fbox">
+<div class="fml ktx">R_{dB} = 10\log_{10}\frac{P_2}{P_1}\quad(\text{power}),\qquad A_{dB} = 20\log_{10}\frac{V_2}{V_1}\quad(\text{voltage})</div>
+<ul class="vars">
+<li>the voltage form gains a factor of 20 because P ∝ V²</li>
+<li><b>+3 dB</b> = double the <b>power</b>; <b>+6 dB</b> = double the <b>voltage</b></li>
+</ul>
+</div>
+<table class="data">
+<tr><th>P₂/P₁</th><th>dB (10 log)</th><th>V₂/V₁</th><th>dB (20 log)</th></tr>
+<tr><td>2</td><td>3 dB</td><td>2</td><td>6 dB</td></tr>
+<tr><td>10</td><td>10 dB</td><td>10</td><td>20 dB</td></tr>
+<tr><td>100</td><td>20 dB</td><td>100</td><td>40 dB</td></tr>
+<tr><td>1000</td><td>30 dB</td><td>1000</td><td>60 dB</td></tr>
+</table>
+<p>For an absolute reference, <b>dBm</b> compares to 1 mW (across 600 Ω):
+    <span class="fml ktx" style="font-size:1rem">R_{dBm} = 10\log_{10}\dfrac{P}{1\,\text{mW}}</span>.</p>
+<details class="example"><summary>Worked examples — voltage gain in dB</summary>
+<div class="body">
+<p>Input 5 mV, output 2 V:</p>
+<p class="fml ktx">A_{dB} = 20\log_{10}\frac{2000\,\text{mV}}{5\,\text{mV}} = 20\log_{10}400 \approx 52\,\text{dB}</p>
+<p>A system with 46 dB gain and an 8.5 V output:</p>
+<p class="fml ktx">V_{in} = \frac{V_o}{10^{\,A_{dB}/20}} = \frac{8.5\,\text{V}}{10^{2.3}} = \frac{8.5}{200} = 42.5\,\text{mV}</p>
+</div>
+</details>
+<p class="ref">Reference: Boylestad, Ch. 21.3–21.5.</p>
+</section>
+
+<!-- 4 -->
+<section class="topic" id="lowpass">
+<h2><span class="nr">4</span> The Low-Pass Filter</h2>
+<p>A filter is any R/L/C (passive) or op-amp (active) combination that selects or rejects a band of frequencies.
+    Anything in the <b>pass-band</b> reaches the output with at least <b>70.7&nbsp;%</b> of the maximum voltage.</p>
+<p>A series R with the output taken across C is a <b>low-pass</b> filter: at low f, X<sub>C</sub> is huge and
+    V<sub>o</sub> ≈ V<sub>i</sub>; at high f, X<sub>C</sub> → 0 and the output collapses:</p>
+<div class="fbox">
+<div class="fml ktx">|A_V| = \frac{1}{\sqrt{1 + (\omega RC)^{2}}},\qquad f_c = \frac{1}{2\pi RC},\qquad \theta = -\tan^{-1}(\omega RC)</div>
+<ul class="vars">
+<li><b>f<sub>c</sub></b> – cut-off (corner) frequency, where |A<sub>V</sub>| = 0.707 and R = X<sub>C</sub></li>
+<li>at f<sub>c</sub> the output <b>lags</b> the input by <b>45°</b></li>
+</ul>
+</div>
+<figure class="fig">
+<img alt="Magnitude response of low-pass and high-pass RC filters versus frequency on a log axis" src="assets/img/filter-response.png"/>
+<figcaption><b>Low-pass vs high-pass</b> magnitude. The 0.707 (−3 dB) line at f<sub>c</sub> divides pass-band from stop-band. <span class="src-note">— Lecture 9</span></figcaption>
+</figure>
+<div class="callout tip"><b class="tag">R-L version</b>
+    A low-pass response is also obtained with R-L, where <span class="m">f<sub>c</sub> = R/(2πL)</span>. R-C is more
+    common — capacitors are smaller and inductors less ideal.</div>
+<p class="ref">Reference: Boylestad, Ch. 22.2.</p>
+</section>
+
+<!-- 5 -->
+<section class="topic" id="highpass">
+<h2><span class="nr">5</span> The High-Pass Filter</h2>
+<p>Swap R and C (output across R) and the behaviour inverts: low frequencies are blocked (X<sub>C</sub> → ∞), high
+    frequencies pass:</p>
+<div class="fbox">
+<div class="fml ktx">|A_V| = \frac{R}{\sqrt{R^{2} + X_C^{2}}},\qquad f_c = \frac{1}{2\pi RC},\qquad \theta = +\tan^{-1}\!\frac{X_C}{R}</div>
+<ul class="vars">
+<li>same f<sub>c</sub> formula as the low-pass; below f<sub>c</sub> the output falls off</li>
+<li>at f<sub>c</sub> the output <b>leads</b> the input by <b>45°</b></li>
+</ul>
+</div>
+<div class="fbox">
+<div class="fml ktx">\frac{A_{V_c}}{A_{V\max}} = 0.707 \;\Rightarrow\; 20\log_{10}0.707 = -3\,\text{dB}</div>
+<ul class="vars"><li>this is why the cut-off is universally called the <b>−3 dB point</b> (half-power)</li></ul>
+</div>
+<p class="ref">Reference: Boylestad, Ch. 22.3.</p>
+</section>
+
+<!-- 6 -->
+<section class="topic" id="bandstop">
+<h2><span class="nr">6</span> Band-Pass &amp; Stop-Band Filters</h2>
+<p>Combine the two single filters and you can pass — or reject — a <i>band</i>:</p>
+<div class="callout idea"><b class="tag">Band-pass</b>
+    A high-pass <b>cascaded</b> with a low-pass, with the high-pass cut-off set <i>below</i> the low-pass cut-off.
+    Frequencies between the two corners pass; everything outside is attenuated.</div>
+<div class="callout idea"><b class="tag">Stop-band (notch)</b>
+    The same two filters in a <b>parallel</b> arrangement: low frequencies take the low-pass path, high frequencies the
+    high-pass path, and the band in between is rejected — the inverse of a band-pass.</div>
+<p>A <b>resonant circuit</b> (Part 4) is itself a band-pass filter, sharpest of all:</p>
+<div class="fbox">
+<div class="fml ktx">f_s = \frac{1}{2\pi\sqrt{LC}},\qquad \text{BW} = \frac{f_s}{Q_s}</div>
+<ul class="vars"><li>high Q ⇒ narrow band ⇒ very selective (radio tuning)</li></ul>
+</div>
+<details class="example"><summary>Worked example — band-pass critical frequencies</summary>
+<div class="body">
+<p>High-pass stage R₁ = 1 kΩ, C₁ = 1.5 nF; low-pass stage R₂ = 40 kΩ, C₂ = 4 pF:</p>
+<p class="fml ktx">f_{c\_h} = \frac{1}{2\pi R_1 C_1} \approx 106\,\text{kHz},\qquad f_{c\_l} = \frac{1}{2\pi R_2 C_2} \approx 995\,\text{kHz}</p>
+<p class="muted">The pass-band runs from ≈106 kHz to ≈995 kHz (high-pass corner below the low-pass corner).</p>
+</div>
+</details>
+<p class="ref">Reference: Boylestad, Ch. 22.4–22.6.</p>
+</section>
+
+<!-- 7 -->
+<section class="topic" id="bode">
+<h2><span class="nr">7</span> Bode Plots</h2>
+<p>A <b>Bode plot</b> graphs gain (in dB) and phase against frequency on a log scale. Its magic: the real curve is
+    closely approximated by <b>straight-line asymptotes</b>, so you can sketch a response from just the cut-off
+    frequency.</p>
+<div class="fbox">
+<div class="fml ktx">A_{V,dB} = -20\log_{10}\sqrt{1 + \left(\tfrac{f_c}{f}\right)^{2}} \;\xrightarrow{f \ll f_c}\; +20\log_{10}\tfrac{f}{f_c}</div>
+<ul class="vars">
+<li>far from f<sub>c</sub> the response is a straight line; near it, it bends</li>
+</ul>
+</div>
+<figure class="fig">
+<img alt="Bode magnitude plot of a high-pass filter showing idealized asymptotes versus the actual curve, 3 dB down at the cutoff" src="assets/img/bode-highpass.png"/>
+<figcaption><b>Idealized vs actual.</b> The asymptotes meet at f<sub>c</sub>; the real curve is exactly <b>−3 dB</b> there and rises at <b>+20 dB/decade</b>. <span class="src-note">— Lecture 9</span></figcaption>
+</figure>
+<div class="fbox">
+<div class="fml ktx">\text{octave } (2{:}1) \to 6\,\text{dB change},\qquad \text{decade } (10{:}1) \to 20\,\text{dB change}</div>
+<ul class="vars">
+<li>the slope is constant per octave/decade — that's why the segments are straight</li>
+<li>actual response is 3 dB off at f<sub>c</sub>, and ~1 dB off at f<sub>c</sub>/2 and 2f<sub>c</sub></li>
+</ul>
+</div>
+<div class="callout tip"><b class="tag">Phase, the easy way</b>
+    Sketch phase with three asymptotes: it sits at the extreme value for <span class="m">f &lt; 0.1f<sub>c</sub></span>
+    and <span class="m">f &gt; 10f<sub>c</sub></span>, and passes through <b>45°</b> at f<sub>c</sub> — a straight line
+    across the two decades between.</div>
+<p class="ref">Reference: Boylestad, Ch. 23.</p>
+</section>
+
+<div class="next-prev">
+<a href="pulse-waveforms.html"><span class="sub">← Previous</span> Pulse Waveforms</a>
+<a href="formulas.html"><span class="sub">Next →</span> Formula Cheat Sheet</a>
+</div>
+</main>
+</div>
+<footer class="site">
+  Built from the Electronics lecture slides · Explanations cross-checked with Boylestad,
+  <i>Introductory Circuit Analysis</i> · Figures reproduced/redrawn for personal study.
+</footer>
+<script src="vendor/katex/katex.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

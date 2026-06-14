@@ -14,14 +14,16 @@
 <nav class="topnav"><div class="wrap">
   <a class="brand" href="index.html"><span class="bolt">⚡</span> Electronics Study Guide</a>
   <div class="navlinks" id="navlinks">
-    <a class="navlink" data-nav="home" href="index.html">Home</a>
-    <a class="navlink" data-nav="dc" href="dc-circuits.html">DC Circuits</a>
-    <a class="navlink" data-nav="cap" href="capacitors-inductors.html">Capacitors &amp; Inductors</a>
-    <a class="navlink" data-nav="ac" href="ac-circuits.html">AC Circuits</a>
-    <a class="navlink" data-nav="res" href="resonance-transformers.html">Resonance &amp; Transformers</a>
-    <a class="navlink" data-nav="formulas" href="formulas.html">Formula Sheet</a>
-    <a class="navlink" data-nav="quiz" href="quiz.html">Quiz</a>
-  </div>
+<a class="navlink" data-nav="home" href="index.html">Home</a>
+<a class="navlink" data-nav="dc" href="dc-circuits.html">DC Circuits</a>
+<a class="navlink" data-nav="cap" href="capacitors-inductors.html">Capacitors</a>
+<a class="navlink" data-nav="ac" href="ac-circuits.html">AC Circuits</a>
+<a class="navlink" data-nav="res" href="resonance-transformers.html">Resonance</a>
+<a class="navlink" data-nav="pulse" href="pulse-waveforms.html">Pulse Waveforms</a>
+<a class="navlink" data-nav="bode" href="transfer-functions.html">Transfer Functions</a>
+<a class="navlink" data-nav="formulas" href="formulas.html">Formulas</a>
+<a class="navlink" data-nav="quiz" href="quiz.html">Quiz</a>
+</div>
   <button class="themetoggle" id="themetoggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
   <button class="navtoggle" id="navtoggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
 </div></nav>
@@ -31,7 +33,7 @@
   <div class="page-head">
     <span class="crumb">Check yourself</span>
     <h1>Self-Test Quiz</h1>
-    <p class="lead">A bank of <b id="bankcount">200+</b> exam-style questions (including <b id="examcount">0</b> flagged ★ Past exam) spanning Lectures 1–7. Pick a
+    <p class="lead">A bank of <b id="bankcount">200+</b> exam-style questions (including <b id="examcount">0</b> flagged ★ Past exam) spanning all six study topics. Pick a
     topic and a set size, then click an answer to check it instantly — every question includes a short
     explanation. Shuffle on for a fresh set each time, or pick ★ Past exam to drill only the past-paper questions.</p>
   </div>
@@ -43,6 +45,8 @@
       <button class="fchip" data-cat="cap">Capacitors &amp; Inductors</button>
       <button class="fchip" data-cat="ac">AC Circuits</button>
       <button class="fchip" data-cat="res">Resonance &amp; Transformers</button>
+      <button class="fchip" data-cat="pulse">Pulse Waveforms</button>
+      <button class="fchip" data-cat="bode">Transfer Functions</button>
       <button class="fchip qc-exam-chip" data-cat="exam">★ Past exam</button>
     </div>
     <div class="qc-row">
@@ -97,7 +101,7 @@
   "use strict";
 
   var ALL = (window.QUIZ_QUESTIONS || []).slice();
-  var CAT_NAMES = { dc: "DC Circuits", cap: "Capacitors & Inductors", ac: "AC Circuits", res: "Resonance & Transformers" };
+  var CAT_NAMES = { dc: "DC Circuits", cap: "Capacitors & Inductors", ac: "AC Circuits", res: "Resonance & Transformers", pulse: "Pulse Waveforms", bode: "Transfer Functions & Filters" };
   var PREFS_KEY = "eguide-quiz-prefs";
 
   var quiz = document.getElementById("quiz");

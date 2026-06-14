@@ -14,14 +14,16 @@
 <nav class="topnav"><div class="wrap">
   <a class="brand" href="index.html"><span class="bolt">⚡</span> Electronics Study Guide</a>
   <div class="navlinks" id="navlinks">
-    <a class="navlink" data-nav="home" href="index.html">Home</a>
-    <a class="navlink" data-nav="dc" href="dc-circuits.html">DC Circuits</a>
-    <a class="navlink" data-nav="cap" href="capacitors-inductors.html">Capacitors &amp; Inductors</a>
-    <a class="navlink" data-nav="ac" href="ac-circuits.html">AC Circuits</a>
-    <a class="navlink" data-nav="res" href="resonance-transformers.html">Resonance &amp; Transformers</a>
-    <a class="navlink" data-nav="formulas" href="formulas.html">Formula Sheet</a>
-    <a class="navlink" data-nav="quiz" href="quiz.html">Quiz</a>
-  </div>
+<a class="navlink" data-nav="home" href="index.html">Home</a>
+<a class="navlink" data-nav="dc" href="dc-circuits.html">DC Circuits</a>
+<a class="navlink" data-nav="cap" href="capacitors-inductors.html">Capacitors</a>
+<a class="navlink" data-nav="ac" href="ac-circuits.html">AC Circuits</a>
+<a class="navlink" data-nav="res" href="resonance-transformers.html">Resonance</a>
+<a class="navlink" data-nav="pulse" href="pulse-waveforms.html">Pulse Waveforms</a>
+<a class="navlink" data-nav="bode" href="transfer-functions.html">Transfer Functions</a>
+<a class="navlink" data-nav="formulas" href="formulas.html">Formulas</a>
+<a class="navlink" data-nav="quiz" href="quiz.html">Quiz</a>
+</div>
   <button class="themetoggle" id="themetoggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
   <button class="navtoggle" id="navtoggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
 </div></nav>
@@ -32,12 +34,12 @@
   <div class="hero">
     <div class="circuit-deco">⚡</div>
     <h1>Electronics Exam Study Guide</h1>
-    <p>Built directly from your professor's lecture slides (Lectures 1–7) — every topic, formula and diagram on
+    <p>Built directly from your professor's lecture slides (Lectures 1–9) — every topic, formula and diagram on
     this site appears in the lectures, so nothing here is off-syllabus. Explanations are kept simple and
     beginner-friendly, cross-checked with Boylestad's <i>Introductory Circuit Analysis</i> (the course textbook).</p>
     <div class="meta">
-      <span class="chip">📚 7 lectures covered</span>
-      <span class="chip">🖼 60+ original lecture figures</span>
+      <span class="chip">📚 9 lectures covered</span>
+      <span class="chip">🖼 65+ original lecture figures</span>
       <span class="chip">📐 65+ formulas with variables explained</span>
       <span class="chip">✅ Self-test quiz</span>
     </div>
@@ -82,6 +84,24 @@
       <div class="pbar"><span></span></div><span class="pct"></span>
     </a>
 
+    <a class="navcard" href="pulse-waveforms.html" data-progress-of="pulse|8">
+      <div class="icon">📶</div>
+      <h3>5 · Pulse Waveforms</h3>
+      <p>Real pulses: rise/fall time, tilt, duty cycle and repetition rate; the general R-C transient and how a
+      square wave is reshaped; oscilloscope probe compensation.</p>
+      <div class="tags"><span>Lecture 8</span><span>8 topics</span></div>
+      <div class="pbar"><span></span></div><span class="pct"></span>
+    </a>
+
+    <a class="navcard" href="transfer-functions.html" data-progress-of="bode|7">
+      <div class="icon">📈</div>
+      <h3>6 · Transfer Functions &amp; Bode</h3>
+      <p>The transfer function H = V<sub>o</sub>/V<sub>i</sub>, decibels and dBm, low/high/band/stop-pass filters,
+      the −3 dB cut-off frequency, and sketching responses with Bode straight-line asymptotes.</p>
+      <div class="tags"><span>Lecture 9</span><span>7 topics</span></div>
+      <div class="pbar"><span></span></div><span class="pct"></span>
+    </a>
+
     <a class="navcard" href="formulas.html">
       <div class="icon">📐</div>
       <h3>Formula Cheat Sheet</h3>
@@ -93,9 +113,9 @@
     <a class="navcard" href="quiz.html">
       <div class="icon">✅</div>
       <h3>Self-Test Quiz</h3>
-      <p>16 instant-feedback questions modelled on the lecture examples — from colour codes to resonant voltage
-      rise. Find your weak spots before the exam does.</p>
-      <div class="tags"><span>16 questions</span><span>Explanations included</span></div>
+      <p>Hundreds of instant-feedback questions across all six topics — conceptual and numerical — with
+      topic filters, a random practice mode, and real <b>past-exam</b> questions flagged with a badge.</p>
+      <div class="tags"><span>280+ questions</span><span>Filters &amp; past-exam mode</span></div>
     </a>
 
   </div>
@@ -111,12 +131,14 @@
       <tr><td><b>5</b></td><td>R/L/C response to AC, reactance, frequency response, power &amp; power factor, complex numbers, phasors</td><td><a href="ac-circuits.html">AC Circuits §5–7</a></td></tr>
       <tr><td><b>6</b></td><td>Series &amp; parallel AC circuits, impedance, AC network analysis, AC power, PF correction</td><td><a href="ac-circuits.html">AC Circuits §8–9</a></td></tr>
       <tr><td><b>7</b></td><td>Series &amp; parallel resonance, Q, bandwidth; transformers, turns ratio, reflected impedance</td><td><a href="resonance-transformers.html">Resonance &amp; Transformers</a></td></tr>
+      <tr><td><b>8</b></td><td>Pulse waveforms: width, rise/fall, tilt, duty cycle, average value, R-C transient &amp; square-wave response, scope probe compensation</td><td><a href="pulse-waveforms.html">Pulse Waveforms</a></td></tr>
+      <tr><td><b>9</b></td><td>Transfer functions, logarithms &amp; decibels, low/high/band/stop-pass filters, cut-off frequency, Bode plots</td><td><a href="transfer-functions.html">Transfer Functions &amp; Bode</a></td></tr>
     </table>
   </div>
 
   <div class="panel">
     <h2>How to use this guide</h2>
-    <p><b>1. Study in order.</b> The four sections build on each other — AC circuits assume you're fluent in the DC
+    <p><b>1. Study in order.</b> The six sections build on each other — AC circuits assume you're fluent in the DC
     tools, and resonance assumes reactance. Tick the checkbox next to each topic in the sidebar as you master it;
     your progress is saved in the browser and shows up on the cards above.</p>
     <p><b>2. Read the figures, not just the text.</b> Each diagram is taken from the actual lecture slides — if it's
@@ -131,7 +153,7 @@
 </div>
 
 <footer class="site">
-  Built from the Electronics lecture slides (Lectures 1–7) · Explanations cross-checked with Boylestad,
+  Built from the Electronics lecture slides (Lectures 1–9) · Explanations cross-checked with Boylestad,
   <i>Introductory Circuit Analysis</i> · Figures © their original sources, reproduced from the lecture PDF for personal study.
 </footer>
 

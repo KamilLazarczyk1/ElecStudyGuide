@@ -4065,5 +4065,629 @@ window.QUIZ_QUESTIONS = [
   ],
   "a": 1,
   "e": "For AC, Z_L = Z_Th* (the complex conjugate) - same resistance, opposite reactance - so the reactances cancel."
+ },
+ {
+  "id": "pulse-001",
+  "cat": "pulse",
+  "topic": "Pulse Parameters",
+  "diff": "easy",
+  "src": "guide",
+  "t": "The width of a pulse (t_p) is conventionally measured at what level of the peak value?",
+  "o": [
+   "10%",
+   "50%",
+   "90%",
+   "100%"
+  ],
+  "a": 1,
+  "e": "Pulse width t_p is defined at the 50% level so the sloped edges do not make it ambiguous."
+ },
+ {
+  "id": "pulse-002",
+  "cat": "pulse",
+  "topic": "Pulse Parameters",
+  "diff": "easy",
+  "src": "guide",
+  "t": "The amplitude of a general pulse waveform is usually taken as the:",
+  "o": [
+   "peak value above 0 V",
+   "peak-to-peak value",
+   "RMS value",
+   "average value"
+  ],
+  "a": 1,
+  "e": "For most pulses the amplitude is the peak-to-peak value (equal to the peak only if it starts and returns to 0 V)."
+ },
+ {
+  "id": "pulse-003",
+  "cat": "pulse",
+  "topic": "Pulse Parameters",
+  "diff": "medium",
+  "src": "guide",
+  "t": "The 'leading edge' of a pulse is:",
+  "o": [
+   "the falling edge",
+   "the rising edge closest to t = 0",
+   "the flat top",
+   "the base-line level"
+  ],
+  "a": 1,
+  "e": "The leading (rising) edge increases from low to high and is closest to t = 0; the trailing (falling) edge follows it."
+ },
+ {
+  "id": "pulse-004",
+  "cat": "pulse",
+  "topic": "Distortion",
+  "diff": "medium",
+  "src": "guide",
+  "t": "Tilt (droop or sag) on the flat top of a pulse is caused by:",
+  "o": [
+   "poor high-frequency response",
+   "poor low-frequency response",
+   "too large an amplitude",
+   "too short a rise time"
+  ],
+  "a": 1,
+  "e": "Tilt is a low-frequency distortion: the system cannot sustain the flat top."
+ },
+ {
+  "id": "pulse-005",
+  "cat": "pulse",
+  "topic": "Distortion",
+  "diff": "medium",
+  "src": "guide",
+  "t": "Ringing on a pulse edge is caused by:",
+  "o": [
+   "resistive heating",
+   "the L and C elements oscillating at their natural frequency",
+   "a slow rise time",
+   "a DC offset"
+  ],
+  "a": 1,
+  "e": "Ringing is the damped oscillation of the network's inductance and capacitance at their resonant frequency."
+ },
+ {
+  "id": "pulse-006",
+  "cat": "pulse",
+  "topic": "Repetition Rate",
+  "diff": "easy",
+  "src": "guide",
+  "t": "The pulse repetition frequency (prf) of a periodic pulse train is:",
+  "o": [
+   "t_p / T",
+   "1 / T",
+   "T / t_p",
+   "t_p x T"
+  ],
+  "a": 1,
+  "e": "prf = 1/T (Hz); it depends only on the period, not the pulse shape."
+ },
+ {
+  "id": "pulse-007",
+  "cat": "pulse",
+  "topic": "Duty Cycle",
+  "diff": "easy",
+  "src": "guide",
+  "t": "The duty cycle of a pulse train is defined as:",
+  "o": [
+   "(T / t_p) x 100%",
+   "(t_p / T) x 100%",
+   "(t_p x T) x 100%",
+   "(1 / t_p) x 100%"
+  ],
+  "a": 1,
+  "e": "Duty cycle = (t_p / T) x 100% - the fraction of the period the pulse is on."
+ },
+ {
+  "id": "pulse-008",
+  "cat": "pulse",
+  "topic": "Repetition Rate",
+  "diff": "medium",
+  "src": "guide",
+  "t": "A pulse of width 2 us repeats every 26 us. The pulse repetition frequency is about:",
+  "o": [
+   "13 kHz",
+   "38 kHz",
+   "2 MHz",
+   "77 kHz"
+  ],
+  "a": 1,
+  "e": "prf = 1/T = 1/(26 us) is about 38 kHz."
+ },
+ {
+  "id": "pulse-009",
+  "cat": "pulse",
+  "topic": "Duty Cycle",
+  "diff": "medium",
+  "src": "guide",
+  "t": "A pulse of width 2 us repeats every 26 us. The duty cycle is about:",
+  "o": [
+   "2%",
+   "7.7%",
+   "13%",
+   "26%"
+  ],
+  "a": 1,
+  "e": "Duty cycle = t_p/T x 100% = 2/26 x 100% is about 7.7%."
+ },
+ {
+  "id": "pulse-010",
+  "cat": "pulse",
+  "topic": "Average Value",
+  "diff": "hard",
+  "src": "guide",
+  "t": "A pulse sits at 8 mV for 40% of its period and at a 2 mV base line for the rest. Its average value is:",
+  "o": [
+   "8 mV",
+   "2 mV",
+   "4.4 mV",
+   "5 mV"
+  ],
+  "a": 2,
+  "e": "V_av = (duty)(peak) + (1-duty)(base) = 0.4(8) + 0.6(2) = 3.2 + 1.2 = 4.4 mV."
+ },
+ {
+  "id": "pulse-011",
+  "cat": "pulse",
+  "topic": "RC Transient",
+  "diff": "medium",
+  "src": "guide",
+  "t": "The general expression for the capacitor voltage during any R-C transient is:",
+  "o": [
+   "v_C = V_f e^(-t/tau)",
+   "v_C = V_f + (V_i - V_f) e^(-t/tau)",
+   "v_C = V_i e^(-t/tau)",
+   "v_C = (V_f - V_i)(1 - e^(-t/tau))"
+  ],
+  "a": 1,
+  "e": "v_C = V_f + (V_i - V_f) e^(-t/tau): it glides exponentially from the initial value V_i to the final value V_f."
+ },
+ {
+  "id": "pulse-012",
+  "cat": "pulse",
+  "topic": "RC Transient",
+  "diff": "easy",
+  "src": "guide",
+  "t": "An R-C transient is generally taken to be complete after about:",
+  "o": [
+   "1 tau",
+   "2 tau",
+   "5 tau",
+   "10 tau"
+  ],
+  "a": 2,
+  "e": "After about 5 tau the response is over 99% settled (the leftover e^-5 is about 0.68%)."
+ },
+ {
+  "id": "pulse-013",
+  "cat": "pulse",
+  "topic": "Square-Wave Response",
+  "diff": "medium",
+  "src": "guide",
+  "t": "When a high-frequency square wave (half-period much less than 5 tau) drives an R-C circuit, v_C:",
+  "o": [
+   "exactly copies the square wave",
+   "never fully charges and looks nearly triangular",
+   "becomes a pure DC level",
+   "rings continuously"
+  ],
+  "a": 1,
+  "e": "If the half-period is far shorter than 5 tau, the capacitor cannot finish charging, so v_C is small and roughly triangular."
+ },
+ {
+  "id": "pulse-014",
+  "cat": "pulse",
+  "topic": "Square-Wave Response",
+  "diff": "medium",
+  "src": "guide",
+  "t": "Under steady state, the average value of v_C for a square-wave input equals:",
+  "o": [
+   "always zero",
+   "the peak of the input",
+   "the average value of the applied square wave",
+   "twice the input average"
+  ],
+  "a": 2,
+  "e": "In steady state the capacitor's average voltage equals the average value of the applied waveform."
+ },
+ {
+  "id": "pulse-015",
+  "cat": "pulse",
+  "topic": "Scope Probe",
+  "diff": "medium",
+  "src": "guide",
+  "t": "A x10 oscilloscope attenuator probe used with a 1 Mega-ohm scope input contains an internal resistance of:",
+  "o": [
+   "1 Mega-ohm",
+   "9 Mega-ohm",
+   "10 Mega-ohm",
+   "100 kilo-ohm"
+  ],
+  "a": 1,
+  "e": "The 9 Mega-ohm probe resistor in series with the 1 Mega-ohm scope input forms the divide-by-10 divider."
+ },
+ {
+  "id": "bode-001",
+  "cat": "bode",
+  "topic": "Transfer Function",
+  "diff": "easy",
+  "src": "guide",
+  "t": "The transfer function of a network is defined as:",
+  "o": [
+   "V_i / V_o",
+   "V_o / V_i",
+   "V_o x V_i",
+   "V_o - V_i"
+  ],
+  "a": 1,
+  "e": "H = V_o / V_i - the complex ratio of output to input, giving gain magnitude and phase versus frequency."
+ },
+ {
+  "id": "bode-002",
+  "cat": "bode",
+  "topic": "Decibels",
+  "diff": "easy",
+  "src": "guide",
+  "t": "A voltage ratio expressed in decibels is:",
+  "o": [
+   "10 log10(V2/V1)",
+   "20 log10(V2/V1)",
+   "20 ln(V2/V1)",
+   "V2/V1"
+  ],
+  "a": 1,
+  "e": "Voltage: A(dB) = 20 log10(V2/V1); the factor 20 (vs 10) comes from P proportional to V squared."
+ },
+ {
+  "id": "bode-003",
+  "cat": "bode",
+  "topic": "Decibels",
+  "diff": "medium",
+  "src": "guide",
+  "t": "Doubling a voltage level corresponds to a change of:",
+  "o": [
+   "3 dB",
+   "6 dB",
+   "10 dB",
+   "20 dB"
+  ],
+  "a": 1,
+  "e": "20 log10 2 is about 6 dB. (Doubling power is +3 dB.)"
+ },
+ {
+  "id": "bode-004",
+  "cat": "bode",
+  "topic": "Decibels",
+  "diff": "hard",
+  "src": "guide",
+  "t": "A system has a 5 mV input and a 2 V output. Its voltage gain is about:",
+  "o": [
+   "26 dB",
+   "40 dB",
+   "52 dB",
+   "400 dB"
+  ],
+  "a": 2,
+  "e": "A(dB) = 20 log10(2000 mV / 5 mV) = 20 log10(400), which is about 52 dB."
+ },
+ {
+  "id": "bode-005",
+  "cat": "bode",
+  "topic": "Decibels",
+  "diff": "easy",
+  "src": "guide",
+  "t": "The reference power level for the dBm scale is:",
+  "o": [
+   "1 W",
+   "1 mW",
+   "1 uW",
+   "600 W"
+  ],
+  "a": 1,
+  "e": "dBm is referenced to 1 mW (commonly across a 600 ohm load)."
+ },
+ {
+  "id": "bode-006",
+  "cat": "bode",
+  "topic": "Filters",
+  "diff": "easy",
+  "src": "guide",
+  "t": "Any frequency in a filter's pass-band reaches the output with at least:",
+  "o": [
+   "50% of maximum output",
+   "70.7% of maximum output",
+   "90% of maximum output",
+   "100% of maximum output"
+  ],
+  "a": 1,
+  "e": "The pass-band extends down to 0.707 (the -3 dB / half-power level) of the maximum output."
+ },
+ {
+  "id": "bode-007",
+  "cat": "bode",
+  "topic": "Filters",
+  "diff": "medium",
+  "src": "guide",
+  "t": "In a simple R-C low-pass filter, as frequency increases the output voltage:",
+  "o": [
+   "increases",
+   "stays constant",
+   "decreases",
+   "leads the input by 90 degrees"
+  ],
+  "a": 2,
+  "e": "X_C falls with frequency, so more of the input drops across R and V_o decreases - high frequencies are attenuated."
+ },
+ {
+  "id": "bode-008",
+  "cat": "bode",
+  "topic": "Cut-off Frequency",
+  "diff": "medium",
+  "src": "guide",
+  "t": "At the cut-off frequency, the magnitude (relative to maximum) and dB level are:",
+  "o": [
+   "0.5 and -6 dB",
+   "0.707 and -3 dB",
+   "0.9 and -1 dB",
+   "1.0 and 0 dB"
+  ],
+  "a": 1,
+  "e": "At f_c, |A_V| = 0.707 of maximum, i.e. 20 log10(0.707) = -3 dB (the half-power point)."
+ },
+ {
+  "id": "bode-009",
+  "cat": "bode",
+  "topic": "Cut-off Frequency",
+  "diff": "hard",
+  "src": "guide",
+  "t": "An R-C filter has R = 1 kilo-ohm and C = 1.5 nF. Its cut-off frequency is about:",
+  "o": [
+   "1.06 kHz",
+   "10.6 kHz",
+   "106 kHz",
+   "1.06 MHz"
+  ],
+  "a": 2,
+  "e": "f_c = 1/(2*pi*R*C) = 1/(2*pi*1000*1.5e-9), which is about 106 kHz."
+ },
+ {
+  "id": "bode-010",
+  "cat": "bode",
+  "topic": "Phase Response",
+  "diff": "medium",
+  "src": "guide",
+  "t": "At the cut-off frequency of a low-pass R-C filter, the output:",
+  "o": [
+   "is in phase with the input",
+   "lags the input by 45 degrees",
+   "leads the input by 45 degrees",
+   "lags the input by 90 degrees"
+  ],
+  "a": 1,
+  "e": "A low-pass filter's output lags by 45 degrees at f_c (approaching -90 degrees well above it)."
+ },
+ {
+  "id": "bode-011",
+  "cat": "bode",
+  "topic": "Phase Response",
+  "diff": "medium",
+  "src": "guide",
+  "t": "At the cut-off frequency of a high-pass R-C filter, the output:",
+  "o": [
+   "lags the input by 45 degrees",
+   "leads the input by 45 degrees",
+   "is in phase with the input",
+   "leads the input by 90 degrees"
+  ],
+  "a": 1,
+  "e": "A high-pass filter's output leads the input by 45 degrees at f_c."
+ },
+ {
+  "id": "bode-012",
+  "cat": "bode",
+  "topic": "Band Filters",
+  "diff": "medium",
+  "src": "guide",
+  "t": "A band-pass filter can be formed from a low-pass and a high-pass filter connected:",
+  "o": [
+   "in parallel",
+   "in cascade, with the high-pass cut-off set below the low-pass cut-off",
+   "in a bridge",
+   "with identical cut-off frequencies"
+  ],
+  "a": 1,
+  "e": "Cascading them, with the high-pass corner below the low-pass corner, passes the band between the two cut-offs."
+ },
+ {
+  "id": "bode-013",
+  "cat": "bode",
+  "topic": "Bode Plots",
+  "diff": "medium",
+  "src": "guide",
+  "t": "A first-order roll-off on a Bode plot has a slope of:",
+  "o": [
+   "6 dB per decade",
+   "20 dB per octave",
+   "20 dB per decade (= 6 dB per octave)",
+   "3 dB per decade"
+  ],
+  "a": 2,
+  "e": "A first-order slope is 20 dB/decade, equivalently 6 dB/octave."
+ },
+ {
+  "id": "bode-014",
+  "cat": "bode",
+  "topic": "Bode Plots",
+  "diff": "easy",
+  "src": "guide",
+  "t": "Two frequencies in a 10:1 ratio are separated by:",
+  "o": [
+   "an octave",
+   "a decade",
+   "a bel",
+   "a radian"
+  ],
+  "a": 1,
+  "e": "A 10:1 ratio is a decade; a 2:1 ratio is an octave."
+ },
+ {
+  "id": "pulse-exam-01",
+  "cat": "pulse",
+  "topic": "Pulse Parameters",
+  "diff": "easy",
+  "src": "exam",
+  "t": "Rise time is defined as the time for the signal to change from:",
+  "o": [
+   "0% to 100% of amplitude",
+   "10% to 90% of amplitude",
+   "25% to 75% of amplitude",
+   "50% to 100% of amplitude"
+  ],
+  "a": 1,
+  "e": "Rise time is the time to go from 10% to 90% of the amplitude (the rounded corners make 0%/100% unusable)."
+ },
+ {
+  "id": "pulse-exam-02",
+  "cat": "pulse",
+  "topic": "RC Transient",
+  "diff": "medium",
+  "src": "exam",
+  "t": "For an R-C circuit with V_i = 0, the steady-state error remaining at t = 5RC is:",
+  "o": [
+   "less than 1% (about 0.68%)",
+   "about 5%",
+   "about 10%",
+   "exactly 0%"
+  ],
+  "a": 0,
+  "e": "At 5 tau the leftover is e^-5 = 0.0068, i.e. about 0.68% - less than 1%, which is why 5 tau is taken as settled."
+ },
+ {
+  "id": "pulse-exam-03",
+  "cat": "pulse",
+  "topic": "Average Value",
+  "diff": "medium",
+  "src": "exam",
+  "t": "The average value of a pulse waveform is defined (valid for any waveform) by:",
+  "o": [
+   "the peak value",
+   "the peak-to-peak value",
+   "(1/T) times the integral of v(t) over one period",
+   "0.707 times the peak"
+  ],
+  "a": 2,
+  "e": "By definition V_av = (1/T) * integral of v(t) dt over one period (area divided by length)."
+ },
+ {
+  "id": "pulse-exam-04",
+  "cat": "pulse",
+  "topic": "Scope Probe",
+  "diff": "hard",
+  "src": "exam",
+  "t": "An oscilloscope probe (R_p, C_p) is insensitive to frequency, with scope (R_s, C_s), when:",
+  "o": [
+   "R_p = R_s",
+   "C_p = C_s",
+   "R_p C_p = R_s C_s",
+   "R_p R_s = C_p C_s"
+  ],
+  "a": 2,
+  "e": "The compensated divider is frequency-independent when the two arms have equal time constants: R_p C_p = R_s C_s."
+ },
+ {
+  "id": "bode-exam-01",
+  "cat": "bode",
+  "topic": "Cut-off Frequency",
+  "diff": "easy",
+  "src": "exam",
+  "t": "The cut-off frequency of an R-C filter is equal to:",
+  "o": [
+   "2*pi*R*C",
+   "1/(2*pi*R*C)",
+   "R/C",
+   "1/(R*C)"
+  ],
+  "a": 1,
+  "e": "f_c = 1/(2*pi*R*C)."
+ },
+ {
+  "id": "bode-exam-02",
+  "cat": "bode",
+  "topic": "Logarithms",
+  "diff": "easy",
+  "src": "exam",
+  "t": "Which property of the logarithm is true?",
+  "o": [
+   "log(a*b) = log(a) x log(b)",
+   "log(a*b) = log(a) + log(b)",
+   "log(a*b) = log(a) - log(b)",
+   "log(a*b) = log(a) / log(b)"
+  ],
+  "a": 1,
+  "e": "The log of a product is the sum of the logs: log(a*b) = log(a) + log(b)."
+ },
+ {
+  "id": "bode-exam-03",
+  "cat": "bode",
+  "topic": "Decibels",
+  "diff": "easy",
+  "src": "exam",
+  "t": "The ratio of two powers P2/P1 expressed in decibels is equal to:",
+  "o": [
+   "20 log10(P2/P1)",
+   "10 log10(P2/P1)",
+   "10 ln(P2/P1)",
+   "P2/P1"
+  ],
+  "a": 1,
+  "e": "A power ratio in dB = 10 log10(P2/P1). (The voltage form uses 20 log.)"
+ },
+ {
+  "id": "bode-exam-04",
+  "cat": "bode",
+  "topic": "Decibels",
+  "diff": "easy",
+  "src": "exam",
+  "t": "A power change of +3 dB means:",
+  "o": [
+   "the power is halved",
+   "the power is doubled",
+   "the power increases ten times",
+   "there is no change in power"
+  ],
+  "a": 1,
+  "e": "+3 dB corresponds to doubling the power (10 log10 2 is about 3 dB)."
+ },
+ {
+  "id": "bode-exam-05",
+  "cat": "bode",
+  "topic": "Bode Plots",
+  "diff": "medium",
+  "src": "exam",
+  "t": "Two frequencies separated by a 2:1 ratio are said to be separated by:",
+  "o": [
+   "a decade",
+   "an octave",
+   "a bel",
+   "a radian"
+  ],
+  "a": 1,
+  "e": "A 2:1 frequency ratio is an octave; a 10:1 ratio is a decade."
+ },
+ {
+  "id": "bode-exam-06",
+  "cat": "bode",
+  "topic": "Bode Plots",
+  "diff": "medium",
+  "src": "exam",
+  "t": "At f = f_c, the actual frequency-response curve is:",
+  "o": [
+   "equal to the idealized Bode plot",
+   "3 dB below the idealized Bode plot",
+   "6 dB below the idealized Bode plot",
+   "20 dB below the idealized Bode plot"
+  ],
+  "a": 1,
+  "e": "At the cut-off the true curve sits 3 dB below the point where the straight-line asymptotes meet."
  }
 ];
